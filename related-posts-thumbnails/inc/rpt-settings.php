@@ -17,6 +17,26 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
         } else {
             update_option( 'relpoststh_single_only', '0' );
 		}
+        if ( isset( $_POST[ 'relpoststh_column' ] ) ) {
+			update_option( 'relpoststh_column', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_column' ] ) ) );
+		} else {
+			update_option( 'relpoststh_column', '' );
+		}
+        if ( isset( $_POST[ 'relpoststh_column_t' ] ) ) {
+			update_option( 'relpoststh_column_t', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_column_t' ] ) ) );
+		} else {
+			update_option( 'relpoststh_column_t', '' );
+		}
+        if ( isset( $_POST[ 'relpoststh_column_m' ] ) ) {
+			update_option( 'relpoststh_column_m', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_column_m' ] ) ) );
+		} else {
+			update_option( 'relpoststh_column_m', '' );
+		}
+        if ( isset( $_POST[ 'relpoststh_image_size' ] ) ) {
+			update_option( 'relpoststh_image_size', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_image_size' ] ) ) );
+		} else {
+			update_option( 'relpoststh_image_size', '' );
+		}
 
 		if ( isset( $_POST[ 'relpoststh_mobile_view' ] ) ) {
 			update_option( 'relpoststh_mobile_view', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_mobile_view' ] ) ) );
@@ -45,6 +65,12 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
             update_option( 'relpoststh_onlywiththumbs', sanitize_text_field( wp_unslash( $_POST[ 'onlywiththumbs' ] ) ) );
         } else {
             update_option( 'relpoststh_onlywiththumbs', '0' );
+        }
+
+		if ( isset( $_POST[ 'articlefirstimage' ] ) ) {
+            update_option( 'relpoststh_articlefirstimage', sanitize_text_field( wp_unslash( $_POST[ 'articlefirstimage' ] ) ) );
+        } else {
+            update_option( 'relpoststh_articlefirstimage', '0' );
         }
 
 		if ( isset( $_POST[ 'relpoststh_show_date' ] ) ) {
@@ -223,13 +249,16 @@ if ( current_theme_supports( 'post-thumbnails' ) ) {
 
     global $_wp_additional_image_sizes;
     
-	if ( is_array( $_wp_additional_image_sizes ) ) {
+	if ( is_array( $_wp_additional_image_sizes ) ) {	
         $available_sizes = array_merge( $available_sizes, $_wp_additional_image_sizes );
     }
 }
 
 // Related posts get settings options
 $relpoststh_single_only        = get_option( 'relpoststh_single_only', $this->single_only );
+$relpoststh_column        	   = get_option( 'relpoststh_column', $this->column );
+$relpoststh_column_t           = get_option( 'relpoststh_column_t', $this->column );
+$relpoststh_image_size           = get_option( 'relpoststh_image_size', $this->size );
 $relpoststh_auto               = get_option( 'relpoststh_auto', $this->auto );
 $relpoststh_cleanhtml          = get_option( 'relpoststh_cleanhtml', 0 );
 $relpoststh_relation           = get_option( 'relpoststh_relation', $this->relation );
@@ -243,6 +272,7 @@ $relpoststh_show_cat		   = get_option( 'relpoststh_show_taxonomy' );
 $relpoststh_show_categories    = get_option( 'relpoststh_show_categories', get_option( 'relpoststh_categories' ) );
 $relpoststh_show_categoriesall = get_option( 'relpoststh_show_categoriesall', $relpoststh_categoriesall );
 $onlywiththumbs                = get_option( 'relpoststh_onlywiththumbs', false );
+$articlefirstimage             = get_option( 'relpoststh_articlefirstimage', true );
 $relpoststh_show_date          = get_option( 'relpoststh_show_date', false );
 $relpoststh_date_format        = get_option( 'relpoststh_date_format', false );
 $relpoststh_startdate          = explode( '-', get_option( 'relpoststh_startdate' ) );
@@ -671,7 +701,7 @@ if ( $this->wp_version >= 3 ) {
 							<div class="rpt-td-wrap">
 								<select name="relpoststh_poststhname">
 									<?php foreach ( $available_sizes as $size_name => $size ): ?>
-										<option <?php if ( $size_name == get_option( 'relpoststh_poststhname', $this->poststhname ) ) {
+										<option <?php if ( $size_name == get_option( 'relpoststh_poststhname' ) ) {
 													echo 'selected';
 												} ?> >
 											<?php echo $size_name; ?>
@@ -679,7 +709,7 @@ if ( $this->wp_version >= 3 ) {
 									<?php endforeach; ?>
 								</select>
 								<?php if ( !current_theme_supports( 'post-thumbnails' ) ): ?> (<?php
-										e( 'Your theme has to support post-thumbnails to have more choices', 'related-posts-thumbnails' ); ?>)
+										_e( 'Your theme has to support post-thumbnails to have more choices', 'related-posts-thumbnails' ); ?>)
 								<?php endif; ?>
 							</div>
 						</td>
@@ -695,6 +725,22 @@ if ( $this->wp_version >= 3 ) {
 									<label for="onlywiththumbs">
 										<p class="description rpth-discription">
 											<?php _e( 'Only those posts will be shown that has featured image', 'related-posts-thumbnails' ); ?>
+										</p>
+									</label>
+									<br />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<?php _e( 'Show Post\'s First Image', 'related-posts-thumbnails' ); ?>:
+							</th>
+							<td>
+								<div class="rpt-td-wrap">
+									<input type="checkbox" name="articlefirstimage" id="articlefirstimage" value="1" <?php if ( $articlefirstimage ) { echo 'checked="checked"'; } ?> />
+									<label for="articlefirstimage">
+										<p class="description rpth-discription">
+											<?php _e( 'Display the first image found in the post as related post thumbnail if no featured image is set.', 'related-posts-thumbnails' ); ?>
 										</p>
 									</label>
 									<br />
@@ -813,7 +859,69 @@ if ( $this->wp_version >= 3 ) {
 							</div>
 						</td>
 					</tr>
+					<?php $column_selector_display = ($relpoststh_output_style == 'list') ? ' style=" display: none; "' : ''; ?>
+					<tr class="relpost_column_selector" <?php echo $column_selector_display; ?> >
+						<th>Desktop Columns:</th>
+						<td>
+							<?php $relpoststh_column = get_option( 'relpoststh_column', $this->column ); ?>
+							<select name="relpoststh_column">
+							<option value="" <?php selected( $relpoststh_column, '' ); ?>>Select Column</option>
+							<option value="1" <?php selected( $relpoststh_column, '1' ); ?>>1</option>
+							<option value="2" <?php selected( $relpoststh_column, '2' ); ?>>2</option>
+							<option value="3" <?php selected( $relpoststh_column, '3' ); ?>>3</option>
+							<option value="4" <?php selected( $relpoststh_column, '4' ); ?>>4</option>
+							<option value="5" <?php selected( $relpoststh_column, '5' ); ?>>5</option>
+							<option value="6" <?php selected( $relpoststh_column, '6' ); ?>>6</option>
+							</select>
+						</td>
+					</tr>
+					<tr class="relpost_column_selector" <?php echo $column_selector_display; ?>>
+						<th>Tablet Columns:</th>
+						<td>
+							<?php $relpoststh_column_t = get_option( 'relpoststh_column_t', $this->column ); ?>
+							<select name="relpoststh_column_t">
+							<option value="" <?php selected( $relpoststh_column_t, '' ); ?>>Select Column</option>
+							<option value="1" <?php selected( $relpoststh_column_t, '1' ); ?>>1</option>
+							<option value="2" <?php selected( $relpoststh_column_t, '2' ); ?>>2</option>
+							<option value="3" <?php selected( $relpoststh_column_t, '3' ); ?>>3</option>
+							<option value="4" <?php selected( $relpoststh_column_t, '4' ); ?>>4</option>
+							<option value="5" <?php selected( $relpoststh_column_t, '5' ); ?>>5</option>
+							<option value="6" <?php selected( $relpoststh_column_t, '6' ); ?>>6</option>
+							</select>
+						</td>
+					</tr>
+					<tr class="relpost_column_selector" <?php echo $column_selector_display; ?>>
+						<th>Mobile Columns:</th>
+						<td>
+						<?php $relpoststh_column_m = get_option( 'relpoststh_column_m', $this->column ); ?>
 
+							<select name="relpoststh_column_m">
+							<option value="" <?php selected( $relpoststh_column_m, '' ); ?>>Select Column</option>
+							<option value="1" <?php selected( $relpoststh_column_m, '1' ); ?>>1</option>
+							<option value="2" <?php selected( $relpoststh_column_m, '2' ); ?>>2</option>
+							<option value="3" <?php selected( $relpoststh_column_m, '3' ); ?>>3</option>
+							<option value="4" <?php selected( $relpoststh_column_m, '4' ); ?>>4</option>
+							<option value="5" <?php selected( $relpoststh_column_m, '5' ); ?>>5</option>
+							<option value="6" <?php selected( $relpoststh_column_m, '6' ); ?>>6</option>
+							</select>
+						</td>
+					</tr>
+					
+					<tr class="relpoststh_image_size">
+						<th>Image Size:</th>
+						<td>
+							<?php $relpoststh_image_size = get_option( 'relpoststh_image_size', $this->size ); ?>
+							<select name="relpoststh_image_size">
+							<option value="" <?php selected( $relpoststh_image_size, '' ); ?>>Select Size</option>
+							<option value="16/9" <?php selected( $relpoststh_image_size, '16/9' ); ?>>16:9</option>
+							<option value="4/3" <?php selected( $relpoststh_image_size, '4/3' ); ?>>4:3</option>
+							<option value="1/1" <?php selected( $relpoststh_image_size, '1/1' ); ?>>1:1 (Square)</option>
+							<option value="3/2" <?php selected( $relpoststh_image_size, '3/2' ); ?>>3:2</option>
+							<option value="21/9" <?php selected( $relpoststh_image_size, '21/9' ); ?>>21:9</option>
+							<option value="9/16" <?php selected( $relpoststh_image_size, '9/16' ); ?>>9:16 (Vertical)</option>
+							</select>
+						</td>
+					</tr>
 					<tr valign="top">
 						
 						<th scope="row"><?php

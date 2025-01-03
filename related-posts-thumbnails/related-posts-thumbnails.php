@@ -3,13 +3,13 @@
  * Plugin Name:  Related Posts Thumbnails
  * Plugin URI:   https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp
  * Description:  Showing related posts thumbnails under the posts.
- * Version:      4.1.0
+ * Version:      4.2.0
  * Author:       WPBrigade
  * Author URI:   https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&utm_campaign=pro-upgrade-rp
  */
 
 /*
-Copyright 2010 - 2024 WPBrigade.com
+Copyright 2010 - 2025 WPBrigade.com
 
 This product was first developed by Maria I Shaldybina and later on maintained and developed by Adnan (WPBrigade.com)
 
@@ -58,6 +58,10 @@ if (!function_exists('rpt_wpb92640233')) {
                     'relpoststh_onlywiththumbs' => false,
                     'relpoststh_output_style' => false,
                     'relpoststh_cleanhtml' => false,
+                    'relpoststh_column' => false,
+                    'relpoststh_column_t' => false,
+                    'relpoststh_column_m' => false,
+                    'relpoststh_image_size' => false,
                     'relpoststh_auto' => false,
                     'relpoststh_top_text' => false,
                     'relpoststh_number' => false,
@@ -131,7 +135,13 @@ class RelatedPostsThumbnails
     public $post_types = array('post');
     public $custom_taxonomies = array();
     public $default_image = '';
+    public $column = '';
+    public $size = '';
     public $wp_version = '';
+	public $relpoststh_column;
+	public $relpoststh_column_t;
+	public $relpoststh_column_m;
+	public $relpoststh_image_size;
 
     protected $wp_kses_rp_args = array('h1' => array(), 'h2' => array(), 'h3' => array(), 'h4' => array(), 'h5' => array(), 'h6' => array(), 'strong' => array());
     protected static $instance = null;
@@ -144,9 +154,9 @@ class RelatedPostsThumbnails
 
         $this->constant();
 
-        // Load text domain for translation
-        load_plugin_textdomain('related-posts-thumbnails', false, basename(dirname(__FILE__)) . '/locale');
         $this->default_image = esc_url(plugins_url('img/default.png', __FILE__));
+        $this->column = '3';
+        $this->size = '16/9';
 
         add_action('admin_enqueue_scripts', array($this, 'admin_scripts'));
 
@@ -175,7 +185,7 @@ class RelatedPostsThumbnails
 
         add_action('admin_init', array($this, 'review_notice'));
         add_action('wp_enqueue_scripts', array($this, 'front_scripts'));
-
+		add_action('amp_post_template_css',array( $this, 'rpt_ampforwp_add_custom_css'));
         add_action('wp_head', array($this, 'head_style'));
 
         add_shortcode('related-posts-thumbnails', array($this, 'related_posts_shortcode'));
@@ -183,7 +193,18 @@ class RelatedPostsThumbnails
         add_action('admin_footer', array($this, 'add_deactivate_modal'));
         add_action('wp_ajax_rpt_optout_yes', array($this, 'optout_yes'));
         add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'filter_plugin_action_links'));
+        add_filter('init', array($this, 'textdomain'));
 
+    }
+
+    /**
+     * Load Languages
+     *
+     * @since 4.1.1
+     */
+    public function textdomain() {
+        $plugin_dir = dirname( plugin_basename( __FILE__ ) );
+        load_plugin_textdomain( 'related-posts-thumbnails', false, $plugin_dir . '/locale/' );
     }
 
     /**
@@ -387,7 +408,19 @@ class RelatedPostsThumbnails
             );
         }
     }
-
+	/**
+	 * Function to add custom CSS for AMP pages.
+	 *
+	 * This function outputs custom CSS specific to AMP (Accelerated Mobile Pages).
+	 * It is intended to be used in a WordPress theme or plugin for customizing the styles of AMP pages.
+	 *
+	 * @return void
+	 * @since 4.2.0
+	 */
+	public function rpt_ampforwp_add_custom_css() { 
+        // inlcude the file
+        include_once RELATED_POSTS_THUMBNAILS_PLUGIN_DIR . '/inc/amp.php';
+     }
     /**
      * Function to enqueue front styles and scripts.
      *
@@ -983,11 +1016,19 @@ class RelatedPostsThumbnails
         }
 
         $relpoststh_output_style = get_option('relpoststh_output_style', $this->output_style);
-        $relpoststh_show_date = get_option('relpoststh_show_date', '0');
-        $relpoststh_date_format = get_option('relpoststh_date_format', $this->format);
+        $relpoststh_show_date    = get_option('relpoststh_show_date', '0');
+        $relpoststh_date_format  = get_option('relpoststh_date_format', $this->format);
 
-        $relpoststh_cleanhtml = get_option('relpoststh_cleanhtml', 0);
-        $text_height = get_option('relpoststh_textblockheight', $this->text_block_height);
+        $relpoststh_cleanhtml    = get_option('relpoststh_cleanhtml', 0);
+        $text_height             = get_option('relpoststh_textblockheight', $this->text_block_height);
+        $column                  = get_option('relpoststh_column', $this->relpoststh_column);
+        $column_t                = get_option('relpoststh_column_t', $this->relpoststh_column_t);
+        $column_m                = get_option('relpoststh_column_m', $this->relpoststh_column_m);
+        $relpoststh_image_size   = get_option('relpoststh_image_size', $this->relpoststh_image_size);
+		$column_layout = '';
+		if($column !== ''){
+			$column_layout = "relpost-block-column-layout";
+		}
 
 
         if ($relpoststh_output_style == 'list') {
@@ -1007,7 +1048,7 @@ class RelatedPostsThumbnails
             $output .= '<div style="clear: both"></div>';
 
             $output .= '<!-- relpost-block-container -->';
-            $output .= '<div class="relpost-block-container">'; // open relpost-block-container div
+            $output .= '<div class="relpost-block-container ' . $column_layout . '" style="--relposth-columns: '. $column .';--relposth-columns_t: '. $column_t .'; --relposth-columns_m: '. $column_m .'">'; // open relpost-block-container div
         }
 
         foreach ($posts as $post) {
@@ -1026,7 +1067,8 @@ class RelatedPostsThumbnails
             if ($show_category) {
                 $category_list = $this->relpoststh_category_list($post->ID, $taxonomies[0], $post_type);
             }
-
+            // Setting's option to show the first image of the article, if no featured image is set
+            $articlefirstimage = get_option('relpoststh_articlefirstimage');
             if ($thsource == 'custom-field') {
                 $custom_field = get_option('relpoststh_customfield', $this->custom_field);
                 $custom_field_meta = get_post_meta($post->ID, $custom_field);
@@ -1074,7 +1116,6 @@ class RelatedPostsThumbnails
                     }
                 }
             } else {
-                $from_post_body = true;
 
                 // using built in WordPress Thumbnails Feature
                 if (current_theme_supports('post-thumbnails')) {
@@ -1093,69 +1134,71 @@ class RelatedPostsThumbnails
                          * @since 3.0.3
                          */
                         $url = !is_bool($image) && isset($image[0]) ? $image[0] : false;
-                        $from_post_body = false;
                     } else {
                         $debug .= 'Post has no thumbnail;';
                     }
+                    
                 }
 
-                // Theme does not support post-thumbnails, or post does not have assigned thumbnail
-                if ($from_post_body) {
-                    $debug .= 'Getting image from post body;';
-                    $wud = wp_upload_dir();
-
-                    // search the first uploaded image in content
-                    preg_match_all('|<img.*?src=[\'"](' . $wud['baseurl'] . '.*?)[\'"].*?>|i', $post->post_content, $matches);
-
-                    if (isset($matches) && isset($matches[1][0])) {
-                        $image = $matches[1][0];
-                        $html = $matches[0][0];
-
-                        if (!empty($html)) {
-                            preg_match('/alt="([^"]*)"/i', $html, $array);
-
-                            if (!empty($array) && is_array($array)) {
-                                $explode_tag = explode('"', $array[0]);
-                                $alt = $explode_tag[1];
-                            }
-                        }
-
-                    } else {
-                        $debug .= 'No image was found;';
-                    }
-
-                    if (strlen(trim($image)) > 0) {
-
-                        $image_sizes = @getimagesize($image);
-
-                        if ($image_sizes === false) {
-                            $debug .= 'Unable to determine parsed image size';
-                        }
-
-                        if (($image_sizes !== false && isset($image_sizes[0])) && $image_sizes[0] == $width) {
-                            // if this image is the same size
-                            $debug .= 'Image used is the required size;';
-                            $url = $image;
-                        } elseif (apply_filters('rpt_prevent_img_size_check', false) && $image_sizes[0] < $width) {
-                            // if this image is samll than required size
-                            $debug .= 'Image used is smaller than the required size, rpt_prevent_img_size_check filter is active;';
-                            $url = $image;
-                        } else {
-                            // search for resized thumbnail according to Wordpress thumbnails naming function
-                            $debug .= 'Changing image according to Wordpress standards;';
-                            $url = preg_replace('/(-[0-9]+x[0-9]+)?(\.[^\.]*)$/', '-' . $width . 'x' . $height . '$2', $image);
-                        }
-
-                    } else {
-                        $debug .= 'Found wrong formatted image: ' . $image . ';';
-                    }
-
-                }
             }
 
             if (strpos($url, '/') === 0) {
                 $url = get_bloginfo('url') . $url;
                 $debug .= 'Relative url: ' . $url . ';';
+            }
+
+            // Get the first image from the post body if the option is enabled
+            if ( empty($url) && $articlefirstimage === '1' ) {
+                $debug .= 'Getting image from post body;';
+                $wud = wp_upload_dir();
+
+                // search the first uploaded image in content
+                preg_match_all('|<img.*?src=[\'"](' . $wud['baseurl'] . '.*?)[\'"].*?>|i', $post->post_content, $matches);
+
+                if (isset($matches) && isset($matches[1][0])) {
+                    $image = $matches[1][0];
+                    $html = $matches[0][0];
+
+                    if (!empty($html)) {
+                        preg_match('/alt="([^"]*)"/i', $html, $array);
+
+                        if (!empty($array) && is_array($array)) {
+                            $explode_tag = explode('"', $array[0]);
+                            $alt = $explode_tag[1];
+                        }
+                    }
+
+                } else {
+                    $debug .= 'No image was found;';
+                }
+
+                if (strlen(trim($image)) > 0) {
+
+                    $image_sizes = @getimagesize($image);
+
+                    if ($image_sizes === false) {
+                        $debug .= 'Unable to determine parsed image size';
+                    }
+
+                    if (($image_sizes !== false && isset($image_sizes[0])) && $image_sizes[0] == $width) {
+                        // if this image is the same size
+                        $debug .= 'Image used is the required size;';
+                        $url = $image;
+                    } elseif (apply_filters('rpt_prevent_img_size_check', false) && $image_sizes[0] < $width) {
+                        // if this image is smaller than required size
+                        $debug .= 'Image used is smaller than the required size, rpt_prevent_img_size_check filter is active;';
+                        $url = $image;
+                    } else {
+                        $debug .= 'Changing image according to Wordpress standards;';
+                        // Resize the image using WordPress' built-in image editor
+                        $editor = wp_get_image_editor($image);
+                        $editor->resize($width, $height, true);
+                        $url = $image;
+                    }
+
+                } else {
+                    $debug .= 'Found wrong formatted image: ' . $image . ';';
+                }
             }
 
             // parsed URL is empty or no image found
@@ -1180,16 +1223,9 @@ class RelatedPostsThumbnails
                 $excerpt = '<div class="relpost_card_exerpt">' . $excerpt . '</div>';
             }
 
-            $fontface = str_replace('"', "'", stripslashes(get_option('relpoststh_fontfamily', $this->font_family)));
-            $debug .= 'Using title with size ' . $text_length . '. Using excerpt with size ' . $excerpt_length . ';';
-            $after_content = apply_filters('rpth_after_content', '', $post);
-
-            if (($amp_endpoint) && (true === apply_filters('rpth_amp', true))) {
-                $debug .= 'AMP view enabled';
-                $output .= '<li style="' . apply_filters('rpth_amp_list_style', 'margin: 5px 20px;') . '">';
-                $output .= '<a href="' . get_permalink($post->ID) . '" class="relpost_content" font-family: ' . $fontface . '>';
-                $output .= '<span class="rpth_amp_list_content">' . $title . $excerpt . '</span>' . $after_content . '</a></li>';
-            } else {
+            $fontface = str_replace( '"', "'", stripslashes( get_option( 'relpoststh_fontfamily', $this->font_family ) ) );
+			$debug .= 'Using title with size ' . $text_length . '. Using excerpt with size ' . $excerpt_length . ';';
+			$after_content = apply_filters( 'rpth_after_content', '', $post );
 
                 $date_output = '';
 
@@ -1218,9 +1254,9 @@ class RelatedPostsThumbnails
                     $output .= '>';
                     $output .= '<a href="' . $link . '" ><img class="relpost-post-image" alt="' . esc_attr($alt) . '" src="' . esc_url($url) . '" width="' . esc_attr($width) . '" height="' . esc_attr($height) . '" ';
 
-                    // if ( !$relpoststh_cleanhtml ) {
-                    // $output .= 'style="padding: 0px; margin: 0px; border: 0pt none;"';
-                    // }
+                    if ( $relpoststh_image_size ) {
+                    $output .= 'style="aspect-ratio:'.$relpoststh_image_size.'"';
+                    }
 
                     $output .= '/></a>';
 
@@ -1295,19 +1331,18 @@ class RelatedPostsThumbnails
 
                     $output .= '<a href="' . get_permalink($post->ID) . '"' . $relpost_attributes . '>';
 
-                    $output .= '<div class="relpost-custom-block-single" style="width: ' . $width . 'px; height: ' . ($height + $text_height) . 'px;">';
+                    $output .= '<div class="relpost-custom-block-single">';
                     if ($rpt_lazy_single_background) {
-                        $output .= '<img loading="lazy" class="relpost-block-single-image" alt="' . esc_attr($alt) . '"  src="' . esc_url($url) . '">' . $date_output . $category_list . '</img>';
+                        $output .= '<img loading="lazy" class="relpost-block-single-image" alt="' . esc_attr($alt) . '"  src="' . esc_url($url) . '" style="aspect-ratio:'.$relpoststh_image_size.'" style="aspect-ratio:'.$relpoststh_image_size.'">' . $date_output . $category_list . '</img>';
                     } else {
-                        $output .= '<div class="relpost-block-single-image" ' . $aria_label . ' role="img" style="' . esc_attr($rpt_single_background) . '"></div>';
+                        $output .= '<div class="relpost-block-single-image" ' . $aria_label . ' role="img" style="' . esc_attr($rpt_single_background) . 'aspect-ratio:'.$relpoststh_image_size.'"></div>';
                     }
-                    $output .= '<div class="relpost-block-single-text"  style="font-family: ' . $fontface . ';  font-size: ' . get_option('relpoststh_fontsize', $this->font_size) . 'px;  color: ' . get_option('relpoststh_fontcolor', $this->font_color) . ';">' . $title . $excerpt . $date_output . $category_list . '</div>';
+                    $output .= '<div class="relpost-block-single-text"  style="height: ' . ($text_height) . 'px;font-family: ' . $fontface . ';  font-size: ' . get_option('relpoststh_fontsize', $this->font_size) . 'px;  color: ' . get_option('relpoststh_fontcolor', $this->font_color) . ';">' . $title . $excerpt . $date_output . $category_list . '</div>';
                     $output .= $after_content;
                     // $output .= $date;
                     $output .= '</div>';
                     $output .= '</a>';
                 }
-            }
 
         } // end foreach
 
@@ -1533,7 +1568,7 @@ class RelatedPostsThumbnails
     {
         add_menu_page(__('Related Posts Thumbnails', 'related-posts-thumbnails'), __('Related Posts', 'related-posts-thumbnails'), 'administrator', 'related-posts-thumbnails', array($this, 'admin_interface'), 'dashicons-screenoptions');
         add_submenu_page(
-            'related-posts-thumbnails',
+            'Related Posts Thumbnails', // same like the parent menu slug so it is not visible in the menu
             '', // Leave this empty or null to hide it from the sidebar
             '', // This hides the submenu from being displayed
             'manage_options',
@@ -1602,7 +1637,7 @@ class RelatedPostsThumbnails
     { ?>
         <style>
             #related_posts_thumbnails li {
-                border-right: 1px solid<?php echo get_option( 'relpoststh_bordercolor', $this->border_color );  ?>;
+                border-right: 1px solid <?php echo get_option( 'relpoststh_bordercolor', $this->border_color );  ?>;
                 background-color: <?php echo get_option( 'relpoststh_background', $this->background ); ?>
             }
 
@@ -1617,8 +1652,8 @@ class RelatedPostsThumbnails
 
             .relpost-block-single {
                 background-color: <?php echo get_option( 'relpoststh_background', $this->background ); ?>;
-                border-right: 1px solid<?php echo get_option( 'relpoststh_bordercolor', $this->border_color ); ?>;
-                border-left: 1px solid<?php echo get_option( 'relpoststh_bordercolor', $this->border_color ); ?>;
+                border-right: 1px solid <?php echo get_option( 'relpoststh_bordercolor', $this->border_color ); ?>;
+                border-left: 1px solid <?php echo get_option( 'relpoststh_bordercolor', $this->border_color ); ?>;
                 margin-right: -1px;
             }
 

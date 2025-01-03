@@ -1382,7 +1382,12 @@
 [data-tooltip] {
 	position: relative;
 }
-
+.relpost_column_selector .select{
+	max-width: 200px;
+}
+.relpoststh_image_size .select{
+	max-width: 200px;
+}
 [data-tooltip]:before {
 	content: attr(data-tooltip);
 	position: absolute;

@@ -98,8 +98,10 @@
 		$('#relpoststh_output_style').change(function() {
             if (this.value == 'list') {
                 $('#relpoststh_cleanhtml').show();
+				$('.relpost_column_selector').hide();
             } else {
                 $('#relpoststh_cleanhtml').hide();
+				$('.relpost_column_selector').show();
             }
         });
         $("input[name='relpoststh_relation']").change(function() {

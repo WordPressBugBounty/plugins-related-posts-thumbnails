@@ -21,6 +21,10 @@ class RelatedPostsThumbnailsWidget extends WP_Widget {
 			'classname' => 'relpoststh_widget',
 		);
 		parent::__construct( false, 'Related Posts Thumbnails', $args );
+		$this->column = get_option('relpoststh_column', '3');
+		$this->column = get_option('relpoststh_column_t', '3');
+		$this->column = get_option('relpoststh_column_m', '3');
+		$this->size = get_option('relpoststh_image_size', '');
 	}
 
 	/**
