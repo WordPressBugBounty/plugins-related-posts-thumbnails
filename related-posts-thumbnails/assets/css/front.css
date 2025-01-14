@@ -239,10 +239,11 @@ html[dir="rtl"] #related_posts_thumbnails li {
 .relpost-block-column-layout .relpost-custom-block-single{
 	max-width: 100%;
 }
-.relpost-block-single-image{
+.relpost-block-column-layout .relpost-block-single-image{
 	width: 100% !important;
 	aspect-ratio: 1/1;
 	height: auto !important;
+	background-position: center center !important;
 }
 
 /* Media Queries */

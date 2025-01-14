@@ -5,7 +5,7 @@ Author URI: https://loginpress.pro/?utm_source=related-posts-lite&utm_medium=aut
 Tags: easy related posts, Related Posts thumbnails, Free Related Posts, related posts, similar related posts
 Requires at least: 3.6
 Tested up to: 6.7
-Stable tag: 4.2.0
+Stable tag: 4.2.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -72,15 +72,21 @@ If there are no images of the specified size in the post, or file does not exist
 
 == Upgrade Notice ==
 
-= 4.2.0 =
+= 4.2.1 =
 * Upgrade immediately.
 
 == Changelog ==
+
+= 4.2.1 – 2025-01-15 =
+* Bugfix: Set default value for new introduced settings.
+* Bugfix: Fatal Error resolved from v4.2.0
+* Enhancement: Code re-factorization and optimization.
 
 = 4.2.0 – 2025-01-03 =
 * Bugfix: PHP Warning for translation hook.
 * Enhancement: Introducing new feature to show 1st image in the article as thumbnail if featured image is not set.
 * Enhancement: Introducing new settings to set the width/height of the thumbnail.
+* Enhancement: Introducing new settings to set the column of the thumbnails.
 * Enhancement: Related Posts is now AMP compatible.
 * Compatibility: Compatible with WordPress 6.7
 

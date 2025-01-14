@@ -70,8 +70,8 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
 		if ( isset( $_POST[ 'articlefirstimage' ] ) ) {
             update_option( 'relpoststh_articlefirstimage', sanitize_text_field( wp_unslash( $_POST[ 'articlefirstimage' ] ) ) );
         } else {
-            update_option( 'relpoststh_articlefirstimage', '0' );
-        }
+			update_option( 'relpoststh_articlefirstimage', '0' );
+		}
 
 		if ( isset( $_POST[ 'relpoststh_show_date' ] ) ) {
             update_option( 'relpoststh_show_date', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_show_date' ] ) ) );
@@ -258,7 +258,7 @@ if ( current_theme_supports( 'post-thumbnails' ) ) {
 $relpoststh_single_only        = get_option( 'relpoststh_single_only', $this->single_only );
 $relpoststh_column        	   = get_option( 'relpoststh_column', $this->column );
 $relpoststh_column_t           = get_option( 'relpoststh_column_t', $this->column );
-$relpoststh_image_size           = get_option( 'relpoststh_image_size', $this->size );
+$relpoststh_image_size         = get_option( 'relpoststh_image_size', $this->size );
 $relpoststh_auto               = get_option( 'relpoststh_auto', $this->auto );
 $relpoststh_cleanhtml          = get_option( 'relpoststh_cleanhtml', 0 );
 $relpoststh_relation           = get_option( 'relpoststh_relation', $this->relation );
@@ -272,11 +272,11 @@ $relpoststh_show_cat		   = get_option( 'relpoststh_show_taxonomy' );
 $relpoststh_show_categories    = get_option( 'relpoststh_show_categories', get_option( 'relpoststh_categories' ) );
 $relpoststh_show_categoriesall = get_option( 'relpoststh_show_categoriesall', $relpoststh_categoriesall );
 $onlywiththumbs                = get_option( 'relpoststh_onlywiththumbs', false );
-$articlefirstimage             = get_option( 'relpoststh_articlefirstimage', true );
+$articlefirstimage             = get_option( 'relpoststh_articlefirstimage', '1' );
 $relpoststh_show_date          = get_option( 'relpoststh_show_date', false );
 $relpoststh_date_format        = get_option( 'relpoststh_date_format', false );
 $relpoststh_startdate          = explode( '-', get_option( 'relpoststh_startdate' ) );
-$relpoststh_output_style       = get_option( 'relpoststh_output_style', $this->output_style );
+$relpoststh_output_style       = get_option( 'relpoststh_output_style', 'block' );
 $thsources                     = array( 'post-thumbnails' => __( 'Post thumbnails', 'related_posts_thumbnails' ),'custom-field' => __( 'Custom field', 'related_posts_thumbnails' ) );
 $categories                    = get_categories();
 
@@ -289,7 +289,7 @@ if ( $this->wp_version >= 3 ) {
 $relpoststh_post_types = get_option( 'relpoststh_post_types', $this->post_types );
 
 $output_styles = array(
-	''     => __( 'Blocks', 'related-posts-thumbnails' ),
+	'block'     => __( 'Blocks', 'related-posts-thumbnails' ),
 	'list' => __( 'List', 'related-posts-thumbnails' ),
 );
 
@@ -559,7 +559,8 @@ if ( $this->wp_version >= 3 ) {
 							<select class="rpt_post_sort" name="rpt_post_sort">
 								<option value="rand"
 									<?php
-									if ( get_option('rpt_post_sort') == 'rand' ) {
+									$rpt_post_sort = get_option('rpt_post_sort', 'rand');
+									if ( $rpt_post_sort == 'rand' ) {
 										echo 'selected';
 									}
 									?> >
@@ -567,7 +568,7 @@ if ( $this->wp_version >= 3 ) {
 								</option>
 								<option value="latest"
 									<?php
-										if ( get_option('rpt_post_sort') == 'latest' ) {
+										if ( $rpt_post_sort == 'latest' ) {
 											echo 'selected';
 										}
 									?> >
@@ -701,7 +702,7 @@ if ( $this->wp_version >= 3 ) {
 							<div class="rpt-td-wrap">
 								<select name="relpoststh_poststhname">
 									<?php foreach ( $available_sizes as $size_name => $size ): ?>
-										<option <?php if ( $size_name == get_option( 'relpoststh_poststhname' ) ) {
+										<option <?php if ( $size_name == get_option( 'relpoststh_poststhname', 'thumbnail' ) ) {
 													echo 'selected';
 												} ?> >
 											<?php echo $size_name; ?>
@@ -737,7 +738,7 @@ if ( $this->wp_version >= 3 ) {
 							</th>
 							<td>
 								<div class="rpt-td-wrap">
-									<input type="checkbox" name="articlefirstimage" id="articlefirstimage" value="1" <?php if ( $articlefirstimage ) { echo 'checked="checked"'; } ?> />
+									<input type="checkbox" name="articlefirstimage" id="articlefirstimage" value="1" <?php if ( $articlefirstimage == '1' ) { echo 'checked="checked"'; } ?> />
 									<label for="articlefirstimage">
 										<p class="description rpth-discription">
 											<?php _e( 'Display the first image found in the post as related post thumbnail if no featured image is set.', 'related-posts-thumbnails' ); ?>
@@ -833,6 +834,8 @@ if ( $this->wp_version >= 3 ) {
 						<td>
 							<div class="rpt-td-wrap">
 								<select name="relpoststh_output_style"  id="relpoststh_output_style">
+
+								<?php $relpoststh_output_style = isset( $relpoststh_output_style ) && empty( $relpoststh_output_style ) ? 'block' : $relpoststh_output_style;   ?>
 									<?php foreach ( $output_styles as $name => $title ): ?>
 										<option value="<?php echo $name; ?>"
 											<?php if ( $relpoststh_output_style == $name ) { echo 'selected'; } ?> >
@@ -878,7 +881,6 @@ if ( $this->wp_version >= 3 ) {
 					<tr class="relpost_column_selector" <?php echo $column_selector_display; ?>>
 						<th>Tablet Columns:</th>
 						<td>
-							<?php $relpoststh_column_t = get_option( 'relpoststh_column_t', $this->column ); ?>
 							<select name="relpoststh_column_t">
 							<option value="" <?php selected( $relpoststh_column_t, '' ); ?>>Select Column</option>
 							<option value="1" <?php selected( $relpoststh_column_t, '1' ); ?>>1</option>
@@ -893,7 +895,7 @@ if ( $this->wp_version >= 3 ) {
 					<tr class="relpost_column_selector" <?php echo $column_selector_display; ?>>
 						<th>Mobile Columns:</th>
 						<td>
-						<?php $relpoststh_column_m = get_option( 'relpoststh_column_m', $this->column ); ?>
+						<?php $relpoststh_column_m = get_option( 'relpoststh_column_m', $this->column_m ); ?>
 
 							<select name="relpoststh_column_m">
 							<option value="" <?php selected( $relpoststh_column_m, '' ); ?>>Select Column</option>
@@ -910,7 +912,6 @@ if ( $this->wp_version >= 3 ) {
 					<tr class="relpoststh_image_size">
 						<th>Image Size:</th>
 						<td>
-							<?php $relpoststh_image_size = get_option( 'relpoststh_image_size', $this->size ); ?>
 							<select name="relpoststh_image_size">
 							<option value="" <?php selected( $relpoststh_image_size, '' ); ?>>Select Size</option>
 							<option value="16/9" <?php selected( $relpoststh_image_size, '16/9' ); ?>>16:9</option>
@@ -976,7 +977,7 @@ if ( $this->wp_version >= 3 ) {
 								<?php _e( 'Font size', 'related-posts-thumbnails' ); ?>:
 							</th>
 							<td>
-								<input type="number" min="1" name="relpoststh_fontsize" value="<?php echo get_option( 'relpoststh_fontsize', $this->font_size ); ?>" size="7"/>
+								<input type="number" min="1" name="relpoststh_fontsize" value="<?php echo get_option( 'relpoststh_fontsize', $this->font_size ); ?>" size="7" />
 								<label for="relpoststh_fontsize" class="rpt-field-description">
 									<p class="description rpth-discription"><?php _e( 'Enter size in pixels (px) ', 'related-posts-thumbnails' ); ?></p>
 								</label>
@@ -991,7 +992,8 @@ if ( $this->wp_version >= 3 ) {
 								<?php _e( 'Text maximum length', 'related-posts-thumbnails' ); ?>:
 							</th>
 							<td>
-								<input type="number" min="0" name="relpoststh_textlength" value="<?php echo get_option( 'relpoststh_textlength', $this->text_length ); ?>" size="7"/>
+								<?php $text_length_value = get_option( 'relpoststh_textlength', $this->text_length ) ? get_option( 'relpoststh_textlength', $this->text_length ) : 0;  ?>
+								<input type="number" min="0" name="relpoststh_textlength" value="<?php echo $text_length_value; ?>" size="7" required oninvalid="this.setCustomValidity('Plesae Enter Any Number')" oninput="this.setCustomValidity('')"/>
 								<label for="relpoststh_textlength" class="rpt-field-description">
 									<p class="description rpth-discription"> 
 										<?php _e( 'Set 0 for no title', 'related-posts-thumbnails' ); ?>
@@ -1008,7 +1010,8 @@ if ( $this->wp_version >= 3 ) {
 								<?php _e( 'Excerpt maximum length', 'related-posts-thumbnails' ); ?>:
 							</th>
 							<td>
-								<input type="number" min="0" name="relpoststh_excerptlength" value="<?php echo get_option( 'relpoststh_excerptlength', $this->excerpt_length ); ?>" size="7"/>
+								<?php $excerpt_length_value = get_option( 'relpoststh_excerptlength', $this->excerpt_length ) ? get_option( 'relpoststh_excerptlength', $this->excerpt_length ) : 0; ?>
+								<input type="number" min="0" name="relpoststh_excerptlength" value="<?php echo $excerpt_length_value; ?>" size="7" required oninvalid="this.setCustomValidity('Plesae Enter Any Number')" oninput="this.setCustomValidity('')"/>
 								<label for="relpoststh_excerptlength" class="rpt-field-description">
 									<p class="description rpth-discription" >
 										<?php _e( 'Set 0 for no excerpt', 'related-posts-thumbnails' ); ?>
@@ -1025,8 +1028,9 @@ if ( $this->wp_version >= 3 ) {
 								<?php _e( 'Text block height', 'related-posts-thumbnails' ); ?>:
 							</th>
 							<td>
-								<input type="number" min="0" name="relpoststh_textblockheight" value="<?php echo get_option( 'relpoststh_textblockheight', $this->text_block_height ); ?>" size="7"/> 
-								<p class="description rpth-discription rpt-field-description"><?php echo esc_html( 'Enter size in pixels (px)', 'related-posts-thumbnails' ); ?></p>
+								<?php $text_block_height_value = get_option( 'relpoststh_textblockheight', $this->text_block_height ) ? get_option( 'relpoststh_textblockheight', $this->text_block_height ) : 0; ?>
+								<input type="number" min="0" name="relpoststh_textblockheight" value="<?php echo $text_block_height_value; ?>" size="7" required oninvalid="this.setCustomValidity('Plesae Enter Any Number')" oninput="this.setCustomValidity('')"/>
+								<p class="description rpth-discription rpt-field-description"><?php echo esc_html( 'Enter height in pixels (px)', 'related-posts-thumbnails' ); ?></p>
 								<span class='rpt-no-validate-error' style="display:none;">
 									<?php _e( 'Only Digits are allowed', 'related-posts-thumbnails' ); ?>
 								</span>

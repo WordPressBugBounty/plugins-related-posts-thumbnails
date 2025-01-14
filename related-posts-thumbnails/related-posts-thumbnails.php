@@ -3,7 +3,7 @@
  * Plugin Name:  Related Posts Thumbnails
  * Plugin URI:   https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp
  * Description:  Showing related posts thumbnails under the posts.
- * Version:      4.2.0
+ * Version:      4.2.1
  * Author:       WPBrigade
  * Author URI:   https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&utm_campaign=pro-upgrade-rp
  */
@@ -135,13 +135,15 @@ class RelatedPostsThumbnails
     public $post_types = array('post');
     public $custom_taxonomies = array();
     public $default_image = '';
-    public $column = '';
-    public $size = '';
+    public $column = '3';
+    public $column_t = '2';
+    public $column_m = '2';
+    public $size = '1/1';
     public $wp_version = '';
-	public $relpoststh_column;
-	public $relpoststh_column_t;
-	public $relpoststh_column_m;
-	public $relpoststh_image_size;
+	public $relpoststh_column = "3";
+	public $relpoststh_column_t = "2";
+	public $relpoststh_column_m = "2";
+	public $relpoststh_image_size = "1/1";
 
     protected $wp_kses_rp_args = array('h1' => array(), 'h2' => array(), 'h3' => array(), 'h4' => array(), 'h5' => array(), 'h6' => array(), 'strong' => array());
     protected static $instance = null;
@@ -156,7 +158,7 @@ class RelatedPostsThumbnails
 
         $this->default_image = esc_url(plugins_url('img/default.png', __FILE__));
         $this->column = '3';
-        $this->size = '16/9';
+        $this->size = '1/1';
 
         add_action('admin_enqueue_scripts', array($this, 'admin_scripts'));
 
@@ -442,7 +444,7 @@ class RelatedPostsThumbnails
      */
     function constant()
     {
-        define('RELATED_POSTS_THUMBNAILS_VERSION', '1.9.0');
+        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.2.1');
         define('RELATED_POSTS_THUMBNAILS_FEEDBACK_SERVER', 'https://wpbrigade.com/');
         define('RELATED_POSTS_THUMBNAILS_PLUGIN_DIR', plugin_dir_path(__FILE__));
     }
@@ -781,8 +783,8 @@ class RelatedPostsThumbnails
         $id = get_the_ID();
         $relation = get_option('relpoststh_relation', $this->relation);
         $poststhname = get_option('relpoststh_poststhname', $this->poststhname);
-        $text_length = get_option('relpoststh_textlength', $this->text_length);
-        $excerpt_length = get_option('relpoststh_excerptlength', $this->excerpt_length);
+        $text_length = get_option('relpoststh_textlength', $this->text_length) ? get_option('relpoststh_textlength', $this->text_length) : 0;
+        $excerpt_length = get_option('relpoststh_excerptlength', $this->excerpt_length) ? get_option('relpoststh_excerptlength', $this->text_length) : 0;
         $thsource = get_option('relpoststh_thsource', $this->thsource);
         $categories_show_all = get_option('relpoststh_show_categoriesall', get_option('relpoststh_categoriesall', $this->categories_all));
         $onlywiththumbs = (current_theme_supports('post-thumbnails') && $thsource == 'post-thumbnails') ? get_option('relpoststh_onlywiththumbs', false) : false;
@@ -1021,10 +1023,11 @@ class RelatedPostsThumbnails
 
         $relpoststh_cleanhtml    = get_option('relpoststh_cleanhtml', 0);
         $text_height             = get_option('relpoststh_textblockheight', $this->text_block_height);
-        $column                  = get_option('relpoststh_column', $this->relpoststh_column);
-        $column_t                = get_option('relpoststh_column_t', $this->relpoststh_column_t);
-        $column_m                = get_option('relpoststh_column_m', $this->relpoststh_column_m);
-        $relpoststh_image_size   = get_option('relpoststh_image_size', $this->relpoststh_image_size);
+		$column = get_option('relpoststh_column', $this->relpoststh_column) ?: "3";
+		$column_t = get_option('relpoststh_column_t', $this->relpoststh_column_t) ?: "2";
+		$column_m = get_option('relpoststh_column_m', $this->relpoststh_column_m) ?: "2";
+		$relpoststh_image_size = get_option('relpoststh_image_size', $this->relpoststh_image_size) ?: "1/1";
+		
 		$column_layout = '';
 		if($column !== ''){
 			$column_layout = "relpost-block-column-layout";
@@ -1068,7 +1071,7 @@ class RelatedPostsThumbnails
                 $category_list = $this->relpoststh_category_list($post->ID, $taxonomies[0], $post_type);
             }
             // Setting's option to show the first image of the article, if no featured image is set
-            $articlefirstimage = get_option('relpoststh_articlefirstimage');
+            $articlefirstimage = get_option('relpoststh_articlefirstimage', '1');
             if ($thsource == 'custom-field') {
                 $custom_field = get_option('relpoststh_customfield', $this->custom_field);
                 $custom_field_meta = get_post_meta($post->ID, $custom_field);
@@ -1190,9 +1193,6 @@ class RelatedPostsThumbnails
                         $url = $image;
                     } else {
                         $debug .= 'Changing image according to Wordpress standards;';
-                        // Resize the image using WordPress' built-in image editor
-                        $editor = wp_get_image_editor($image);
-                        $editor->resize($width, $height, true);
                         $url = $image;
                     }
 
@@ -1217,9 +1217,11 @@ class RelatedPostsThumbnails
                 $alt = str_replace('"', '', $title);
                 $aria_label = 'aria-hidden="true"';
             }
-
-            if (!empty($title) && !empty($excerpt)) {
+			if (!empty($title)){
                 $title = '<h2 class="relpost_card_title">' . esc_html($title) . '</h2>';
+
+			}
+            if (!empty($excerpt)) {
                 $excerpt = '<div class="relpost_card_exerpt">' . $excerpt . '</div>';
             }
 
