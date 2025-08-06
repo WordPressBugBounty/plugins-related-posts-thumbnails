@@ -5,7 +5,7 @@ Author URI: https://loginpress.pro/?utm_source=related-posts-lite&utm_medium=aut
 Tags: easy related posts, Related Posts thumbnails, Free Related Posts, related posts, similar related posts
 Requires at least: 3.6
 Tested up to: 6.8
-Stable tag: 4.3.0
+Stable tag: 4.3.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -72,10 +72,13 @@ If there are no images of the specified size in the post, or file does not exist
 
 == Upgrade Notice ==
 
-= 4.3.0 =
+= 4.3.1 =
 * Upgrade immediately.
 
 == Changelog ==
+
+= 4.3.1 - 2025-08-06 =
+* Bugfix: The HTML title tag now correctly defaults to its intended value.
 
 = 4.3.0 - 2025-08-06 =
 * Bugfix: Fixed PHP warnings related to taxonomy handling.

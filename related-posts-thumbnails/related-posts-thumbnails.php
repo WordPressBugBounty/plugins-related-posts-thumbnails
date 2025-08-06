@@ -3,7 +3,7 @@
  * Plugin Name:  Related Posts Thumbnails
  * Plugin URI:   https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp
  * Description:  Showing related posts thumbnails under the posts.
- * Version:      4.3.0
+ * Version:      4.3.1
  * Author:       WPBrigade
  * Author URI:   https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&utm_campaign=pro-upgrade-rp
  * GitHub Plugin URI: https://github.com/WPBrigade/related-posts-thumbnails
@@ -448,7 +448,7 @@ class RelatedPostsThumbnails
      */
     function constant()
     {
-        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.3.0-beta');
+        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.3.1');
         define('RELATED_POSTS_THUMBNAILS_FEEDBACK_SERVER', 'https://wpbrigade.com/');
         define('RELATED_POSTS_THUMBNAILS_PLUGIN_DIR', plugin_dir_path(__FILE__));
     }
@@ -1011,7 +1011,7 @@ class RelatedPostsThumbnails
 
         $debug .= 'Got sizes ' . $width . 'x' . $height . ';';
         $spacing = get_option('relpoststh_spacing', '10px'); // Default spacing is 10px
-        $title_tag = apply_filters('relpoststh_title_tag', get_option( 'relpoststh_title_tag' ) );
+        $title_tag = apply_filters('relpoststh_title_tag', get_option( 'relpoststh_title_tag', 'h2' ) );
 
         // Add spacing style to the output
         $output .= '<style>.relpost-block-single-image, .relpost-post-image { margin-bottom: ' . esc_attr( $spacing ) . '; }</style>';
