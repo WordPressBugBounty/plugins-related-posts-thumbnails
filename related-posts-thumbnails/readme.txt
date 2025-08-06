@@ -4,8 +4,8 @@ Donate link: https://wpbrigade.com/go/donate-related-posts
 Author URI: https://loginpress.pro/?utm_source=related-posts-lite&utm_medium=author-url-link
 Tags: easy related posts, Related Posts thumbnails, Free Related Posts, related posts, similar related posts
 Requires at least: 3.6
-Tested up to: 6.7
-Stable tag: 4.2.1
+Tested up to: 6.8
+Stable tag: 4.3.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -72,10 +72,18 @@ If there are no images of the specified size in the post, or file does not exist
 
 == Upgrade Notice ==
 
-= 4.2.1 =
+= 4.3.0 =
 * Upgrade immediately.
 
 == Changelog ==
+
+= 4.3.0 - 2025-08-06 =
+* Bugfix: Fixed PHP warnings related to taxonomy handling.
+* Bugfix: Resolved date format setting issue in dashboard settings.
+* Enhancement: Added new setting to control spacing between title and thumbnail.
+* Enhancement: Added new setting to customize HTML tag for titles (default: h2).
+* Enhancement: Improved performance with code refactoring and lazy loading implementation.
+* Compatibility: Compatible with WordPress 6.8
 
 = 4.2.1 – 2025-01-15 =
 * Bugfix: Set default value for new introduced settings.

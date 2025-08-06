@@ -3,9 +3,10 @@
  * Plugin Name:  Related Posts Thumbnails
  * Plugin URI:   https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp
  * Description:  Showing related posts thumbnails under the posts.
- * Version:      4.2.1
+ * Version:      4.3.0
  * Author:       WPBrigade
  * Author URI:   https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&utm_campaign=pro-upgrade-rp
+ * GitHub Plugin URI: https://github.com/WPBrigade/related-posts-thumbnails
  */
 
 /*
@@ -90,6 +91,7 @@ if (!function_exists('rpt_wpb92640233')) {
                     'relpoststh_startdate' => false,
                     'relpoststh_custom_taxonomies' => false,
                     'relpoststh_show_taxonomy' => false,
+                    'relpoststh_title_tag' => false,
                 ]
             ]);
         }
@@ -410,6 +412,7 @@ class RelatedPostsThumbnails
             );
         }
     }
+
 	/**
 	 * Function to add custom CSS for AMP pages.
 	 *
@@ -429,12 +432,13 @@ class RelatedPostsThumbnails
      * @param $page
      * @return void
      * @since 1.7.0
-     * @version 1.9.0
+     * @version 4.3.0
      *
      */
     function front_scripts()
     {
-        wp_enqueue_style('rpt_front_style', plugins_url('assets/css/front.css', __FILE__), false, RELATED_POSTS_THUMBNAILS_VERSION);
+        wp_enqueue_script('rpt_front_style', plugins_url('assets/js/front.min.js', __FILE__), array(), RELATED_POSTS_THUMBNAILS_VERSION);
+        wp_enqueue_script('rpt-lazy-load', plugins_url('assets/js/lazy-load.js', __FILE__), array('jquery'), RELATED_POSTS_THUMBNAILS_VERSION);
     }
 
     /**
@@ -444,7 +448,7 @@ class RelatedPostsThumbnails
      */
     function constant()
     {
-        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.2.1');
+        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.3.0-beta');
         define('RELATED_POSTS_THUMBNAILS_FEEDBACK_SERVER', 'https://wpbrigade.com/');
         define('RELATED_POSTS_THUMBNAILS_PLUGIN_DIR', plugin_dir_path(__FILE__));
     }
@@ -737,15 +741,15 @@ class RelatedPostsThumbnails
      * @param string $exclude post_ids To exclude from related posts thumbnails.
      *
      * @return void
-     * @version 3.0.2
+     * @version 4.3.0
      *
      * @since 1.0.0
      */
     function get_thumbnails($show_top = false, $posts_number = '', $sort_by = '', $main_title = '', $exclude = '')
     {
         $output = '';
-        $debug = 'Developer mode initialization; Version: 1.2.9;';
-        $time = microtime(true);
+        $debug = 'Developer mode initialization; Version: ;' . RELATED_POSTS_THUMBNAILS_VERSION;
+        $time = microtime( true );
 
         $amp_endpoint = (function_exists('is_amp_endpoint') && is_amp_endpoint()) ? true : false;
 
@@ -941,7 +945,7 @@ class RelatedPostsThumbnails
          * Filter rpt_exclude_post to exclude post from RPT thumbnails
          *
          * @since 1.9.0
-         *
+         * @version 4.3.0
          */
         $exclude_by_filter = apply_filters('rpt_exclude_post', '');
 
@@ -1006,11 +1010,17 @@ class RelatedPostsThumbnails
         }
 
         $debug .= 'Got sizes ' . $width . 'x' . $height . ';';
+        $spacing = get_option('relpoststh_spacing', '10px'); // Default spacing is 10px
+        $title_tag = apply_filters('relpoststh_title_tag', get_option( 'relpoststh_title_tag' ) );
+
+        // Add spacing style to the output
+        $output .= '<style>.relpost-block-single-image, .relpost-post-image { margin-bottom: ' . esc_attr( $spacing ) . '; }</style>';
 
         // rendering related posts HTML
         if ($show_top) {
             if (!empty($main_title)) {
-                $output .= '<div class="relpoststh-block-title">' . esc_html($main_title) . '</div>';
+
+                $output .= '<' . esc_attr( $title_tag ) . ' class="relpoststh-block-title">' . esc_html( $main_title ) . '</' . esc_attr( $title_tag ) . '>';
             } else {
                 $top_text = stripslashes(get_option('relpoststh_top_text', $this->top_text));
                 $output .= stripslashes(apply_filters('rpt_top_text', $top_text));
@@ -1059,22 +1069,24 @@ class RelatedPostsThumbnails
             $url = '';
             $alt = '';
             $category_list = '';
-
+			$post_id = $post->ID;
             $taxonomies = get_object_taxonomies($post_type);
 
             /**
              * Show the Categories names of a post in related post thumbnails.
              *
              * @since 2.2.0
+             * @version 4.3.0
              */
             if ($show_category) {
-                $category_list = $this->relpoststh_category_list($post->ID, $taxonomies[0], $post_type);
+				$category_list = $this->rpt_get_post_category_list( $show_category, $taxonomies, $post, $post_type );
             }
+
             // Setting's option to show the first image of the article, if no featured image is set
             $articlefirstimage = get_option('relpoststh_articlefirstimage', '1');
             if ($thsource == 'custom-field') {
                 $custom_field = get_option('relpoststh_customfield', $this->custom_field);
-                $custom_field_meta = get_post_meta($post->ID, $custom_field);
+                $custom_field_meta = get_post_meta( $post_id, $custom_field );
                 if (empty($custom_field)) {
                     $debug .= 'No custom field specifield, using default thumbnail image;';
                     $url = $this->default_image;
@@ -1123,7 +1135,7 @@ class RelatedPostsThumbnails
                 // using built in WordPress Thumbnails Feature
                 if (current_theme_supports('post-thumbnails')) {
 
-                    $post_thumbnail_id = get_post_thumbnail_id($post->ID);
+                    $post_thumbnail_id = get_post_thumbnail_id( $post_id );
                     $debug .= 'Post-thumbnails enabled in theme;';
 
                     if (!(empty($post_thumbnail_id) || $post_thumbnail_id === false)) { // post has thumbnail
@@ -1217,8 +1229,8 @@ class RelatedPostsThumbnails
                 $alt = str_replace('"', '', $title);
                 $aria_label = 'aria-hidden="true"';
             }
-			if (!empty($title)){
-                $title = '<h2 class="relpost_card_title">' . esc_html($title) . '</h2>';
+			if ( ! empty( $title) ) {
+                 $title = '<' . esc_attr( $title_tag ) . ' class="relpost_card_title">' . esc_html( $title ) . '</' . esc_attr( $title_tag ) . '>';
 
 			}
             if (!empty($excerpt)) {
@@ -1237,16 +1249,16 @@ class RelatedPostsThumbnails
                  * @since 1.9.3
                  */
                 if ('0' !== $relpoststh_show_date) {
-                    $date = get_the_date($relpoststh_date_format, $post->ID);
+                    $date = get_the_date($relpoststh_date_format, $post_id );
                     $date_output = '<span class="rpth_list_date">' . $date . '</span>';
                 }
 
-                if ($show_category) {
-                    $category_list = $this->relpoststh_category_list($post->ID, $taxonomies[0], $post_type);
+                if ( $show_category ) {
+					$category_list = $this->rpt_get_post_category_list( $show_category, $taxonomies, $post, $post_type );
                 }
 
                 if ($relpoststh_output_style == 'list') {
-                    $link = get_permalink($post->ID);
+                    $link = get_permalink( $post_id );
                     $output .= '<li ';
 
                     // if ( !$relpoststh_cleanhtml ) {
@@ -1254,10 +1266,10 @@ class RelatedPostsThumbnails
                     // }
 
                     $output .= '>';
-                    $output .= '<a href="' . $link . '" ><img class="relpost-post-image" alt="' . esc_attr($alt) . '" src="' . esc_url($url) . '" width="' . esc_attr($width) . '" height="' . esc_attr($height) . '" ';
+                    $output .= '<a href="' . $link . '"><img class="relpost-post-image lazy-load" alt="' . esc_attr( $alt ) . '" data-src="' . esc_url( $url ) . '" width="' . esc_attr( $width ) . '" height="' . esc_attr( $height ) . '" ';
 
                     if ( $relpoststh_image_size ) {
-                    $output .= 'style="aspect-ratio:'.$relpoststh_image_size.'"';
+                        $output .= 'style="aspect-ratio:' . esc_attr( $relpoststh_image_size ) . '"';
                     }
 
                     $output .= '/></a>';
@@ -1275,9 +1287,9 @@ class RelatedPostsThumbnails
                     }
                 } else {
                     //if lazy-load is not activated
-                    $rpt_single_background = apply_filters('rpt-single-background', 'background: transparent url(' . $url . ') no-repeat scroll 0% 0%; width: ' . $width . 'px; height: ' . $height . 'px;');
+                    $rpt_single_background = apply_filters('rpt-single-background', 'data-bg="' . esc_url( $url ) . '" style="background: transparent no-repeat scroll 0% 0%; width: ' . esc_attr( $width ) . 'px; height: ' . esc_attr( $height ) . 'px; aspect-ratio: ' . esc_attr( $relpoststh_image_size ) . ';"');
 
-                    //if lazy-load is activated
+                    //if lazy-load is activated.
                     $rpt_lazy_single_background = apply_filters('rpt-lazy-loading', false);
 
                     $rpt_anchor_attrs = array(
@@ -1293,7 +1305,7 @@ class RelatedPostsThumbnails
                      *
                      * @since 1.9.2
                      */
-                    $rpt_anchor_attr_filter = (array)apply_filters('relpost_anchor_attr', $post->ID, $rpt_anchor_attrs);
+                    $rpt_anchor_attr_filter = (array)apply_filters('relpost_anchor_attr', $post_id, $rpt_anchor_attrs);
 
                     /**
                      * Array Containing Allowed attributes.
@@ -1331,13 +1343,13 @@ class RelatedPostsThumbnails
                         }
                     }
 
-                    $output .= '<a href="' . get_permalink($post->ID) . '"' . $relpost_attributes . '>';
+                    $output .= '<a href="' . get_permalink( $post_id ) . '"' . $relpost_attributes . '>';
 
                     $output .= '<div class="relpost-custom-block-single">';
                     if ($rpt_lazy_single_background) {
                         $output .= '<img loading="lazy" class="relpost-block-single-image" alt="' . esc_attr($alt) . '"  src="' . esc_url($url) . '" style="aspect-ratio:'.$relpoststh_image_size.'" style="aspect-ratio:'.$relpoststh_image_size.'">' . $date_output . $category_list . '</img>';
                     } else {
-                        $output .= '<div class="relpost-block-single-image" ' . $aria_label . ' role="img" style="' . esc_attr($rpt_single_background) . 'aspect-ratio:'.$relpoststh_image_size.'"></div>';
+                        $output .= '<div class="relpost-block-single-image rpt-lazyload" ' . $aria_label . ' role="img" ' . $rpt_single_background . '></div>';
                     }
                     $output .= '<div class="relpost-block-single-text"  style="height: ' . ($text_height) . 'px;font-family: ' . $fontface . ';  font-size: ' . get_option('relpoststh_fontsize', $this->font_size) . 'px;  color: ' . get_option('relpoststh_fontcolor', $this->font_color) . ';">' . $title . $excerpt . $date_output . $category_list . '</div>';
                     $output .= $after_content;
@@ -1398,19 +1410,22 @@ class RelatedPostsThumbnails
          * @return string $taxonomy The taxonomy of a post.
          *
          * @since 2.2.0
+		 * @version 4.3.0
          */
         $category_list = apply_filters('relpoststh_show_all_categories', $category_list, $id, $taxonomy, $post_type);
         $category_names = array();
 
-        if (is_array($category_list)) {
-            foreach ($category_list[0] as $category_list_item) {
-                $category_names[] = $category_list_item->name;
-            }
-        } else {
-            $category_names[] = $category_list->name;
-        }
+		if ( is_array( $category_list ) && ! empty( $category_list[0] ) ) {
+			foreach ( $category_list[0] as $item ) {
+				if ( isset( $item->name ) ) {
+					$category_names[] = $item->name;
+				}
+			}
+		} elseif ( ! empty( $category_list->name ) ) {
+			$category_names[] = $category_list->name;
+		}
 
-        $html = '';
+		$html = '';
 
         if (!empty($category_names)) {
             $category_names = implode(', ', $category_names);
@@ -1578,6 +1593,33 @@ class RelatedPostsThumbnails
             array($this, 'render_optin')
         );
     }
+
+	/**
+	 * Retrieves the category list for a post based on provided conditions.
+	 *
+	 * @param bool   $show_category Whether to show categories.
+	 * @param array  $taxonomies    Array of taxonomies.
+	 * @param WP_Post|int $post     Post object or post ID.
+	 * @param string $post_type     The type of the post.
+	 *
+	 * @since 4.3.0
+	 * @return array|string Category list array or empty string.
+	 */
+	private function rpt_get_post_category_list( $show_category, $taxonomies, $post, $post_type ) {
+		// Ensure $post is a valid post ID or object
+		$post_id = is_object( $post ) && isset( $post->ID) ? $post->ID : ( is_numeric( $post ) ? intval( $post ) : 0 );
+
+		if ( ! $show_category || $post_id === 0 ) {
+			return '';
+		}
+
+		if ( is_array( $taxonomies ) && isset( $taxonomies[0] ) ) {
+			return $this->relpoststh_category_list( $post_id, $taxonomies[0], $post_type );
+		}
+		
+		// Add missing return statement
+		return '';
+	}
 
     /**
      * Related post thumbnail settings page load

@@ -48,6 +48,7 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
 		 * Show Related Post Categories settings.
 		 *
 		 * @since 2.2.0
+		 * @version 4.3.0
 		 */
 		if ( isset( $_POST[ 'relpoststh_show_taxonomy' ] ) ) {
 			update_option( 'relpoststh_show_taxonomy', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_show_taxonomy' ] ) ) );
@@ -215,6 +216,20 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
             update_option( 'relpoststh_devmode', '0' );
         }
 
+		// Added for custom title tag. Added in 4.3.0.
+        if ( isset( $_POST[ 'relpoststh_title_tag' ] ) ) {
+            update_option( 'relpoststh_title_tag', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_title_tag' ] ) ) );
+        } else {
+            update_option( 'relpoststh_title_tag', 'h2' ); // Default is h2
+        }
+
+		// update related posts thumbnail spacing option. Added in 4.3.0
+		if ( isset( $_POST['relpoststh_spacing'] ) ) {
+			update_option( 'relpoststh_spacing', sanitize_text_field( wp_unslash( $_POST['relpoststh_spacing'] ) ) );
+		} else {
+			update_option( 'relpoststh_spacing', '10px' );
+		}
+
         update_option( 'relpoststh_startdate', $set_date );
 
         if ( isset( $_POST[ 'relpoststh_custom_taxonomies' ] ) ) {
@@ -238,7 +253,7 @@ $available_sizes = array(
  * To add WordPress standard size which is original image resolution (unmodified).
  *
  * @since 1.9.0
- * @version 3.0.3
+ * @version 4.3.0
  *
  * @param array '$available_sizes' Associative array of post thumbnail sizes.
  */
@@ -321,7 +336,7 @@ if ( $this->wp_version >= 3 ) {
     	$relpoststh_custom_taxonomies = array();
     }
 } else {
-    $relation_options[ 'custom' ] .= ' ' . __( '(This option is available for WP v3+ only)', 'related_posts_thumbnails' );
+	$relation_options['custom'] .= ' ' . esc_html__( '(This option is available for WP v3+ only)', 'related-posts-thumbnails' );
 }
 ?>
 
@@ -652,13 +667,11 @@ if ( $this->wp_version >= 3 ) {
 							<div class="rpt-td-wrap rpt-multi-content-wrap">
 								<select name="relpoststh_date_format"  id="relpoststh_date_format">
 									<?php foreach ( $rpt_date_format as $date => $date_format ): ?>
-										<div class="rpt-td-wrap-inner">
-											<option value="<?php echo $date; ?>"
-												<?php if ( $relpoststh_date_format == $date ) { echo 'selected'; } ?> >
-												<?php echo $date_format; ?>
-											</option>
-										</div>
-										<?php
+										<option value="<?php echo esc_attr( $date ); ?>"
+											<?php if ( $relpoststh_date_format == $date ) { echo 'selected="selected"'; } ?> >
+											<?php echo esc_attr( $date_format ); ?>
+										</option>
+									<?php
 									endforeach; ?>
 								</select>
 							</div>
@@ -826,6 +839,27 @@ if ( $this->wp_version >= 3 ) {
 			<!-- DISPLAY SETTINGS -->
 			<div class="postbox" style="display:none;" id="content_style_options">
 				<table class="form-table">
+				<?php // Added in version 4.3.0 ?>
+				<tr valign="top">
+						<th scope="row">
+							<?php esc_html_e( 'Thumbnail Title Tag', 'related-posts-thumbnails' ); ?>:
+						</th>
+						<td>
+							<div class="rpt-td-wrap">
+								<select name="relpoststh_title_tag" id="relpoststh_title_tag">
+									<?php $title_tag = get_option( 'relpoststh_title_tag', 'h2' ); ?>
+									<option value="h2" <?php selected( get_option( 'relpoststh_title_tag', 'h2' ), 'h2' ); ?>><?php esc_html_e( 'H2 (Default)', 'related-posts-thumbnails' ); ?></option>
+									<option value="h3" <?php selected( $title_tag, 'h3' ); ?>><?php esc_html_e( 'H3', 'related-posts-thumbnails' ); ?></option>
+									<option value="h4" <?php selected( $title_tag, 'h4' ); ?>><?php esc_html_e( 'H4', 'related-posts-thumbnails' ); ?></option>
+									<option value="h5" <?php selected( $title_tag, 'h5' ); ?>><?php esc_html_e( 'H5', 'related-posts-thumbnails' ); ?></option>
+									<option value="h6" <?php selected( $title_tag, 'h6' ); ?>><?php esc_html_e( 'H6', 'related-posts-thumbnails' ); ?></option>
+									<option value="p" <?php selected( $title_tag, 'p' ); ?>><?php esc_html_e( 'Normal', 'related-posts-thumbnails' ); ?></option>
+									<option value="strong" <?php selected( $title_tag, 'strong' ); ?>><?php esc_html_e( 'Strong', 'related-posts-thumbnails' ); ?></option>
+								</select>
+								<p class="description"><?php esc_html_e( 'Select the HTML tag for the thumbnail title.', 'related-posts-thumbnails' ); ?></p>
+							</div>
+						</td>
+					</tr>
 					<tr>
 						<th scope="row"><?php
 							_e( 'Output style', 'related-posts-thumbnails' ); ?>:
@@ -862,9 +896,9 @@ if ( $this->wp_version >= 3 ) {
 							</div>
 						</td>
 					</tr>
-					<?php $column_selector_display = ($relpoststh_output_style == 'list') ? ' style=" display: none; "' : ''; ?>
-					<tr class="relpost_column_selector" <?php echo $column_selector_display; ?> >
-						<th>Desktop Columns:</th>
+					<?php $column_selector_display = ( $relpoststh_output_style == 'list') ? ' style=" display: none; "' : ''; ?>
+					<tr class="relpost_column_selector" <?php echo $column_selector_display; ?>>
+						<th><?php esc_html_e( 'Desktop Columns:', 'related-posts-thumbnails' ); ?></th>
 						<td>
 							<?php $relpoststh_column = get_option( 'relpoststh_column', $this->column ); ?>
 							<select name="relpoststh_column">
@@ -987,6 +1021,18 @@ if ( $this->wp_version >= 3 ) {
 								</span>
 							</td>
 						</tr>
+						<?php // Added in 4.3.0. ?>
+						<tr valign="top">
+							<th scope="row">
+								<?php esc_html_e( 'Space Between Image and Title', 'related-posts-thumbnails' ); ?>:
+							</th>
+							<td>
+								<div class="rpt-td-wrap">
+									<input type="text" name="relpoststh_spacing" id="relpoststh_spacing" value="<?php echo esc_attr( get_option( 'relpoststh_spacing', '10px' ) ); ?>" maxlength="6" />
+									<p class="description rpt-field-description"><?php esc_html_e( 'Set the space between the image and the title box (e.g., 10px, 1em).', 'related-posts-thumbnails' ); ?></p>
+								</div>
+							</td>
+						</tr>
 						<tr valign="top">
 							<th scope="row">
 								<?php _e( 'Text maximum length', 'related-posts-thumbnails' ); ?>:
@@ -1036,8 +1082,8 @@ if ( $this->wp_version >= 3 ) {
 								</span>
 							</td>
 						</tr>
-					</table>
-				</div>
+				</table>
+			</div>
 				
 				<div class="postbox" style="display:none;" id="content_relation_options">
 					<table class="form-table">
