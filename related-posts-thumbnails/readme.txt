@@ -4,7 +4,7 @@ Donate link: https://wpbrigade.com/go/donate-related-posts
 Author URI: https://loginpress.pro/?utm_source=related-posts-lite&utm_medium=author-url-link
 Tags: easy related posts, Related Posts thumbnails, Free Related Posts, related posts, similar related posts
 Requires at least: 3.6
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 4.3.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
