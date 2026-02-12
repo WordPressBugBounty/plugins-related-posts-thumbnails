@@ -11,17 +11,17 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-02-04T07:23:16+00:00\n"
-"PO-Revision-Date: 2026-02-04 07:28+0000\n"
+"PO-Revision-Date: 2026-02-04 07:38+0000\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: related-posts-thumbnails\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de-DE\n"
+"Language: nl-NL\n"
 
 #: related-posts-thumbnails.php
 #: related-posts-thumbnails.php:1586
 #. Plugin Name of the plugin
 msgid "Related Posts Thumbnails"
-msgstr "Verwandte Beiträge Thumbnails"
+msgstr "Gerelateerde Berichten Thumbnails"
 
 #: related-posts-thumbnails.php
 #. Plugin URI of the plugin
@@ -35,7 +35,7 @@ msgstr ""
 #: related-posts-thumbnails.php
 #. Description of the plugin
 msgid "Showing related posts thumbnails under the posts."
-msgstr "Zeigt Thumbnails verwandter Beiträge unter den Beiträgen an."
+msgstr "Toont miniaturen van gerelateerde berichten onder de berichten."
 
 #: related-posts-thumbnails.php
 #. Author of the plugin
@@ -59,24 +59,24 @@ msgid ""
 "notifications etc. %4$s  %5$sNo Spam, I promise.%6$s %4$s%4$s Help us "
 "%7$sImprove Related Posts Thumbnails%8$s %4$s %4$s "
 msgstr ""
-"%1$s Hey %2$s,  %4$s Wenn Sie zustimmen, werden einige Daten über Ihre "
-"Installation von Verwandte Beiträge Thumbnails an WPBrigade.com gesendet "
-"(dies umfasst keine Statistiken) und Sie erhalten neue Funktionsupdates, "
-"Sicherheitsbenachrichtigungen usw. %4$s  %5$sKein Spam, das verspreche "
-"ich.%6$s %4$s%4$s Helfen Sie uns %7$sVerwandte Beiträge Thumbnails zu "
-"verbessern%8$s %4$s %4$s "
+"%1$s Hey %2$s,  %4$s Als je akkoord gaat, zullen sommige gegevens over je "
+"installatie van Gerelateerde Berichten Thumbnails naar WPBrigade.com worden "
+"gestuurd (dit omvat geen statistieken) en je ontvangt nieuwe "
+"functie-updates, beveiligingsmeldingen, enz. %4$s  %5$s Geen spam, dat "
+"beloof ik.%6$s %4$s%4$s Help ons %7$sVerbeter Gerelateerde Berichten "
+"Thumbnails%8$s %4$s %4$s "
 
 #: inc/rpt-optin-form.php:446
 msgid "Allow and Continue "
-msgstr "Erlauben und Fortfahren "
+msgstr "Toestaan en Doorgaan "
 
 #: inc/rpt-optin-form.php:447
 msgid "Skip This Step"
-msgstr "Diesen Schritt überspringen"
+msgstr "Deze Stap Overslaan"
 
 #: inc/rpt-optin-form.php:450
 msgid "Your Website Overview"
-msgstr "Ihre Website-Übersicht"
+msgstr "Overzicht van je Website"
 
 #: inc/rpt-optin-form.php:451
 msgid ""
@@ -84,29 +84,29 @@ msgid ""
 "make sure this plugin always stays compatible with the most popular plugins "
 "and themes."
 msgstr ""
-"Ihre Site-URL, WordPress- und PHP-Version, Plugins und Themes. Diese Daten "
-"helfen uns sicherzustellen, dass dieses Plugin immer mit den beliebtesten "
-"Plugins und Themes kompatibel bleibt."
+"Je Site-URL, WordPress & PHP-versie, plugins & thema's. Deze gegevens "
+"helpen ons ervoor te zorgen dat deze plugin altijd compatibel blijft met de "
+"meest populaire plugins en thema's."
 
 #: inc/rpt-optin-form.php:453
 msgid "Your Profile Overview"
-msgstr "Ihre Profilübersicht"
+msgstr "Jouw Profieloverzicht"
 
 #: inc/rpt-optin-form.php:454
 msgid "Your name and email address."
-msgstr "Ihr Name und Ihre E-Mail-Adresse."
+msgstr "Jouw naam en e-mailadres."
 
 #: inc/rpt-optin-form.php:456
 msgid "Admin Notices"
-msgstr "Admin-Benachrichtigungen"
+msgstr "Beheerder Meldingen"
 
 #: inc/rpt-optin-form.php:457
 msgid "Updates, Announcement, Marketing. No Spam, I promise."
-msgstr "Updates, Ankündigungen, Marketing. Kein Spam, das verspreche ich."
+msgstr "Updates, Aankondiging, Marketing. Geen Spam, dat beloof ik."
 
 #: inc/rpt-optin-form.php:459
 msgid "Plugin Actions"
-msgstr "Plugin-Aktionen"
+msgstr "Plugin Acties"
 
 #: inc/rpt-optin-form.php:460
 msgid ""
@@ -115,35 +115,35 @@ msgid ""
 "sensitive rpt data, such as traffic. This data helps us learn which "
 "features are most popular, so we can improve the plugin further."
 msgstr ""
-"Aktiv, Deaktivieren, Deinstallation und wie Sie die Funktionen und "
-"Einstellungen dieses Plugins nutzen. Dies beschränkt sich auf "
-"Nutzungsdaten. Es enthält keine Ihrer sensiblen rpt-Daten, wie z.B. "
-"Verkehr. Diese Daten helfen uns zu erfahren, welche Funktionen am "
-"beliebtesten sind, damit wir das Plugin weiter verbessern können."
+"Actief, Inactief, Verwijdering en Hoe je de functies en instellingen van "
+"deze plugin gebruikt. Dit is beperkt tot gebruiksdata. Het omvat geen van "
+"jouw gevoelige rpt-gegevens, zoals verkeer. Deze data helpt ons te leren "
+"welke functies het populairst zijn, zodat we de plugin verder kunnen "
+"verbeteren."
 
 #: inc/rpt-settings.php:10
 msgid "No access"
-msgstr "Kein Zugriff"
+msgstr "Geen toegang"
 
 #: inc/rpt-settings.php:244
 msgid "Settings updated"
-msgstr "Einstellungen aktualisiert"
+msgstr "Instellingen bijgewerkt"
 
 #: inc/rpt-settings.php:246
 msgid "Settings update failed"
-msgstr "Einstellungsaktualisierung fehlgeschlagen"
+msgstr "Bijwerken van instellingen mislukt"
 
 #: inc/rpt-settings.php:310
 msgid "Blocks"
-msgstr "Blöcke"
+msgstr "Blokken"
 
 #: inc/rpt-settings.php:311
 msgid "List"
-msgstr "Liste"
+msgstr "Lijst"
 
 #: inc/rpt-settings.php:326
 msgid "Categories"
-msgstr "Kategorien"
+msgstr "Categorieën"
 
 #: inc/rpt-settings.php:327
 msgid "Tags"
@@ -151,56 +151,56 @@ msgstr "Tags"
 
 #: inc/rpt-settings.php:328
 msgid "Categories and Tags"
-msgstr "Kategorien und Tags"
+msgstr "Categorieën en Tags"
 
 #: inc/rpt-settings.php:329
 #: inc/rpt-settings.php:585
 msgid "Random"
-msgstr "Zufällig"
+msgstr "Willekeurig"
 
 #: inc/rpt-settings.php:330
 msgid "Custom"
-msgstr "Benutzerdefiniert"
+msgstr "Aangepast"
 
 #: inc/rpt-settings.php:342
 msgid "(This option is available for WP v3+ only)"
-msgstr "(Diese Option ist nur für WP v3+ verfügbar)"
+msgstr "(Deze optie is alleen beschikbaar voor WP v3+)"
 
 #: inc/rpt-settings.php:352
 msgid "Related Post Thumbnails"
-msgstr "Verwandte Beitragsminiaturen"
+msgstr "Gerelateerde Berichtminiaturen"
 
 #: inc/rpt-settings.php:356
 msgid "Support"
-msgstr "Unterstützung"
+msgstr "Ondersteuning"
 
 #: inc/rpt-settings.php:360
 msgid "Related Posts Thumbnails Settings"
-msgstr "Einstellungen für verwandte Beitragsminiaturen"
+msgstr "Instellingen voor Gerelateerde Berichtminiaturen"
 
 #: inc/rpt-settings.php:361
 msgid "Menu"
-msgstr "Menü"
+msgstr "Menu"
 
 #: inc/rpt-settings.php:365
 msgid "General"
-msgstr "Allgemein"
+msgstr "Algemeen"
 
 #: inc/rpt-settings.php:370
 msgid "Thumbnails"
-msgstr "Miniaturansichten"
+msgstr "Miniaturen"
 
 #: inc/rpt-settings.php:375
 msgid "Styles"
-msgstr "Stile"
+msgstr "Stijlen"
 
 #: inc/rpt-settings.php:380
 msgid "Relation Builders"
-msgstr "Beziehungsbuilder"
+msgstr "Relatiebouwers"
 
 #: inc/rpt-settings.php:403
 msgid "Automatically Add to Post"
-msgstr "Automatisch zum Beitrag hinzufügen"
+msgstr "Automatisch toevoegen aan bericht"
 
 #: inc/rpt-settings.php:416
 msgid ""
@@ -208,86 +208,85 @@ msgid ""
 "end of your post. Alternatively, you can use a snippet of code in the "
 "loop.%3$s %1$s OR %2$s"
 msgstr ""
-"Aktivieren Sie diese Option, um automatisch verwandte "
-"Beitragsminiaturansichten am Ende Ihres Beitrags einzufügen. Alternativ "
-"können Sie einen Code-Schnipsel in der Schleife verwenden.%3$s %1$s ODER "
-"%2$s"
+"Vink deze optie aan om automatisch gerelateerde post miniaturen aan het "
+"einde van je bericht op te nemen. Als alternatief kun je een stukje code in "
+"de loop gebruiken.%3$s %1$s OF %2$s"
 
 #: inc/rpt-settings.php:425
 msgid "Developer mode"
-msgstr "Entwicklermodus"
+msgstr "Ontwikkelaarsmodus"
 
 #: inc/rpt-settings.php:438
 msgid "This will add debugging information in HTML source"
-msgstr "Dies wird Debugging-Informationen im HTML-Quellcode hinzufügen"
+msgstr "Dit voegt foutopsporingsinformatie toe in de HTML-bron"
 
 #: inc/rpt-settings.php:447
 msgid "Display related posts"
-msgstr "Verwandte Beiträge anzeigen"
+msgstr "Gerelateerde berichten weergeven"
 
 #: inc/rpt-settings.php:458
 msgid "On single posts only"
-msgstr "Nur auf einzelnen Beiträgen"
+msgstr "Alleen op enkele berichten"
 
 #: inc/rpt-settings.php:466
 msgid "Post types"
-msgstr "Beitragsarten"
+msgstr "Berichttypen"
 
 #: inc/rpt-settings.php:482
 msgid ""
 "Choose the types of content (like regular posts, pages, or attachments) for "
 "which you want to show related posts."
 msgstr ""
-"Wählen Sie die Arten von Inhalten (wie reguläre Beiträge, Seiten oder "
-"Anhänge) aus, für die Sie verwandte Beiträge anzeigen möchten."
+"Kies de soorten inhoud (zoals reguliere berichten, pagina's of bijlagen) "
+"waarvoor je gerelateerde berichten wilt weergeven."
 
 #: inc/rpt-settings.php:492
 msgid "Display on Categories"
-msgstr "Auf Kategorien anzeigen"
+msgstr "Weergeven op Categorieën"
 
 #: inc/rpt-settings.php:505
 msgid "Categories will appear in related posts"
-msgstr "Kategorien werden in verwandten Beiträgen angezeigt"
+msgstr "Categorieën zullen verschijnen in gerelateerde berichten"
 
 #: inc/rpt-settings.php:518
 msgid "Show Categories"
-msgstr "Kategorien anzeigen"
+msgstr "Toon Categorieën"
 
 #: inc/rpt-settings.php:529
 msgid "Show Categories On Frontend"
-msgstr "Kategorien im Frontend anzeigen"
+msgstr "Toon Categorieën op Frontend"
 
 #: inc/rpt-settings.php:536
 msgid "Disable on Mobile Devices"
-msgstr "Auf mobilen Geräten deaktivieren"
+msgstr "Uitschakelen op Mobiele Apparaten"
 
 #: inc/rpt-settings.php:548
 msgid "Hide on mobile devices"
-msgstr "Auf mobilen Geräten ausblenden"
+msgstr "Verbergen op mobiele apparaten"
 
 #: inc/rpt-settings.php:556
 msgid "Include posts after"
-msgstr "Beiträge nach einschließen"
+msgstr "Inclusief berichten na"
 
 #: inc/rpt-settings.php:564
 msgid "Leave empty for all posts dates"
-msgstr "Für alle Beitragsdaten leer lassen"
+msgstr "Laat leeg voor alle berichten data"
 
 #: inc/rpt-settings.php:573
 msgid "Sort by"
-msgstr "Sortieren nach"
+msgstr "Sorteer op"
 
 #: inc/rpt-settings.php:593
 msgid "Latest posts"
-msgstr "Neueste Beiträge"
+msgstr "Laatste berichten"
 
 #: inc/rpt-settings.php:601
 msgid "Top text"
-msgstr "Obenstehender Text"
+msgstr "Bovenste tekst"
 
 #: inc/rpt-settings.php:611
 msgid "Number of posts to display"
-msgstr "Anzahl der anzuzeigenden Beiträge"
+msgstr "Aantal berichten om weer te geven"
 
 #: inc/rpt-settings.php:617
 #: inc/rpt-settings.php:817
@@ -296,103 +295,105 @@ msgstr "Anzahl der anzuzeigenden Beiträge"
 #: inc/rpt-settings.php:1070
 #: inc/rpt-settings.php:1084
 msgid "Only Digits are allowed"
-msgstr "Nur Ziffern sind erlaubt"
+msgstr "Alleen cijfers zijn toegestaan"
 
 #: inc/rpt-settings.php:625
 msgid "Default image"
-msgstr "Standardbild"
+msgstr "Standaard afbeelding"
 
 #: inc/rpt-settings.php:632
 msgid "Set Image"
-msgstr "Bild festlegen"
+msgstr "Stel afbeelding in"
 
 #: inc/rpt-settings.php:635
 msgid "Default Image"
-msgstr "Standardbild"
+msgstr "Standaard afbeelding"
 
 #: inc/rpt-settings.php:644
 msgid "Show date"
-msgstr "Datum anzeigen"
+msgstr "Toon datum"
 
 #: inc/rpt-settings.php:651
 msgid "Show date on Related Post Thumbnails"
-msgstr "Datum auf den Miniaturansichten verwandter Beiträge anzeigen"
+msgstr "Toon datum op gerelateerde berichten miniaturen"
 
 #: inc/rpt-settings.php:667
 msgid "Date format"
-msgstr "Datumsformat"
+msgstr "Datumformaat"
 
 #: inc/rpt-settings.php:690
 msgid "Select thumbnails source"
-msgstr "Miniaturansichtsquelle auswählen"
+msgstr "Selecteer miniaturen bron"
 
 #: inc/rpt-settings.php:715
 msgid "Related posts thumbnail size"
-msgstr "Größe der Miniaturansichten verwandter Beiträge"
+msgstr "Grootte van miniaturen van gerelateerde berichten"
 
 #: inc/rpt-settings.php:729
 msgid "Your theme has to support post-thumbnails to have more choices"
-msgstr "Ihr Theme muss Beitragsminiaturen unterstützen, um mehr Optionen zu haben"
+msgstr "Je thema moet post-miniaturen ondersteunen om meer keuzes te hebben"
 
 #: inc/rpt-settings.php:737
 msgid "Show posts with featured image"
-msgstr "Beiträge mit hervorgehobenem Bild anzeigen"
+msgstr "Toon berichten met uitgelichte afbeelding"
 
 #: inc/rpt-settings.php:744
 msgid "Only those posts will be shown that has featured image"
-msgstr "Es werden nur die Beiträge angezeigt, die ein hervorgehobenes Bild haben"
+msgstr ""
+"Alleen die berichten worden weergegeven die een uitgelichte afbeelding "
+"hebben"
 
 #: inc/rpt-settings.php:753
 msgid "Show Post's First Image"
-msgstr "Erstes Bild des Beitrags anzeigen"
+msgstr "Toon de eerste afbeelding van het bericht"
 
 #: inc/rpt-settings.php:760
 msgid ""
 "Display the first image found in the post as related post thumbnail if no "
 "featured image is set."
 msgstr ""
-"Das erste im Beitrag gefundene Bild als Miniaturansicht verwandter Beiträge "
-"anzeigen, wenn kein hervorgehobenem Bild festgelegt ist."
+"Toon de eerste afbeelding die in het bericht is gevonden als miniatuur van "
+"een gerelateerd bericht als er geen uitgelichte afbeelding is ingesteld."
 
 #: inc/rpt-settings.php:775
 msgid "Custom field name"
-msgstr "Name des benutzerdefinierten Feldes"
+msgstr "Naam van het aangepaste veld"
 
 #: inc/rpt-settings.php:782
 msgid "ACF/Custom field name for thumbnails that should have image field type."
 msgstr ""
-"ACF/Benutzerdefinierter Feldname für Miniaturansichten, die den Bildfeldtyp "
-"haben sollten."
+"ACF/Aangepaste veldnaam voor miniaturen die een afbeeldingsveldtype moeten "
+"hebben."
 
 #: inc/rpt-settings.php:790
 msgid "Size"
-msgstr "Größe"
+msgstr "Grootte"
 
 #: inc/rpt-settings.php:797
 msgid "Enter width in pixels"
-msgstr "Geben Sie die Breite in Pixeln ein"
+msgstr "Voer de breedte in pixels in"
 
 #: inc/rpt-settings.php:808
 msgid "Enter height in pixels"
-msgstr "Geben Sie die Höhe in Pixeln ein"
+msgstr "Voer de hoogte in pixels in"
 
 #: inc/rpt-settings.php:825
 msgid "Theme resize url"
-msgstr "Themen-Resize-URL"
+msgstr "Thema afbeeldings-url"
 
 #: inc/rpt-settings.php:833
 msgid "If your theme resizes images, enter URL to its resizing PHP file"
 msgstr ""
-"Wenn Ihr Theme Bilder neu skaliert, geben Sie die URL zu seiner PHP-Datei "
-"für das Resizing ein"
+"Als je thema afbeeldingen resized, voer dan de URL naar het resizing "
+"PHP-bestand in"
 
 #: inc/rpt-settings.php:848
 msgid "Thumbnail Title Tag"
-msgstr "Miniaturansicht Titel-Tag"
+msgstr "Miniatuur Titel Tag"
 
 #: inc/rpt-settings.php:854
 msgid "H2 (Default)"
-msgstr "H2 (Standard)"
+msgstr "H2 (Standaard)"
 
 #: inc/rpt-settings.php:855
 msgid "H3"
@@ -412,158 +413,156 @@ msgstr "H6"
 
 #: inc/rpt-settings.php:859
 msgid "Normal"
-msgstr "Normal"
+msgstr "Normaal"
 
 #: inc/rpt-settings.php:860
 msgid "Strong"
-msgstr "Fett"
+msgstr "Sterk"
 
 #: inc/rpt-settings.php:862
 msgid "Select the HTML tag for the thumbnail title."
-msgstr "Wählen Sie das HTML-Tag für den Titel der Miniaturansicht."
+msgstr "Selecteer de HTML-tag voor de thumbnail titel."
 
 #: inc/rpt-settings.php:868
 msgid "Output style"
-msgstr "Ausgabestil"
+msgstr "Uitvoerstijl"
 
 #: inc/rpt-settings.php:895
 msgid "Turn off plugin styles"
-msgstr "Plugin-Stile deaktivieren"
+msgstr "Schakel plugin-stijlen uit"
 
 #: inc/rpt-settings.php:904
 msgid "Desktop Columns:"
-msgstr "Desktop-Spalten:"
+msgstr "Desktop Kolommen:"
 
 #: inc/rpt-settings.php:966
 msgid "Background color"
-msgstr "Hintergrundfarbe"
+msgstr "Achtergrondkleur"
 
 #: inc/rpt-settings.php:976
 msgid "Background color on mouse over"
-msgstr "Hintergrundfarbe bei Mouseover"
+msgstr "Achtergrondkleur bij muisover"
 
 #: inc/rpt-settings.php:986
 msgid "Border color"
-msgstr "Rahmenfarbe"
+msgstr "Randkleur"
 
 #: inc/rpt-settings.php:996
 msgid "Font color"
-msgstr "Schriftfarbe"
+msgstr "Letterkleur"
 
 #: inc/rpt-settings.php:1005
 msgid "Font family"
-msgstr "Schriftfamilie"
+msgstr "Lettertype"
 
 #: inc/rpt-settings.php:1014
 msgid "Font size"
-msgstr "Schriftgröße"
+msgstr "Lettergrootte"
 
 #: inc/rpt-settings.php:1019
 msgid "Enter size in pixels (px) "
-msgstr "Größe in Pixel (px) eingeben "
+msgstr "Voer grootte in pixels (px) in "
 
 #: inc/rpt-settings.php:1030
 msgid "Space Between Image and Title"
-msgstr "Abstand zwischen Bild und Titel"
+msgstr "Ruimte Tussen Afbeelding en Titel"
 
 #: inc/rpt-settings.php:1035
 msgid "Set the space between the image and the title box (e.g., 10px, 1em)."
-msgstr ""
-"Legen Sie den Abstand zwischen dem Bild und dem Titelkästchen fest (z. B. "
-"10px, 1em)."
+msgstr "Stel de ruimte in tussen de afbeelding en het titelvak (bijv. 10px, 1em)."
 
 #: inc/rpt-settings.php:1041
 msgid "Text maximum length"
-msgstr "Maximale Textlänge"
+msgstr "Maximale lengte van tekst"
 
 #: inc/rpt-settings.php:1048
 msgid "Set 0 for no title"
-msgstr "Setze 0 für keinen Titel"
+msgstr "Stel 0 in voor geen titel"
 
 #: inc/rpt-settings.php:1059
 msgid "Excerpt maximum length"
-msgstr "Maximale Auszugslänge"
+msgstr "Maximale lengte van fragment"
 
 #: inc/rpt-settings.php:1066
 msgid "Set 0 for no excerpt"
-msgstr "Setzen Sie 0 für keinen Auszug"
+msgstr "Stel 0 in voor geen samenvatting"
 
 #: inc/rpt-settings.php:1077
 msgid "Text block height"
-msgstr "Höhe des Textblocks"
+msgstr "Hoogte van de tekstblok"
 
 #: inc/rpt-settings.php:1096
 msgid "Base relation on:"
-msgstr "Basisrelation auf:"
+msgstr "Basisrelatie op:"
 
 #: inc/rpt-settings.php:1158
 msgid "Save Settings"
-msgstr "Einstellungen speichern"
+msgstr "Instellingen Opslaan"
 
 #: inc/rpt-settings.php:1166
 msgid "Recommended Plugins"
-msgstr "Empfohlene Plugins"
+msgstr "Aanbevolen Plugins"
 
 #: inc/rpt-settings.php:1172
 #: inc/rpt-settings.php:1206
 msgid "Share with your facebook friends about this awesome plugin."
-msgstr "Teilen Sie mit Ihren Facebook-Freunden über dieses großartige Plugin."
+msgstr "Deel met je Facebook-vrienden over deze geweldige plugin."
 
 #: inc/rpt-settings.php:1176
 msgid "Google Analytics by Analytify"
-msgstr "Google Analytics von Analytify"
+msgstr "Google Analytics door Analytify"
 
 #: inc/rpt-settings.php:1181
 msgid "Simple Social Buttons."
-msgstr "Einfache soziale Schaltflächen."
+msgstr "Eenvoudige sociale knoppen."
 
 #: inc/rpt-settings.php:1188
 msgid "Under Construction & Maintenance mode"
-msgstr "In Bearbeitung & Wartungsmodus"
+msgstr "Onder Constructie & Onderhoudsmodus"
 
 #: inc/rpt-settings.php:1196
 msgid "Spread the Word"
-msgstr "Verbreiten Sie das Wort"
+msgstr "Verspreid het Woord"
 
 #: inc/rpt-settings.php:1201
 msgid "Post to Twitter Now"
-msgstr "Jetzt auf Twitter posten"
+msgstr "Plaats nu op Twitter"
 
 #: inc/rpt-settings.php:1201
 msgid "Share on X"
-msgstr "Auf X teilen"
+msgstr "Deel op X"
 
 #: inc/rpt-settings.php:1206
 msgid "Share on Facebook"
-msgstr "Auf Facebook teilen"
+msgstr "Deel op Facebook"
 
 #: inc/rpt-settings.php:1211
 msgid "Rate on WordPress.org."
-msgstr "Bewerten auf WordPress.org."
+msgstr "Beoordeel op WordPress.org."
 
 #: inc/rpt-settings.php:1211
 msgid "Rate on WordPress.org"
-msgstr "Bewerten auf WordPress.org"
+msgstr "Beoordeel op WordPress.org"
 
 #: inc/rpt-settings.php:1218
 msgid "Subscribe Newsletter"
-msgstr "Newsletter abonnieren"
+msgstr "Abonneer op Nieuwsbrief"
 
 #: inc/rpt-settings.php:1222
 msgid "Email"
-msgstr "E-Mail"
+msgstr "E-mail"
 
 #: inc/rpt-settings.php:1227
 msgid "Name"
-msgstr "Name"
+msgstr "Naam"
 
 #: inc/rpt-settings.php:1231
 msgid "Subscribe Now"
-msgstr "Jetzt abonnieren"
+msgstr "Abonneer nu"
 
 #: inc/rpt-settings.php:1235
 msgid "Email Sent"
-msgstr "E-Mail gesendet"
+msgstr "E-mail verzonden"
 
 #: inc/rpt-settings.php:1246
 msgid ""
@@ -575,68 +574,68 @@ msgid ""
 "href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">WordPress "
 "plugin page</a>. Thanks!"
 msgstr ""
-"Wenn Sie Probleme mit diesem Plugin haben, lassen Sie es mich bitte auf <a "
+"Als je problemen ondervindt met deze plugin, laat het me dan weten op <a "
 "target=\"_blank\" "
-"href=\"https://wpbrigade.com/wordpress/plugins/related-posts/\">der "
-"Homepage des Plugins</a> wissen. Wenn Sie denken, dass dieses Plugin "
-"großartig ist, stimmen Sie bitte auf <a target=\"_blank\" "
-"href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">der "
-"WordPress-Plugin-Seite</a> ab. Danke!"
+"href=\"https://wpbrigade.com/wordpress/plugins/related-posts/\">de homepage "
+"van de plugin</a>. Als je denkt dat deze plugin geweldig is, stem dan op <a "
+"target=\"_blank\" "
+"href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">de "
+"WordPress plugin pagina</a>. Bedankt!"
 
 #: related-posts-thumbnails.php:160
 msgid "Related posts:"
-msgstr "Verwandte Beiträge:"
+msgstr "Gerelateerde berichten:"
 
 #: related-posts-thumbnails.php:294
 msgid " %1$s Opt Out %2$s "
-msgstr " %1$s Abmelden %2$s "
+msgstr " %1$s Afmelden %2$s "
 
 #: related-posts-thumbnails.php:299
 msgid " %1$s Opt In %2$s "
-msgstr " %1$s Anmelden %2$s "
+msgstr " %1$s Aanmelden %2$s "
 
 #: related-posts-thumbnails.php:306
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Instellingen"
 
 #: related-posts-thumbnails.php:616
 msgid "Leave A Review?"
-msgstr "Eine Bewertung hinterlassen?"
+msgstr "Een beoordeling achterlaten?"
 
 #: related-posts-thumbnails.php:620
 msgid ""
 "We hope you've enjoyed using Related Post Thumbnails! Would you consider "
 "leaving us a review on WordPress.org?"
 msgstr ""
-"Wir hoffen, dass Sie die Verwendung von Verwandten Beitragsminiaturen "
-"genossen haben! Würden Sie in Betracht ziehen, uns eine Bewertung auf "
-"WordPress.org zu hinterlassen?"
+"We hopen dat je het leuk vond om Gerelateerde Bericht Miniaturen te "
+"gebruiken! Zou je overwegen om ons een beoordeling achter te laten op "
+"WordPress.org?"
 
 #: related-posts-thumbnails.php:627
 msgid "Sure! I'd love to!"
-msgstr "Klar! Das würde ich gerne tun!"
+msgstr "Zeker! Ik zou dat graag doen!"
 
 #: related-posts-thumbnails.php:634
 msgid "I've already left a review"
-msgstr "Ich habe bereits eine Bewertung hinterlassen"
+msgstr "Ik heb al een beoordeling achtergelaten"
 
 #: related-posts-thumbnails.php:641
 msgid "Maybe Later"
-msgstr "Vielleicht später"
+msgstr "Misschien later"
 
 #: related-posts-thumbnails.php:648
 msgid "Never show again"
-msgstr "Nie wieder anzeigen"
+msgstr "Nooit meer tonen"
 
 #: related-posts-thumbnails.php:1586
 msgid "Related Posts"
-msgstr "Verwandte Beiträge"
+msgstr "Gerelateerde berichten"
 
 #: related-posts-thumbnails.php:1652
 #: related-posts-thumbnails.php:1664
 msgid "All"
-msgstr "Alle"
+msgstr "Alles"
 
 #: related-posts-thumbnails.php:1660
 msgid "Select Categories"
-msgstr "Kategorien auswählen"
+msgstr "Selecteer categorieën"

@@ -11,17 +11,17 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-02-04T07:23:16+00:00\n"
-"PO-Revision-Date: 2026-02-04 07:28+0000\n"
+"PO-Revision-Date: 2026-02-04 07:31+0000\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: related-posts-thumbnails\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de-DE\n"
+"Language: es-ES\n"
 
 #: related-posts-thumbnails.php
 #: related-posts-thumbnails.php:1586
 #. Plugin Name of the plugin
 msgid "Related Posts Thumbnails"
-msgstr "Verwandte Beiträge Thumbnails"
+msgstr "Miniaturas de Entradas Relacionadas"
 
 #: related-posts-thumbnails.php
 #. Plugin URI of the plugin
@@ -35,7 +35,7 @@ msgstr ""
 #: related-posts-thumbnails.php
 #. Description of the plugin
 msgid "Showing related posts thumbnails under the posts."
-msgstr "Zeigt Thumbnails verwandter Beiträge unter den Beiträgen an."
+msgstr "Mostrando miniaturas de entradas relacionadas debajo de las entradas."
 
 #: related-posts-thumbnails.php
 #. Author of the plugin
@@ -59,24 +59,24 @@ msgid ""
 "notifications etc. %4$s  %5$sNo Spam, I promise.%6$s %4$s%4$s Help us "
 "%7$sImprove Related Posts Thumbnails%8$s %4$s %4$s "
 msgstr ""
-"%1$s Hey %2$s,  %4$s Wenn Sie zustimmen, werden einige Daten über Ihre "
-"Installation von Verwandte Beiträge Thumbnails an WPBrigade.com gesendet "
-"(dies umfasst keine Statistiken) und Sie erhalten neue Funktionsupdates, "
-"Sicherheitsbenachrichtigungen usw. %4$s  %5$sKein Spam, das verspreche "
-"ich.%6$s %4$s%4$s Helfen Sie uns %7$sVerwandte Beiträge Thumbnails zu "
-"verbessern%8$s %4$s %4$s "
+"%1$s Hola %2$s,  %4$s Si decides participar, algunos datos sobre tu "
+"instalación de Miniaturas de Entradas Relacionadas serán enviados a "
+"WPBrigade.com (esto no incluye estadísticas) y recibirás actualizaciones de "
+"nuevas funciones, notificaciones de seguridad, etc. %4$s  %5$sNo Spam, lo "
+"prometo.%6$s %4$s%4$s Ayúdanos %7$sMejorar Miniaturas de Entradas "
+"Relacionadas%8$s %4$s %4$s "
 
 #: inc/rpt-optin-form.php:446
 msgid "Allow and Continue "
-msgstr "Erlauben und Fortfahren "
+msgstr "Permitir y Continuar "
 
 #: inc/rpt-optin-form.php:447
 msgid "Skip This Step"
-msgstr "Diesen Schritt überspringen"
+msgstr "Omitir Este Paso"
 
 #: inc/rpt-optin-form.php:450
 msgid "Your Website Overview"
-msgstr "Ihre Website-Übersicht"
+msgstr "Resumen de Tu Sitio Web"
 
 #: inc/rpt-optin-form.php:451
 msgid ""
@@ -84,29 +84,29 @@ msgid ""
 "make sure this plugin always stays compatible with the most popular plugins "
 "and themes."
 msgstr ""
-"Ihre Site-URL, WordPress- und PHP-Version, Plugins und Themes. Diese Daten "
-"helfen uns sicherzustellen, dass dieses Plugin immer mit den beliebtesten "
-"Plugins und Themes kompatibel bleibt."
+"La URL de tu sitio, versión de WordPress & PHP, plugins y temas. Estos "
+"datos nos permiten asegurarnos de que este plugin siempre sea compatible "
+"con los plugins y temas más populares."
 
 #: inc/rpt-optin-form.php:453
 msgid "Your Profile Overview"
-msgstr "Ihre Profilübersicht"
+msgstr "Visión general de tu perfil"
 
 #: inc/rpt-optin-form.php:454
 msgid "Your name and email address."
-msgstr "Ihr Name und Ihre E-Mail-Adresse."
+msgstr "Tu nombre y dirección de correo electrónico."
 
 #: inc/rpt-optin-form.php:456
 msgid "Admin Notices"
-msgstr "Admin-Benachrichtigungen"
+msgstr "Avisos de administrador"
 
 #: inc/rpt-optin-form.php:457
 msgid "Updates, Announcement, Marketing. No Spam, I promise."
-msgstr "Updates, Ankündigungen, Marketing. Kein Spam, das verspreche ich."
+msgstr "Actualizaciones, Anuncios, Marketing. Sin spam, lo prometo."
 
 #: inc/rpt-optin-form.php:459
 msgid "Plugin Actions"
-msgstr "Plugin-Aktionen"
+msgstr "Acciones del plugin"
 
 #: inc/rpt-optin-form.php:460
 msgid ""
@@ -115,92 +115,92 @@ msgid ""
 "sensitive rpt data, such as traffic. This data helps us learn which "
 "features are most popular, so we can improve the plugin further."
 msgstr ""
-"Aktiv, Deaktivieren, Deinstallation und wie Sie die Funktionen und "
-"Einstellungen dieses Plugins nutzen. Dies beschränkt sich auf "
-"Nutzungsdaten. Es enthält keine Ihrer sensiblen rpt-Daten, wie z.B. "
-"Verkehr. Diese Daten helfen uns zu erfahren, welche Funktionen am "
-"beliebtesten sind, damit wir das Plugin weiter verbessern können."
+"Activo, Inactivo, Desinstalación y cómo usas las características y "
+"configuraciones de este plugin. Esto se limita a datos de uso. No incluye "
+"ninguno de tus datos sensibles de rpt, como el tráfico. Estos datos nos "
+"ayudan a aprender qué características son las más populares, para que "
+"podamos mejorar aún más el plugin."
 
 #: inc/rpt-settings.php:10
 msgid "No access"
-msgstr "Kein Zugriff"
+msgstr "Sin acceso"
 
 #: inc/rpt-settings.php:244
 msgid "Settings updated"
-msgstr "Einstellungen aktualisiert"
+msgstr "Configuraciones actualizadas"
 
 #: inc/rpt-settings.php:246
 msgid "Settings update failed"
-msgstr "Einstellungsaktualisierung fehlgeschlagen"
+msgstr "La actualización de configuraciones falló"
 
 #: inc/rpt-settings.php:310
 msgid "Blocks"
-msgstr "Blöcke"
+msgstr "Bloques"
 
 #: inc/rpt-settings.php:311
 msgid "List"
-msgstr "Liste"
+msgstr "Lista"
 
 #: inc/rpt-settings.php:326
 msgid "Categories"
-msgstr "Kategorien"
+msgstr "Categorías"
 
 #: inc/rpt-settings.php:327
 msgid "Tags"
-msgstr "Tags"
+msgstr "Etiquetas"
 
 #: inc/rpt-settings.php:328
 msgid "Categories and Tags"
-msgstr "Kategorien und Tags"
+msgstr "Categorías y Etiquetas"
 
 #: inc/rpt-settings.php:329
 #: inc/rpt-settings.php:585
 msgid "Random"
-msgstr "Zufällig"
+msgstr "Aleatorio"
 
 #: inc/rpt-settings.php:330
 msgid "Custom"
-msgstr "Benutzerdefiniert"
+msgstr "Personalizado"
 
 #: inc/rpt-settings.php:342
 msgid "(This option is available for WP v3+ only)"
-msgstr "(Diese Option ist nur für WP v3+ verfügbar)"
+msgstr "(Esta opción está disponible solo para WP v3+)"
 
 #: inc/rpt-settings.php:352
 msgid "Related Post Thumbnails"
-msgstr "Verwandte Beitragsminiaturen"
+msgstr "Miniaturas de Publicaciones Relacionadas"
 
 #: inc/rpt-settings.php:356
 msgid "Support"
-msgstr "Unterstützung"
+msgstr "Soporte"
 
 #: inc/rpt-settings.php:360
 msgid "Related Posts Thumbnails Settings"
-msgstr "Einstellungen für verwandte Beitragsminiaturen"
+msgstr "Configuración de Miniaturas de Publicaciones Relacionadas"
 
 #: inc/rpt-settings.php:361
 msgid "Menu"
-msgstr "Menü"
+msgstr "Menú"
 
 #: inc/rpt-settings.php:365
 msgid "General"
-msgstr "Allgemein"
+msgstr "General"
 
 #: inc/rpt-settings.php:370
 msgid "Thumbnails"
-msgstr "Miniaturansichten"
+msgstr "Miniaturas"
 
 #: inc/rpt-settings.php:375
 msgid "Styles"
-msgstr "Stile"
+msgstr "Estilos"
 
 #: inc/rpt-settings.php:380
 msgid "Relation Builders"
-msgstr "Beziehungsbuilder"
+msgstr "Constructores de relaciones"
 
 #: inc/rpt-settings.php:403
 msgid "Automatically Add to Post"
-msgstr "Automatisch zum Beitrag hinzufügen"
+msgstr "Añadir automáticamente al post"
 
 #: inc/rpt-settings.php:416
 msgid ""
@@ -208,86 +208,85 @@ msgid ""
 "end of your post. Alternatively, you can use a snippet of code in the "
 "loop.%3$s %1$s OR %2$s"
 msgstr ""
-"Aktivieren Sie diese Option, um automatisch verwandte "
-"Beitragsminiaturansichten am Ende Ihres Beitrags einzufügen. Alternativ "
-"können Sie einen Code-Schnipsel in der Schleife verwenden.%3$s %1$s ODER "
-"%2$s"
+"Marca esta opción para incluir automáticamente miniaturas de posts "
+"relacionados al final de tu post. Alternativamente, puedes usar un "
+"fragmento de código en el bucle.%3$s %1$s O %2$s"
 
 #: inc/rpt-settings.php:425
 msgid "Developer mode"
-msgstr "Entwicklermodus"
+msgstr "Modo desarrollador"
 
 #: inc/rpt-settings.php:438
 msgid "This will add debugging information in HTML source"
-msgstr "Dies wird Debugging-Informationen im HTML-Quellcode hinzufügen"
+msgstr "Esto añadirá información de depuración en el código fuente HTML"
 
 #: inc/rpt-settings.php:447
 msgid "Display related posts"
-msgstr "Verwandte Beiträge anzeigen"
+msgstr "Mostrar posts relacionados"
 
 #: inc/rpt-settings.php:458
 msgid "On single posts only"
-msgstr "Nur auf einzelnen Beiträgen"
+msgstr "Solo en publicaciones individuales"
 
 #: inc/rpt-settings.php:466
 msgid "Post types"
-msgstr "Beitragsarten"
+msgstr "Tipos de publicaciones"
 
 #: inc/rpt-settings.php:482
 msgid ""
 "Choose the types of content (like regular posts, pages, or attachments) for "
 "which you want to show related posts."
 msgstr ""
-"Wählen Sie die Arten von Inhalten (wie reguläre Beiträge, Seiten oder "
-"Anhänge) aus, für die Sie verwandte Beiträge anzeigen möchten."
+"Elige los tipos de contenido (como publicaciones regulares, páginas o "
+"adjuntos) para los cuales deseas mostrar publicaciones relacionadas."
 
 #: inc/rpt-settings.php:492
 msgid "Display on Categories"
-msgstr "Auf Kategorien anzeigen"
+msgstr "Mostrar en Categorías"
 
 #: inc/rpt-settings.php:505
 msgid "Categories will appear in related posts"
-msgstr "Kategorien werden in verwandten Beiträgen angezeigt"
+msgstr "Las categorías aparecerán en publicaciones relacionadas"
 
 #: inc/rpt-settings.php:518
 msgid "Show Categories"
-msgstr "Kategorien anzeigen"
+msgstr "Mostrar Categorías"
 
 #: inc/rpt-settings.php:529
 msgid "Show Categories On Frontend"
-msgstr "Kategorien im Frontend anzeigen"
+msgstr "Mostrar Categorías en el Frontend"
 
 #: inc/rpt-settings.php:536
 msgid "Disable on Mobile Devices"
-msgstr "Auf mobilen Geräten deaktivieren"
+msgstr "Desactivar en Dispositivos Móviles"
 
 #: inc/rpt-settings.php:548
 msgid "Hide on mobile devices"
-msgstr "Auf mobilen Geräten ausblenden"
+msgstr "Ocultar en dispositivos móviles"
 
 #: inc/rpt-settings.php:556
 msgid "Include posts after"
-msgstr "Beiträge nach einschließen"
+msgstr "Incluir publicaciones después"
 
 #: inc/rpt-settings.php:564
 msgid "Leave empty for all posts dates"
-msgstr "Für alle Beitragsdaten leer lassen"
+msgstr "Dejar vacío para todas las fechas de publicaciones"
 
 #: inc/rpt-settings.php:573
 msgid "Sort by"
-msgstr "Sortieren nach"
+msgstr "Ordenar por"
 
 #: inc/rpt-settings.php:593
 msgid "Latest posts"
-msgstr "Neueste Beiträge"
+msgstr "Últimas publicaciones"
 
 #: inc/rpt-settings.php:601
 msgid "Top text"
-msgstr "Obenstehender Text"
+msgstr "Texto superior"
 
 #: inc/rpt-settings.php:611
 msgid "Number of posts to display"
-msgstr "Anzahl der anzuzeigenden Beiträge"
+msgstr "Número de publicaciones a mostrar"
 
 #: inc/rpt-settings.php:617
 #: inc/rpt-settings.php:817
@@ -296,103 +295,103 @@ msgstr "Anzahl der anzuzeigenden Beiträge"
 #: inc/rpt-settings.php:1070
 #: inc/rpt-settings.php:1084
 msgid "Only Digits are allowed"
-msgstr "Nur Ziffern sind erlaubt"
+msgstr "Solo se permiten dígitos"
 
 #: inc/rpt-settings.php:625
 msgid "Default image"
-msgstr "Standardbild"
+msgstr "Imagen predeterminada"
 
 #: inc/rpt-settings.php:632
 msgid "Set Image"
-msgstr "Bild festlegen"
+msgstr "Establecer imagen"
 
 #: inc/rpt-settings.php:635
 msgid "Default Image"
-msgstr "Standardbild"
+msgstr "Imagen predeterminada"
 
 #: inc/rpt-settings.php:644
 msgid "Show date"
-msgstr "Datum anzeigen"
+msgstr "Mostrar fecha"
 
 #: inc/rpt-settings.php:651
 msgid "Show date on Related Post Thumbnails"
-msgstr "Datum auf den Miniaturansichten verwandter Beiträge anzeigen"
+msgstr "Mostrar fecha en las miniaturas de publicaciones relacionadas"
 
 #: inc/rpt-settings.php:667
 msgid "Date format"
-msgstr "Datumsformat"
+msgstr "Formato de fecha"
 
 #: inc/rpt-settings.php:690
 msgid "Select thumbnails source"
-msgstr "Miniaturansichtsquelle auswählen"
+msgstr "Seleccionar fuente de miniaturas"
 
 #: inc/rpt-settings.php:715
 msgid "Related posts thumbnail size"
-msgstr "Größe der Miniaturansichten verwandter Beiträge"
+msgstr "Tamaño de miniaturas de publicaciones relacionadas"
 
 #: inc/rpt-settings.php:729
 msgid "Your theme has to support post-thumbnails to have more choices"
-msgstr "Ihr Theme muss Beitragsminiaturen unterstützen, um mehr Optionen zu haben"
+msgstr "Tu tema debe soportar miniaturas de publicaciones para tener más opciones"
 
 #: inc/rpt-settings.php:737
 msgid "Show posts with featured image"
-msgstr "Beiträge mit hervorgehobenem Bild anzeigen"
+msgstr "Mostrar publicaciones con imagen destacada"
 
 #: inc/rpt-settings.php:744
 msgid "Only those posts will be shown that has featured image"
-msgstr "Es werden nur die Beiträge angezeigt, die ein hervorgehobenes Bild haben"
+msgstr "Solo se mostrarán aquellas publicaciones que tengan imagen destacada"
 
 #: inc/rpt-settings.php:753
 msgid "Show Post's First Image"
-msgstr "Erstes Bild des Beitrags anzeigen"
+msgstr "Mostrar la primera imagen de la publicación"
 
 #: inc/rpt-settings.php:760
 msgid ""
 "Display the first image found in the post as related post thumbnail if no "
 "featured image is set."
 msgstr ""
-"Das erste im Beitrag gefundene Bild als Miniaturansicht verwandter Beiträge "
-"anzeigen, wenn kein hervorgehobenem Bild festgelegt ist."
+"Mostrar la primera imagen encontrada en la publicación como miniatura de "
+"publicación relacionada si no se ha establecido una imagen destacada."
 
 #: inc/rpt-settings.php:775
 msgid "Custom field name"
-msgstr "Name des benutzerdefinierten Feldes"
+msgstr "Nombre del campo personalizado"
 
 #: inc/rpt-settings.php:782
 msgid "ACF/Custom field name for thumbnails that should have image field type."
 msgstr ""
-"ACF/Benutzerdefinierter Feldname für Miniaturansichten, die den Bildfeldtyp "
-"haben sollten."
+"Nombre de campo ACF/Personalizado para miniaturas que debe tener tipo de "
+"campo de imagen."
 
 #: inc/rpt-settings.php:790
 msgid "Size"
-msgstr "Größe"
+msgstr "Tamaño"
 
 #: inc/rpt-settings.php:797
 msgid "Enter width in pixels"
-msgstr "Geben Sie die Breite in Pixeln ein"
+msgstr "Introduce el ancho en píxeles"
 
 #: inc/rpt-settings.php:808
 msgid "Enter height in pixels"
-msgstr "Geben Sie die Höhe in Pixeln ein"
+msgstr "Introduce la altura en píxeles"
 
 #: inc/rpt-settings.php:825
 msgid "Theme resize url"
-msgstr "Themen-Resize-URL"
+msgstr "URL de redimensionamiento del tema"
 
 #: inc/rpt-settings.php:833
 msgid "If your theme resizes images, enter URL to its resizing PHP file"
 msgstr ""
-"Wenn Ihr Theme Bilder neu skaliert, geben Sie die URL zu seiner PHP-Datei "
-"für das Resizing ein"
+"Si tu tema redimensiona imágenes, introduce la URL de su archivo PHP de "
+"redimensionamiento"
 
 #: inc/rpt-settings.php:848
 msgid "Thumbnail Title Tag"
-msgstr "Miniaturansicht Titel-Tag"
+msgstr "Etiqueta de título de miniatura"
 
 #: inc/rpt-settings.php:854
 msgid "H2 (Default)"
-msgstr "H2 (Standard)"
+msgstr "H2 (Por defecto)"
 
 #: inc/rpt-settings.php:855
 msgid "H3"
@@ -416,154 +415,154 @@ msgstr "Normal"
 
 #: inc/rpt-settings.php:860
 msgid "Strong"
-msgstr "Fett"
+msgstr "Fuerte"
 
 #: inc/rpt-settings.php:862
 msgid "Select the HTML tag for the thumbnail title."
-msgstr "Wählen Sie das HTML-Tag für den Titel der Miniaturansicht."
+msgstr "Seleccione la etiqueta HTML para el título de la miniatura."
 
 #: inc/rpt-settings.php:868
 msgid "Output style"
-msgstr "Ausgabestil"
+msgstr "Estilo de salida"
 
 #: inc/rpt-settings.php:895
 msgid "Turn off plugin styles"
-msgstr "Plugin-Stile deaktivieren"
+msgstr "Desactivar estilos de plugin"
 
 #: inc/rpt-settings.php:904
 msgid "Desktop Columns:"
-msgstr "Desktop-Spalten:"
+msgstr "Columnas de escritorio:"
 
 #: inc/rpt-settings.php:966
 msgid "Background color"
-msgstr "Hintergrundfarbe"
+msgstr "Color de fondo"
 
 #: inc/rpt-settings.php:976
 msgid "Background color on mouse over"
-msgstr "Hintergrundfarbe bei Mouseover"
+msgstr "Color de fondo al pasar el ratón"
 
 #: inc/rpt-settings.php:986
 msgid "Border color"
-msgstr "Rahmenfarbe"
+msgstr "Color del borde"
 
 #: inc/rpt-settings.php:996
 msgid "Font color"
-msgstr "Schriftfarbe"
+msgstr "Color de la fuente"
 
 #: inc/rpt-settings.php:1005
 msgid "Font family"
-msgstr "Schriftfamilie"
+msgstr "Familia de fuentes"
 
 #: inc/rpt-settings.php:1014
 msgid "Font size"
-msgstr "Schriftgröße"
+msgstr "Tamaño de fuente"
 
 #: inc/rpt-settings.php:1019
 msgid "Enter size in pixels (px) "
-msgstr "Größe in Pixel (px) eingeben "
+msgstr "Introduce el tamaño en píxeles (px) "
 
 #: inc/rpt-settings.php:1030
 msgid "Space Between Image and Title"
-msgstr "Abstand zwischen Bild und Titel"
+msgstr "Espacio entre la imagen y el título"
 
 #: inc/rpt-settings.php:1035
 msgid "Set the space between the image and the title box (e.g., 10px, 1em)."
 msgstr ""
-"Legen Sie den Abstand zwischen dem Bild und dem Titelkästchen fest (z. B. "
+"Establece el espacio entre la imagen y el cuadro del título (por ejemplo, "
 "10px, 1em)."
 
 #: inc/rpt-settings.php:1041
 msgid "Text maximum length"
-msgstr "Maximale Textlänge"
+msgstr "Longitud máxima del texto"
 
 #: inc/rpt-settings.php:1048
 msgid "Set 0 for no title"
-msgstr "Setze 0 für keinen Titel"
+msgstr "Establece 0 para sin título"
 
 #: inc/rpt-settings.php:1059
 msgid "Excerpt maximum length"
-msgstr "Maximale Auszugslänge"
+msgstr "Longitud máxima del extracto"
 
 #: inc/rpt-settings.php:1066
 msgid "Set 0 for no excerpt"
-msgstr "Setzen Sie 0 für keinen Auszug"
+msgstr "Establecer 0 para no mostrar extracto"
 
 #: inc/rpt-settings.php:1077
 msgid "Text block height"
-msgstr "Höhe des Textblocks"
+msgstr "Altura del bloque de texto"
 
 #: inc/rpt-settings.php:1096
 msgid "Base relation on:"
-msgstr "Basisrelation auf:"
+msgstr "Relación base en:"
 
 #: inc/rpt-settings.php:1158
 msgid "Save Settings"
-msgstr "Einstellungen speichern"
+msgstr "Guardar configuraciones"
 
 #: inc/rpt-settings.php:1166
 msgid "Recommended Plugins"
-msgstr "Empfohlene Plugins"
+msgstr "Plugins recomendados"
 
 #: inc/rpt-settings.php:1172
 #: inc/rpt-settings.php:1206
 msgid "Share with your facebook friends about this awesome plugin."
-msgstr "Teilen Sie mit Ihren Facebook-Freunden über dieses großartige Plugin."
+msgstr "Comparte con tus amigos de facebook sobre este increíble plugin."
 
 #: inc/rpt-settings.php:1176
 msgid "Google Analytics by Analytify"
-msgstr "Google Analytics von Analytify"
+msgstr "Google Analytics por Analytify"
 
 #: inc/rpt-settings.php:1181
 msgid "Simple Social Buttons."
-msgstr "Einfache soziale Schaltflächen."
+msgstr "Botones sociales simples."
 
 #: inc/rpt-settings.php:1188
 msgid "Under Construction & Maintenance mode"
-msgstr "In Bearbeitung & Wartungsmodus"
+msgstr "En construcción y modo de mantenimiento"
 
 #: inc/rpt-settings.php:1196
 msgid "Spread the Word"
-msgstr "Verbreiten Sie das Wort"
+msgstr "Corre la voz"
 
 #: inc/rpt-settings.php:1201
 msgid "Post to Twitter Now"
-msgstr "Jetzt auf Twitter posten"
+msgstr "Publicar en Twitter ahora"
 
 #: inc/rpt-settings.php:1201
 msgid "Share on X"
-msgstr "Auf X teilen"
+msgstr "Compartir en X"
 
 #: inc/rpt-settings.php:1206
 msgid "Share on Facebook"
-msgstr "Auf Facebook teilen"
+msgstr "Compartir en Facebook"
 
 #: inc/rpt-settings.php:1211
 msgid "Rate on WordPress.org."
-msgstr "Bewerten auf WordPress.org."
+msgstr "Valorar en WordPress.org."
 
 #: inc/rpt-settings.php:1211
 msgid "Rate on WordPress.org"
-msgstr "Bewerten auf WordPress.org"
+msgstr "Valorar en WordPress.org"
 
 #: inc/rpt-settings.php:1218
 msgid "Subscribe Newsletter"
-msgstr "Newsletter abonnieren"
+msgstr "Suscribirse al boletín"
 
 #: inc/rpt-settings.php:1222
 msgid "Email"
-msgstr "E-Mail"
+msgstr "Correo electrónico"
 
 #: inc/rpt-settings.php:1227
 msgid "Name"
-msgstr "Name"
+msgstr "Nombre"
 
 #: inc/rpt-settings.php:1231
 msgid "Subscribe Now"
-msgstr "Jetzt abonnieren"
+msgstr "Suscribirse ahora"
 
 #: inc/rpt-settings.php:1235
 msgid "Email Sent"
-msgstr "E-Mail gesendet"
+msgstr "Correo enviado"
 
 #: inc/rpt-settings.php:1246
 msgid ""
@@ -575,68 +574,67 @@ msgid ""
 "href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">WordPress "
 "plugin page</a>. Thanks!"
 msgstr ""
-"Wenn Sie Probleme mit diesem Plugin haben, lassen Sie es mich bitte auf <a "
-"target=\"_blank\" "
-"href=\"https://wpbrigade.com/wordpress/plugins/related-posts/\">der "
-"Homepage des Plugins</a> wissen. Wenn Sie denken, dass dieses Plugin "
-"großartig ist, stimmen Sie bitte auf <a target=\"_blank\" "
-"href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">der "
-"WordPress-Plugin-Seite</a> ab. Danke!"
+"Si experimentas algún problema con este plugin, por favor házmelo saber en "
+"<a target=\"_blank\" "
+"href=\"https://wpbrigade.com/wordpress/plugins/related-posts/\">la página "
+"principal del plugin</a>. Si crees que este plugin es increíble, por favor "
+"vota en <a target=\"_blank\" "
+"href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">la página "
+"del plugin de WordPress</a>. ¡Gracias!"
 
 #: related-posts-thumbnails.php:160
 msgid "Related posts:"
-msgstr "Verwandte Beiträge:"
+msgstr "Publicaciones relacionadas:"
 
 #: related-posts-thumbnails.php:294
 msgid " %1$s Opt Out %2$s "
-msgstr " %1$s Abmelden %2$s "
+msgstr " %1$s Oponerse %2$s "
 
 #: related-posts-thumbnails.php:299
 msgid " %1$s Opt In %2$s "
-msgstr " %1$s Anmelden %2$s "
+msgstr " %1$s Aceptar %2$s "
 
 #: related-posts-thumbnails.php:306
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Configuración"
 
 #: related-posts-thumbnails.php:616
 msgid "Leave A Review?"
-msgstr "Eine Bewertung hinterlassen?"
+msgstr "¿Dejar una reseña?"
 
 #: related-posts-thumbnails.php:620
 msgid ""
 "We hope you've enjoyed using Related Post Thumbnails! Would you consider "
 "leaving us a review on WordPress.org?"
 msgstr ""
-"Wir hoffen, dass Sie die Verwendung von Verwandten Beitragsminiaturen "
-"genossen haben! Würden Sie in Betracht ziehen, uns eine Bewertung auf "
-"WordPress.org zu hinterlassen?"
+"¡Esperamos que hayas disfrutado usando Imágenes en las Publicaciones "
+"Relacionadas! ¿Considerarías dejarnos una reseña en WordPress.org?"
 
 #: related-posts-thumbnails.php:627
 msgid "Sure! I'd love to!"
-msgstr "Klar! Das würde ich gerne tun!"
+msgstr "¡Claro! ¡Me encantaría!"
 
 #: related-posts-thumbnails.php:634
 msgid "I've already left a review"
-msgstr "Ich habe bereits eine Bewertung hinterlassen"
+msgstr "Ya he dejado una reseña"
 
 #: related-posts-thumbnails.php:641
 msgid "Maybe Later"
-msgstr "Vielleicht später"
+msgstr "Quizás más tarde"
 
 #: related-posts-thumbnails.php:648
 msgid "Never show again"
-msgstr "Nie wieder anzeigen"
+msgstr "Nunca mostrar de nuevo"
 
 #: related-posts-thumbnails.php:1586
 msgid "Related Posts"
-msgstr "Verwandte Beiträge"
+msgstr "Publicaciones relacionadas"
 
 #: related-posts-thumbnails.php:1652
 #: related-posts-thumbnails.php:1664
 msgid "All"
-msgstr "Alle"
+msgstr "Todo"
 
 #: related-posts-thumbnails.php:1660
 msgid "Select Categories"
-msgstr "Kategorien auswählen"
+msgstr "Seleccionar categorías"

@@ -3,7 +3,7 @@
  * Plugin Name:  Related Posts Thumbnails
  * Plugin URI:   https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp
  * Description:  Showing related posts thumbnails under the posts.
- * Version:      4.3.1
+ * Version:      4.3.2
  * Author:       WPBrigade
  * Author URI:   https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&utm_campaign=pro-upgrade-rp
  * GitHub Plugin URI: https://github.com/WPBrigade/related-posts-thumbnails
@@ -113,7 +113,7 @@ class RelatedPostsThumbnails
      * */
     public $single_only = '1';
     public $auto = '1';
-    public $top_text = '<h3>Related posts:</h3>';
+    public $top_text = '';
     public $number = 3;
     public $relation = 'categories';
     public $poststhname = 'thumbnail';
@@ -157,7 +157,7 @@ class RelatedPostsThumbnails
     {
 
         $this->constant();
-
+        $this->top_text = '<h3>' . esc_html__( 'Related posts:', 'related-posts-thumbnails' ) . '</h3>';
         $this->default_image = esc_url(plugins_url('img/default.png', __FILE__));
         $this->column = '3';
         $this->size = '1/1';
@@ -448,7 +448,7 @@ class RelatedPostsThumbnails
      */
     function constant()
     {
-        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.3.1');
+        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.3.2');
         define('RELATED_POSTS_THUMBNAILS_FEEDBACK_SERVER', 'https://wpbrigade.com/');
         define('RELATED_POSTS_THUMBNAILS_PLUGIN_DIR', plugin_dir_path(__FILE__));
     }

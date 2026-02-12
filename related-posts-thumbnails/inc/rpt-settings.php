@@ -2,10 +2,13 @@
 
 // Admin interface
 if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
+    // Verify nonce FIRST to prevent CSRF attacks - this must be the first check
+    check_admin_referer( 'related-posts-thumbnails' );
+    
+    // Then check user capability
     if ( !current_user_can( 'manage_options' ) ) {
         wp_die( __( 'No access', 'related-posts-thumbnails' ) );
     }
-    check_admin_referer( 'related-posts-thumbnails' );
     $validation = true;
 
     $set_date = isset( $_POST[ 'rpt_post_include' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'rpt_post_include' ] ) ) : '';

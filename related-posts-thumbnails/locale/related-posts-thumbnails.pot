@@ -1,0 +1,565 @@
+# Copyright (C) 2026 WPBrigade
+# This file is distributed under the same license as the Related Posts Thumbnails plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Related Posts Thumbnails 4.3.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/related-posts-thumbnails\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-04T07:23:16+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: related-posts-thumbnails\n"
+
+#. Plugin Name of the plugin
+#: related-posts-thumbnails.php
+#: related-posts-thumbnails.php:1586
+msgid "Related Posts Thumbnails"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: related-posts-thumbnails.php
+msgid "https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp"
+msgstr ""
+
+#. Description of the plugin
+#: related-posts-thumbnails.php
+msgid "Showing related posts thumbnails under the posts."
+msgstr ""
+
+#. Author of the plugin
+#: related-posts-thumbnails.php
+msgid "WPBrigade"
+msgstr ""
+
+#. Author URI of the plugin
+#: related-posts-thumbnails.php
+msgid "https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&utm_campaign=pro-upgrade-rp"
+msgstr ""
+
+#: inc/rpt-optin-form.php:445
+msgid "%1$s Hey %2$s,  %4$s If you opt-in some data about your installation of Related Posts Thumbnails will be sent to WPBrigade.com (This doesn't include stats) and You will receive new feature updates, security notifications etc. %4$s  %5$sNo Spam, I promise.%6$s %4$s%4$s Help us %7$sImprove Related Posts Thumbnails%8$s %4$s %4$s "
+msgstr ""
+
+#: inc/rpt-optin-form.php:446
+msgid "Allow and Continue "
+msgstr ""
+
+#: inc/rpt-optin-form.php:447
+msgid "Skip This Step"
+msgstr ""
+
+#: inc/rpt-optin-form.php:450
+msgid "Your Website Overview"
+msgstr ""
+
+#: inc/rpt-optin-form.php:451
+msgid "Your Site URL, WordPress & PHP version, plugins & themes. This data lets us make sure this plugin always stays compatible with the most popular plugins and themes."
+msgstr ""
+
+#: inc/rpt-optin-form.php:453
+msgid "Your Profile Overview"
+msgstr ""
+
+#: inc/rpt-optin-form.php:454
+msgid "Your name and email address."
+msgstr ""
+
+#: inc/rpt-optin-form.php:456
+msgid "Admin Notices"
+msgstr ""
+
+#: inc/rpt-optin-form.php:457
+msgid "Updates, Announcement, Marketing. No Spam, I promise."
+msgstr ""
+
+#: inc/rpt-optin-form.php:459
+msgid "Plugin Actions"
+msgstr ""
+
+#: inc/rpt-optin-form.php:460
+msgid "Active, Deactive, Uninstallation and How you use this plugin's features and settings. This is limited to usage data. It does not include any of your sensitive rpt data, such as traffic. This data helps us learn which features are most popular, so we can improve the plugin further."
+msgstr ""
+
+#: inc/rpt-settings.php:10
+msgid "No access"
+msgstr ""
+
+#: inc/rpt-settings.php:244
+msgid "Settings updated"
+msgstr ""
+
+#: inc/rpt-settings.php:246
+msgid "Settings update failed"
+msgstr ""
+
+#: inc/rpt-settings.php:310
+msgid "Blocks"
+msgstr ""
+
+#: inc/rpt-settings.php:311
+msgid "List"
+msgstr ""
+
+#: inc/rpt-settings.php:326
+msgid "Categories"
+msgstr ""
+
+#: inc/rpt-settings.php:327
+msgid "Tags"
+msgstr ""
+
+#: inc/rpt-settings.php:328
+msgid "Categories and Tags"
+msgstr ""
+
+#: inc/rpt-settings.php:329
+#: inc/rpt-settings.php:585
+msgid "Random"
+msgstr ""
+
+#: inc/rpt-settings.php:330
+msgid "Custom"
+msgstr ""
+
+#: inc/rpt-settings.php:342
+msgid "(This option is available for WP v3+ only)"
+msgstr ""
+
+#: inc/rpt-settings.php:352
+msgid "Related Post Thumbnails"
+msgstr ""
+
+#: inc/rpt-settings.php:356
+msgid "Support"
+msgstr ""
+
+#: inc/rpt-settings.php:360
+msgid "Related Posts Thumbnails Settings"
+msgstr ""
+
+#: inc/rpt-settings.php:361
+msgid "Menu"
+msgstr ""
+
+#: inc/rpt-settings.php:365
+msgid "General"
+msgstr ""
+
+#: inc/rpt-settings.php:370
+msgid "Thumbnails"
+msgstr ""
+
+#: inc/rpt-settings.php:375
+msgid "Styles"
+msgstr ""
+
+#: inc/rpt-settings.php:380
+msgid "Relation Builders"
+msgstr ""
+
+#: inc/rpt-settings.php:403
+msgid "Automatically Add to Post"
+msgstr ""
+
+#: inc/rpt-settings.php:416
+msgid "Check this option to automatically include related post thumbnails at the end of your post. Alternatively, you can use a snippet of code in the loop.%3$s %1$s OR %2$s"
+msgstr ""
+
+#: inc/rpt-settings.php:425
+msgid "Developer mode"
+msgstr ""
+
+#: inc/rpt-settings.php:438
+msgid "This will add debugging information in HTML source"
+msgstr ""
+
+#: inc/rpt-settings.php:447
+msgid "Display related posts"
+msgstr ""
+
+#: inc/rpt-settings.php:458
+msgid "On single posts only"
+msgstr ""
+
+#: inc/rpt-settings.php:466
+msgid "Post types"
+msgstr ""
+
+#: inc/rpt-settings.php:482
+msgid "Choose the types of content (like regular posts, pages, or attachments) for which you want to show related posts."
+msgstr ""
+
+#: inc/rpt-settings.php:492
+msgid "Display on Categories"
+msgstr ""
+
+#: inc/rpt-settings.php:505
+msgid "Categories will appear in related posts"
+msgstr ""
+
+#: inc/rpt-settings.php:518
+msgid "Show Categories"
+msgstr ""
+
+#: inc/rpt-settings.php:529
+msgid "Show Categories On Frontend"
+msgstr ""
+
+#: inc/rpt-settings.php:536
+msgid "Disable on Mobile Devices"
+msgstr ""
+
+#: inc/rpt-settings.php:548
+msgid "Hide on mobile devices"
+msgstr ""
+
+#: inc/rpt-settings.php:556
+msgid "Include posts after"
+msgstr ""
+
+#: inc/rpt-settings.php:564
+msgid "Leave empty for all posts dates"
+msgstr ""
+
+#: inc/rpt-settings.php:573
+msgid "Sort by"
+msgstr ""
+
+#: inc/rpt-settings.php:593
+msgid "Latest posts"
+msgstr ""
+
+#: inc/rpt-settings.php:601
+msgid "Top text"
+msgstr ""
+
+#: inc/rpt-settings.php:611
+msgid "Number of posts to display"
+msgstr ""
+
+#: inc/rpt-settings.php:617
+#: inc/rpt-settings.php:817
+#: inc/rpt-settings.php:1023
+#: inc/rpt-settings.php:1052
+#: inc/rpt-settings.php:1070
+#: inc/rpt-settings.php:1084
+msgid "Only Digits are allowed"
+msgstr ""
+
+#: inc/rpt-settings.php:625
+msgid "Default image"
+msgstr ""
+
+#: inc/rpt-settings.php:632
+msgid "Set Image"
+msgstr ""
+
+#: inc/rpt-settings.php:635
+msgid "Default Image"
+msgstr ""
+
+#: inc/rpt-settings.php:644
+msgid "Show date"
+msgstr ""
+
+#: inc/rpt-settings.php:651
+msgid "Show date on Related Post Thumbnails"
+msgstr ""
+
+#: inc/rpt-settings.php:667
+msgid "Date format"
+msgstr ""
+
+#: inc/rpt-settings.php:690
+msgid "Select thumbnails source"
+msgstr ""
+
+#: inc/rpt-settings.php:715
+msgid "Related posts thumbnail size"
+msgstr ""
+
+#: inc/rpt-settings.php:729
+msgid "Your theme has to support post-thumbnails to have more choices"
+msgstr ""
+
+#: inc/rpt-settings.php:737
+msgid "Show posts with featured image"
+msgstr ""
+
+#: inc/rpt-settings.php:744
+msgid "Only those posts will be shown that has featured image"
+msgstr ""
+
+#: inc/rpt-settings.php:753
+msgid "Show Post's First Image"
+msgstr ""
+
+#: inc/rpt-settings.php:760
+msgid "Display the first image found in the post as related post thumbnail if no featured image is set."
+msgstr ""
+
+#: inc/rpt-settings.php:775
+msgid "Custom field name"
+msgstr ""
+
+#: inc/rpt-settings.php:782
+msgid "ACF/Custom field name for thumbnails that should have image field type."
+msgstr ""
+
+#: inc/rpt-settings.php:790
+msgid "Size"
+msgstr ""
+
+#: inc/rpt-settings.php:797
+msgid "Enter width in pixels"
+msgstr ""
+
+#: inc/rpt-settings.php:808
+msgid "Enter height in pixels"
+msgstr ""
+
+#: inc/rpt-settings.php:825
+msgid "Theme resize url"
+msgstr ""
+
+#: inc/rpt-settings.php:833
+msgid "If your theme resizes images, enter URL to its resizing PHP file"
+msgstr ""
+
+#: inc/rpt-settings.php:848
+msgid "Thumbnail Title Tag"
+msgstr ""
+
+#: inc/rpt-settings.php:854
+msgid "H2 (Default)"
+msgstr ""
+
+#: inc/rpt-settings.php:855
+msgid "H3"
+msgstr ""
+
+#: inc/rpt-settings.php:856
+msgid "H4"
+msgstr ""
+
+#: inc/rpt-settings.php:857
+msgid "H5"
+msgstr ""
+
+#: inc/rpt-settings.php:858
+msgid "H6"
+msgstr ""
+
+#: inc/rpt-settings.php:859
+msgid "Normal"
+msgstr ""
+
+#: inc/rpt-settings.php:860
+msgid "Strong"
+msgstr ""
+
+#: inc/rpt-settings.php:862
+msgid "Select the HTML tag for the thumbnail title."
+msgstr ""
+
+#: inc/rpt-settings.php:868
+msgid "Output style"
+msgstr ""
+
+#: inc/rpt-settings.php:895
+msgid "Turn off plugin styles"
+msgstr ""
+
+#: inc/rpt-settings.php:904
+msgid "Desktop Columns:"
+msgstr ""
+
+#: inc/rpt-settings.php:966
+msgid "Background color"
+msgstr ""
+
+#: inc/rpt-settings.php:976
+msgid "Background color on mouse over"
+msgstr ""
+
+#: inc/rpt-settings.php:986
+msgid "Border color"
+msgstr ""
+
+#: inc/rpt-settings.php:996
+msgid "Font color"
+msgstr ""
+
+#: inc/rpt-settings.php:1005
+msgid "Font family"
+msgstr ""
+
+#: inc/rpt-settings.php:1014
+msgid "Font size"
+msgstr ""
+
+#: inc/rpt-settings.php:1019
+msgid "Enter size in pixels (px) "
+msgstr ""
+
+#: inc/rpt-settings.php:1030
+msgid "Space Between Image and Title"
+msgstr ""
+
+#: inc/rpt-settings.php:1035
+msgid "Set the space between the image and the title box (e.g., 10px, 1em)."
+msgstr ""
+
+#: inc/rpt-settings.php:1041
+msgid "Text maximum length"
+msgstr ""
+
+#: inc/rpt-settings.php:1048
+msgid "Set 0 for no title"
+msgstr ""
+
+#: inc/rpt-settings.php:1059
+msgid "Excerpt maximum length"
+msgstr ""
+
+#: inc/rpt-settings.php:1066
+msgid "Set 0 for no excerpt"
+msgstr ""
+
+#: inc/rpt-settings.php:1077
+msgid "Text block height"
+msgstr ""
+
+#: inc/rpt-settings.php:1096
+msgid "Base relation on:"
+msgstr ""
+
+#: inc/rpt-settings.php:1158
+msgid "Save Settings"
+msgstr ""
+
+#: inc/rpt-settings.php:1166
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/rpt-settings.php:1172
+#: inc/rpt-settings.php:1206
+msgid "Share with your facebook friends about this awesome plugin."
+msgstr ""
+
+#: inc/rpt-settings.php:1176
+msgid "Google Analytics by Analytify"
+msgstr ""
+
+#: inc/rpt-settings.php:1181
+msgid "Simple Social Buttons."
+msgstr ""
+
+#: inc/rpt-settings.php:1188
+msgid "Under Construction & Maintenance mode"
+msgstr ""
+
+#: inc/rpt-settings.php:1196
+msgid "Spread the Word"
+msgstr ""
+
+#: inc/rpt-settings.php:1201
+msgid "Post to Twitter Now"
+msgstr ""
+
+#: inc/rpt-settings.php:1201
+msgid "Share on X"
+msgstr ""
+
+#: inc/rpt-settings.php:1206
+msgid "Share on Facebook"
+msgstr ""
+
+#: inc/rpt-settings.php:1211
+msgid "Rate on WordPress.org."
+msgstr ""
+
+#: inc/rpt-settings.php:1211
+msgid "Rate on WordPress.org"
+msgstr ""
+
+#: inc/rpt-settings.php:1218
+msgid "Subscribe Newsletter"
+msgstr ""
+
+#: inc/rpt-settings.php:1222
+msgid "Email"
+msgstr ""
+
+#: inc/rpt-settings.php:1227
+msgid "Name"
+msgstr ""
+
+#: inc/rpt-settings.php:1231
+msgid "Subscribe Now"
+msgstr ""
+
+#: inc/rpt-settings.php:1235
+msgid "Email Sent"
+msgstr ""
+
+#: inc/rpt-settings.php:1246
+msgid "If you experience some problems with this plugin please let me know about it on <a target=\"_blank\" href=\"https://wpbrigade.com/wordpress/plugins/related-posts/\">Plugin's homepage</a>. If you think this plugin is awesome please vote on <a target=\"_blank\" href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">WordPress plugin page</a>. Thanks!"
+msgstr ""
+
+#: related-posts-thumbnails.php:160
+msgid "Related posts:"
+msgstr ""
+
+#: related-posts-thumbnails.php:294
+msgid " %1$s Opt Out %2$s "
+msgstr ""
+
+#: related-posts-thumbnails.php:299
+msgid " %1$s Opt In %2$s "
+msgstr ""
+
+#: related-posts-thumbnails.php:306
+msgid "Settings"
+msgstr ""
+
+#: related-posts-thumbnails.php:616
+msgid "Leave A Review?"
+msgstr ""
+
+#: related-posts-thumbnails.php:620
+msgid "We hope you've enjoyed using Related Post Thumbnails! Would you consider leaving us a review on WordPress.org?"
+msgstr ""
+
+#: related-posts-thumbnails.php:627
+msgid "Sure! I'd love to!"
+msgstr ""
+
+#: related-posts-thumbnails.php:634
+msgid "I've already left a review"
+msgstr ""
+
+#: related-posts-thumbnails.php:641
+msgid "Maybe Later"
+msgstr ""
+
+#: related-posts-thumbnails.php:648
+msgid "Never show again"
+msgstr ""
+
+#: related-posts-thumbnails.php:1586
+msgid "Related Posts"
+msgstr ""
+
+#: related-posts-thumbnails.php:1652
+#: related-posts-thumbnails.php:1664
+msgid "All"
+msgstr ""
+
+#: related-posts-thumbnails.php:1660
+msgid "Select Categories"
+msgstr ""

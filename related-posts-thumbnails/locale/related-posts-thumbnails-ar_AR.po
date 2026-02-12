@@ -11,17 +11,18 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-02-04T07:23:16+00:00\n"
-"PO-Revision-Date: 2026-02-04 07:28+0000\n"
+"PO-Revision-Date: 2026-02-04 07:37+0000\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: related-posts-thumbnails\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: de-DE\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"Language: ar-AR\n"
 
 #: related-posts-thumbnails.php
 #: related-posts-thumbnails.php:1586
 #. Plugin Name of the plugin
 msgid "Related Posts Thumbnails"
-msgstr "Verwandte Beiträge Thumbnails"
+msgstr "صور مصغرة للمنشورات المتعلقة"
 
 #: related-posts-thumbnails.php
 #. Plugin URI of the plugin
@@ -35,7 +36,7 @@ msgstr ""
 #: related-posts-thumbnails.php
 #. Description of the plugin
 msgid "Showing related posts thumbnails under the posts."
-msgstr "Zeigt Thumbnails verwandter Beiträge unter den Beiträgen an."
+msgstr "عرض صور مصغرة للمنشورات المتعلقة تحت المنشورات."
 
 #: related-posts-thumbnails.php
 #. Author of the plugin
@@ -59,24 +60,22 @@ msgid ""
 "notifications etc. %4$s  %5$sNo Spam, I promise.%6$s %4$s%4$s Help us "
 "%7$sImprove Related Posts Thumbnails%8$s %4$s %4$s "
 msgstr ""
-"%1$s Hey %2$s,  %4$s Wenn Sie zustimmen, werden einige Daten über Ihre "
-"Installation von Verwandte Beiträge Thumbnails an WPBrigade.com gesendet "
-"(dies umfasst keine Statistiken) und Sie erhalten neue Funktionsupdates, "
-"Sicherheitsbenachrichtigungen usw. %4$s  %5$sKein Spam, das verspreche "
-"ich.%6$s %4$s%4$s Helfen Sie uns %7$sVerwandte Beiträge Thumbnails zu "
-"verbessern%8$s %4$s %4$s "
+"%1$s مرحباً %2$s، %4$s إذا اخترت، سيتم إرسال بعض البيانات حول تثبيتك لصور "
+"المنشورات المتعلقة إلى WPBrigade.com (هذا لا يتضمن الإحصائيات) وستتلقى "
+"تحديثات الميزات الجديدة، وإشعارات الأمان، إلخ. %4$s %5$sلا بريد عشوائي، "
+"أعدك.%6$s %4$s%4$s ساعدنا %7$sتحسين صور المنشورات المتعلقة%8$s %4$s %4$s "
 
 #: inc/rpt-optin-form.php:446
 msgid "Allow and Continue "
-msgstr "Erlauben und Fortfahren "
+msgstr "السماح والمتابعة"
 
 #: inc/rpt-optin-form.php:447
 msgid "Skip This Step"
-msgstr "Diesen Schritt überspringen"
+msgstr "تخطي هذه الخطوة"
 
 #: inc/rpt-optin-form.php:450
 msgid "Your Website Overview"
-msgstr "Ihre Website-Übersicht"
+msgstr "نظرة عامة على موقعك"
 
 #: inc/rpt-optin-form.php:451
 msgid ""
@@ -84,29 +83,28 @@ msgid ""
 "make sure this plugin always stays compatible with the most popular plugins "
 "and themes."
 msgstr ""
-"Ihre Site-URL, WordPress- und PHP-Version, Plugins und Themes. Diese Daten "
-"helfen uns sicherzustellen, dass dieses Plugin immer mit den beliebtesten "
-"Plugins und Themes kompatibel bleibt."
+"رابط موقعك، نسخة ووردبريس و PHP، الإضافات و القوالب. هذه البيانات تتيح لنا "
+"التأكد من أن هذه الإضافة تظل دائماً متوافقة مع أشهر الإضافات والقوالب."
 
 #: inc/rpt-optin-form.php:453
 msgid "Your Profile Overview"
-msgstr "Ihre Profilübersicht"
+msgstr "نظرة عامة على ملفك الشخصي"
 
 #: inc/rpt-optin-form.php:454
 msgid "Your name and email address."
-msgstr "Ihr Name und Ihre E-Mail-Adresse."
+msgstr "اسمك وعنوان بريدك الإلكتروني."
 
 #: inc/rpt-optin-form.php:456
 msgid "Admin Notices"
-msgstr "Admin-Benachrichtigungen"
+msgstr "إشعارات المسؤول"
 
 #: inc/rpt-optin-form.php:457
 msgid "Updates, Announcement, Marketing. No Spam, I promise."
-msgstr "Updates, Ankündigungen, Marketing. Kein Spam, das verspreche ich."
+msgstr "التحديثات، الإعلانات، التسويق. لا بريد مزعج، أعدك."
 
 #: inc/rpt-optin-form.php:459
 msgid "Plugin Actions"
-msgstr "Plugin-Aktionen"
+msgstr "إجراءات الإضافات"
 
 #: inc/rpt-optin-form.php:460
 msgid ""
@@ -115,92 +113,91 @@ msgid ""
 "sensitive rpt data, such as traffic. This data helps us learn which "
 "features are most popular, so we can improve the plugin further."
 msgstr ""
-"Aktiv, Deaktivieren, Deinstallation und wie Sie die Funktionen und "
-"Einstellungen dieses Plugins nutzen. Dies beschränkt sich auf "
-"Nutzungsdaten. Es enthält keine Ihrer sensiblen rpt-Daten, wie z.B. "
-"Verkehr. Diese Daten helfen uns zu erfahren, welche Funktionen am "
-"beliebtesten sind, damit wir das Plugin weiter verbessern können."
+"نشط، غير نشط، إلغاء التثبيت وكيفية استخدام ميزات وإعدادات هذه الإضافة. "
+"تقتصر هذه البيانات على بيانات الاستخدام. لا تتضمن أي من بياناتك الحساسة مثل "
+"حركة المرور. تساعدنا هذه البيانات على معرفة الميزات الأكثر شعبية، حتى نتمكن "
+"من تحسين الإضافة أكثر."
 
 #: inc/rpt-settings.php:10
 msgid "No access"
-msgstr "Kein Zugriff"
+msgstr "لا يوجد وصول"
 
 #: inc/rpt-settings.php:244
 msgid "Settings updated"
-msgstr "Einstellungen aktualisiert"
+msgstr "تم تحديث الإعدادات"
 
 #: inc/rpt-settings.php:246
 msgid "Settings update failed"
-msgstr "Einstellungsaktualisierung fehlgeschlagen"
+msgstr "فشل تحديث الإعدادات"
 
 #: inc/rpt-settings.php:310
 msgid "Blocks"
-msgstr "Blöcke"
+msgstr "الكتل"
 
 #: inc/rpt-settings.php:311
 msgid "List"
-msgstr "Liste"
+msgstr "قائمة"
 
 #: inc/rpt-settings.php:326
 msgid "Categories"
-msgstr "Kategorien"
+msgstr "فئات"
 
 #: inc/rpt-settings.php:327
 msgid "Tags"
-msgstr "Tags"
+msgstr "علامات"
 
 #: inc/rpt-settings.php:328
 msgid "Categories and Tags"
-msgstr "Kategorien und Tags"
+msgstr "الفئات والعلامات"
 
 #: inc/rpt-settings.php:329
 #: inc/rpt-settings.php:585
 msgid "Random"
-msgstr "Zufällig"
+msgstr "عشوائي"
 
 #: inc/rpt-settings.php:330
 msgid "Custom"
-msgstr "Benutzerdefiniert"
+msgstr "مخصص"
 
 #: inc/rpt-settings.php:342
 msgid "(This option is available for WP v3+ only)"
-msgstr "(Diese Option ist nur für WP v3+ verfügbar)"
+msgstr "(هذا الخيار متاح فقط لإصدار WP v3+)"
 
 #: inc/rpt-settings.php:352
 msgid "Related Post Thumbnails"
-msgstr "Verwandte Beitragsminiaturen"
+msgstr "صور مصغرة للمنشورات ذات الصلة"
 
 #: inc/rpt-settings.php:356
 msgid "Support"
-msgstr "Unterstützung"
+msgstr "الدعم"
 
 #: inc/rpt-settings.php:360
 msgid "Related Posts Thumbnails Settings"
-msgstr "Einstellungen für verwandte Beitragsminiaturen"
+msgstr "إعدادات صور المنشورات ذات الصلة"
 
 #: inc/rpt-settings.php:361
 msgid "Menu"
-msgstr "Menü"
+msgstr "القائمة"
 
 #: inc/rpt-settings.php:365
 msgid "General"
-msgstr "Allgemein"
+msgstr "عام"
 
 #: inc/rpt-settings.php:370
 msgid "Thumbnails"
-msgstr "Miniaturansichten"
+msgstr "صور مصغرة"
 
 #: inc/rpt-settings.php:375
 msgid "Styles"
-msgstr "Stile"
+msgstr "أنماط"
 
 #: inc/rpt-settings.php:380
 msgid "Relation Builders"
-msgstr "Beziehungsbuilder"
+msgstr "بناة العلاقات"
 
 #: inc/rpt-settings.php:403
 msgid "Automatically Add to Post"
-msgstr "Automatisch zum Beitrag hinzufügen"
+msgstr "إضافة تلقائياً إلى المنشور"
 
 #: inc/rpt-settings.php:416
 msgid ""
@@ -208,86 +205,85 @@ msgid ""
 "end of your post. Alternatively, you can use a snippet of code in the "
 "loop.%3$s %1$s OR %2$s"
 msgstr ""
-"Aktivieren Sie diese Option, um automatisch verwandte "
-"Beitragsminiaturansichten am Ende Ihres Beitrags einzufügen. Alternativ "
-"können Sie einen Code-Schnipsel in der Schleife verwenden.%3$s %1$s ODER "
+"حدد هذا الخيار لتضمين الصور المصغرة للمنشورات ذات الصلة تلقائياً في نهاية "
+"منشورك. بدلاً من ذلك، يمكنك استخدام مقتطف من الشيفرة في الحلقة.%3$s %1$s أو "
 "%2$s"
 
 #: inc/rpt-settings.php:425
 msgid "Developer mode"
-msgstr "Entwicklermodus"
+msgstr "وضع المطور"
 
 #: inc/rpt-settings.php:438
 msgid "This will add debugging information in HTML source"
-msgstr "Dies wird Debugging-Informationen im HTML-Quellcode hinzufügen"
+msgstr "سيضيف هذا معلومات تصحيح الأخطاء في مصدر HTML"
 
 #: inc/rpt-settings.php:447
 msgid "Display related posts"
-msgstr "Verwandte Beiträge anzeigen"
+msgstr "عرض المنشورات ذات الصلة"
 
 #: inc/rpt-settings.php:458
 msgid "On single posts only"
-msgstr "Nur auf einzelnen Beiträgen"
+msgstr "على المشاركات الفردية فقط"
 
 #: inc/rpt-settings.php:466
 msgid "Post types"
-msgstr "Beitragsarten"
+msgstr "أنواع المشاركات"
 
 #: inc/rpt-settings.php:482
 msgid ""
 "Choose the types of content (like regular posts, pages, or attachments) for "
 "which you want to show related posts."
 msgstr ""
-"Wählen Sie die Arten von Inhalten (wie reguläre Beiträge, Seiten oder "
-"Anhänge) aus, für die Sie verwandte Beiträge anzeigen möchten."
+"اختر أنواع المحتوى (مثل المشاركات العادية، الصفحات، أو المرفقات) التي تريد "
+"عرض المشاركات ذات الصلة لها."
 
 #: inc/rpt-settings.php:492
 msgid "Display on Categories"
-msgstr "Auf Kategorien anzeigen"
+msgstr "عرض على الفئات"
 
 #: inc/rpt-settings.php:505
 msgid "Categories will appear in related posts"
-msgstr "Kategorien werden in verwandten Beiträgen angezeigt"
+msgstr "ستظهر الفئات في المشاركات ذات الصلة"
 
 #: inc/rpt-settings.php:518
 msgid "Show Categories"
-msgstr "Kategorien anzeigen"
+msgstr "عرض الفئات"
 
 #: inc/rpt-settings.php:529
 msgid "Show Categories On Frontend"
-msgstr "Kategorien im Frontend anzeigen"
+msgstr "عرض الفئات على الواجهة الأمامية"
 
 #: inc/rpt-settings.php:536
 msgid "Disable on Mobile Devices"
-msgstr "Auf mobilen Geräten deaktivieren"
+msgstr "تعطيل على الأجهزة المحمولة"
 
 #: inc/rpt-settings.php:548
 msgid "Hide on mobile devices"
-msgstr "Auf mobilen Geräten ausblenden"
+msgstr "إخفاء على الأجهزة المحمولة"
 
 #: inc/rpt-settings.php:556
 msgid "Include posts after"
-msgstr "Beiträge nach einschließen"
+msgstr "تضمين المشاركات بعد"
 
 #: inc/rpt-settings.php:564
 msgid "Leave empty for all posts dates"
-msgstr "Für alle Beitragsdaten leer lassen"
+msgstr "اتركه فارغًا لتواريخ جميع المشاركات"
 
 #: inc/rpt-settings.php:573
 msgid "Sort by"
-msgstr "Sortieren nach"
+msgstr "ترتيب بواسطة"
 
 #: inc/rpt-settings.php:593
 msgid "Latest posts"
-msgstr "Neueste Beiträge"
+msgstr "أحدث المشاركات"
 
 #: inc/rpt-settings.php:601
 msgid "Top text"
-msgstr "Obenstehender Text"
+msgstr "نص أعلى"
 
 #: inc/rpt-settings.php:611
 msgid "Number of posts to display"
-msgstr "Anzahl der anzuzeigenden Beiträge"
+msgstr "عدد المشاركات المعروضة"
 
 #: inc/rpt-settings.php:617
 #: inc/rpt-settings.php:817
@@ -296,103 +292,101 @@ msgstr "Anzahl der anzuzeigenden Beiträge"
 #: inc/rpt-settings.php:1070
 #: inc/rpt-settings.php:1084
 msgid "Only Digits are allowed"
-msgstr "Nur Ziffern sind erlaubt"
+msgstr "يُسمح فقط بالأرقام"
 
 #: inc/rpt-settings.php:625
 msgid "Default image"
-msgstr "Standardbild"
+msgstr "صورة افتراضية"
 
 #: inc/rpt-settings.php:632
 msgid "Set Image"
-msgstr "Bild festlegen"
+msgstr "تعيين صورة"
 
 #: inc/rpt-settings.php:635
 msgid "Default Image"
-msgstr "Standardbild"
+msgstr "صورة افتراضية"
 
 #: inc/rpt-settings.php:644
 msgid "Show date"
-msgstr "Datum anzeigen"
+msgstr "عرض التاريخ"
 
 #: inc/rpt-settings.php:651
 msgid "Show date on Related Post Thumbnails"
-msgstr "Datum auf den Miniaturansichten verwandter Beiträge anzeigen"
+msgstr "عرض التاريخ على صور المشاركات ذات الصلة"
 
 #: inc/rpt-settings.php:667
 msgid "Date format"
-msgstr "Datumsformat"
+msgstr "تنسيق التاريخ"
 
 #: inc/rpt-settings.php:690
 msgid "Select thumbnails source"
-msgstr "Miniaturansichtsquelle auswählen"
+msgstr "اختر مصدر الصور المصغرة"
 
 #: inc/rpt-settings.php:715
 msgid "Related posts thumbnail size"
-msgstr "Größe der Miniaturansichten verwandter Beiträge"
+msgstr "حجم صور المشاركات ذات الصلة"
 
 #: inc/rpt-settings.php:729
 msgid "Your theme has to support post-thumbnails to have more choices"
-msgstr "Ihr Theme muss Beitragsminiaturen unterstützen, um mehr Optionen zu haben"
+msgstr "يجب أن يدعم القالب الخاص بك صور المشاركات المصغرة للحصول على خيارات أكثر"
 
 #: inc/rpt-settings.php:737
 msgid "Show posts with featured image"
-msgstr "Beiträge mit hervorgehobenem Bild anzeigen"
+msgstr "عرض المشاركات بصورة مميزة"
 
 #: inc/rpt-settings.php:744
 msgid "Only those posts will be shown that has featured image"
-msgstr "Es werden nur die Beiträge angezeigt, die ein hervorgehobenes Bild haben"
+msgstr "سيتم عرض فقط تلك المشاركات التي تحتوي على صورة مميزة"
 
 #: inc/rpt-settings.php:753
 msgid "Show Post's First Image"
-msgstr "Erstes Bild des Beitrags anzeigen"
+msgstr "عرض الصورة الأولى للمشاركة"
 
 #: inc/rpt-settings.php:760
 msgid ""
 "Display the first image found in the post as related post thumbnail if no "
 "featured image is set."
 msgstr ""
-"Das erste im Beitrag gefundene Bild als Miniaturansicht verwandter Beiträge "
-"anzeigen, wenn kein hervorgehobenem Bild festgelegt ist."
+"عرض الصورة الأولى الموجودة في المشاركة كصورة مصغرة للمشاركة ذات الصلة إذا "
+"لم يتم تعيين صورة مميزة."
 
 #: inc/rpt-settings.php:775
 msgid "Custom field name"
-msgstr "Name des benutzerdefinierten Feldes"
+msgstr "اسم الحقل المخصص"
 
 #: inc/rpt-settings.php:782
 msgid "ACF/Custom field name for thumbnails that should have image field type."
-msgstr ""
-"ACF/Benutzerdefinierter Feldname für Miniaturansichten, die den Bildfeldtyp "
-"haben sollten."
+msgstr "اسم حقل ACF / مخصص للصور المصغرة التي يجب أن تحتوي على نوع حقل الصورة."
 
 #: inc/rpt-settings.php:790
 msgid "Size"
-msgstr "Größe"
+msgstr "الحجم"
 
 #: inc/rpt-settings.php:797
 msgid "Enter width in pixels"
-msgstr "Geben Sie die Breite in Pixeln ein"
+msgstr "أدخل العرض بالبكسل"
 
 #: inc/rpt-settings.php:808
 msgid "Enter height in pixels"
-msgstr "Geben Sie die Höhe in Pixeln ein"
+msgstr "أدخل الارتفاع بالبكسل"
 
 #: inc/rpt-settings.php:825
 msgid "Theme resize url"
-msgstr "Themen-Resize-URL"
+msgstr "رابط إعادة تغيير حجم القالب"
 
 #: inc/rpt-settings.php:833
 msgid "If your theme resizes images, enter URL to its resizing PHP file"
 msgstr ""
-"Wenn Ihr Theme Bilder neu skaliert, geben Sie die URL zu seiner PHP-Datei "
-"für das Resizing ein"
+"إذا كان القالب الخاص بك يعيد تغيير حجم الصور، أدخل رابط ملف PHP الخاص "
+"بإعادة تغيير الحجم"
 
 #: inc/rpt-settings.php:848
 msgid "Thumbnail Title Tag"
-msgstr "Miniaturansicht Titel-Tag"
+msgstr "علامة عنوان الصورة المصغرة"
 
 #: inc/rpt-settings.php:854
 msgid "H2 (Default)"
-msgstr "H2 (Standard)"
+msgstr "H2 (افتراضي)"
 
 #: inc/rpt-settings.php:855
 msgid "H3"
@@ -412,158 +406,156 @@ msgstr "H6"
 
 #: inc/rpt-settings.php:859
 msgid "Normal"
-msgstr "Normal"
+msgstr "عادي"
 
 #: inc/rpt-settings.php:860
 msgid "Strong"
-msgstr "Fett"
+msgstr "قوي"
 
 #: inc/rpt-settings.php:862
 msgid "Select the HTML tag for the thumbnail title."
-msgstr "Wählen Sie das HTML-Tag für den Titel der Miniaturansicht."
+msgstr "حدد علامة HTML لعنوان الصورة المصغرة."
 
 #: inc/rpt-settings.php:868
 msgid "Output style"
-msgstr "Ausgabestil"
+msgstr "نمط الإخراج"
 
 #: inc/rpt-settings.php:895
 msgid "Turn off plugin styles"
-msgstr "Plugin-Stile deaktivieren"
+msgstr "إيقاف أنماط الإضافات"
 
 #: inc/rpt-settings.php:904
 msgid "Desktop Columns:"
-msgstr "Desktop-Spalten:"
+msgstr "أعمدة سطح المكتب:"
 
 #: inc/rpt-settings.php:966
 msgid "Background color"
-msgstr "Hintergrundfarbe"
+msgstr "لون الخلفية"
 
 #: inc/rpt-settings.php:976
 msgid "Background color on mouse over"
-msgstr "Hintergrundfarbe bei Mouseover"
+msgstr "لون الخلفية عند مرور الماوس"
 
 #: inc/rpt-settings.php:986
 msgid "Border color"
-msgstr "Rahmenfarbe"
+msgstr "لون الحدود"
 
 #: inc/rpt-settings.php:996
 msgid "Font color"
-msgstr "Schriftfarbe"
+msgstr "لون الخط"
 
 #: inc/rpt-settings.php:1005
 msgid "Font family"
-msgstr "Schriftfamilie"
+msgstr "عائلة الخط"
 
 #: inc/rpt-settings.php:1014
 msgid "Font size"
-msgstr "Schriftgröße"
+msgstr "حجم الخط"
 
 #: inc/rpt-settings.php:1019
 msgid "Enter size in pixels (px) "
-msgstr "Größe in Pixel (px) eingeben "
+msgstr "أدخل الحجم بالبكسل (px) "
 
 #: inc/rpt-settings.php:1030
 msgid "Space Between Image and Title"
-msgstr "Abstand zwischen Bild und Titel"
+msgstr "المسافة بين الصورة والعنوان"
 
 #: inc/rpt-settings.php:1035
 msgid "Set the space between the image and the title box (e.g., 10px, 1em)."
-msgstr ""
-"Legen Sie den Abstand zwischen dem Bild und dem Titelkästchen fest (z. B. "
-"10px, 1em)."
+msgstr "حدد المسافة بين الصورة وصندوق العنوان (مثل، 10px، 1em)."
 
 #: inc/rpt-settings.php:1041
 msgid "Text maximum length"
-msgstr "Maximale Textlänge"
+msgstr "الحد الأقصى لطول النص"
 
 #: inc/rpt-settings.php:1048
 msgid "Set 0 for no title"
-msgstr "Setze 0 für keinen Titel"
+msgstr "حدد 0 لعدم وجود عنوان"
 
 #: inc/rpt-settings.php:1059
 msgid "Excerpt maximum length"
-msgstr "Maximale Auszugslänge"
+msgstr "الحد الأقصى لطول الاقتباس"
 
 #: inc/rpt-settings.php:1066
 msgid "Set 0 for no excerpt"
-msgstr "Setzen Sie 0 für keinen Auszug"
+msgstr "قم بتعيين 0 لعدم وجود مقتطف"
 
 #: inc/rpt-settings.php:1077
 msgid "Text block height"
-msgstr "Höhe des Textblocks"
+msgstr "ارتفاع كتلة النص"
 
 #: inc/rpt-settings.php:1096
 msgid "Base relation on:"
-msgstr "Basisrelation auf:"
+msgstr "علاقة أساسية على:"
 
 #: inc/rpt-settings.php:1158
 msgid "Save Settings"
-msgstr "Einstellungen speichern"
+msgstr "حفظ الإعدادات"
 
 #: inc/rpt-settings.php:1166
 msgid "Recommended Plugins"
-msgstr "Empfohlene Plugins"
+msgstr "الإضافات الموصى بها"
 
 #: inc/rpt-settings.php:1172
 #: inc/rpt-settings.php:1206
 msgid "Share with your facebook friends about this awesome plugin."
-msgstr "Teilen Sie mit Ihren Facebook-Freunden über dieses großartige Plugin."
+msgstr "شارك مع أصدقائك على فيسبوك حول هذه الإضافة الرائعة."
 
 #: inc/rpt-settings.php:1176
 msgid "Google Analytics by Analytify"
-msgstr "Google Analytics von Analytify"
+msgstr "تحليلات جوجل بواسطة Analytify"
 
 #: inc/rpt-settings.php:1181
 msgid "Simple Social Buttons."
-msgstr "Einfache soziale Schaltflächen."
+msgstr "أزرار اجتماعية بسيطة."
 
 #: inc/rpt-settings.php:1188
 msgid "Under Construction & Maintenance mode"
-msgstr "In Bearbeitung & Wartungsmodus"
+msgstr "تحت الإنشاء & وضع الصيانة"
 
 #: inc/rpt-settings.php:1196
 msgid "Spread the Word"
-msgstr "Verbreiten Sie das Wort"
+msgstr "انشر الكلمة"
 
 #: inc/rpt-settings.php:1201
 msgid "Post to Twitter Now"
-msgstr "Jetzt auf Twitter posten"
+msgstr "انشر على تويتر الآن"
 
 #: inc/rpt-settings.php:1201
 msgid "Share on X"
-msgstr "Auf X teilen"
+msgstr "شارك على إكس"
 
 #: inc/rpt-settings.php:1206
 msgid "Share on Facebook"
-msgstr "Auf Facebook teilen"
+msgstr "شارك على فيسبوك"
 
 #: inc/rpt-settings.php:1211
 msgid "Rate on WordPress.org."
-msgstr "Bewerten auf WordPress.org."
+msgstr "قيم على WordPress.org."
 
 #: inc/rpt-settings.php:1211
 msgid "Rate on WordPress.org"
-msgstr "Bewerten auf WordPress.org"
+msgstr "قيم على WordPress.org"
 
 #: inc/rpt-settings.php:1218
 msgid "Subscribe Newsletter"
-msgstr "Newsletter abonnieren"
+msgstr "اشترك في النشرة الإخبارية"
 
 #: inc/rpt-settings.php:1222
 msgid "Email"
-msgstr "E-Mail"
+msgstr "البريد الإلكتروني"
 
 #: inc/rpt-settings.php:1227
 msgid "Name"
-msgstr "Name"
+msgstr "الاسم"
 
 #: inc/rpt-settings.php:1231
 msgid "Subscribe Now"
-msgstr "Jetzt abonnieren"
+msgstr "اشترك الآن"
 
 #: inc/rpt-settings.php:1235
 msgid "Email Sent"
-msgstr "E-Mail gesendet"
+msgstr "تم إرسال البريد الإلكتروني"
 
 #: inc/rpt-settings.php:1246
 msgid ""
@@ -575,68 +567,67 @@ msgid ""
 "href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">WordPress "
 "plugin page</a>. Thanks!"
 msgstr ""
-"Wenn Sie Probleme mit diesem Plugin haben, lassen Sie es mich bitte auf <a "
+"إذا واجهت بعض المشاكل مع هذه الإضافة، يرجى إخباري بذلك على <a "
 "target=\"_blank\" "
-"href=\"https://wpbrigade.com/wordpress/plugins/related-posts/\">der "
-"Homepage des Plugins</a> wissen. Wenn Sie denken, dass dieses Plugin "
-"großartig ist, stimmen Sie bitte auf <a target=\"_blank\" "
-"href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">der "
-"WordPress-Plugin-Seite</a> ab. Danke!"
+"href=\"https://wpbrigade.com/wordpress/plugins/related-posts/\">الصفحة "
+"الرئيسية للإضافة</a>. إذا كنت تعتقد أن هذه الإضافة رائعة، يرجى التصويت على "
+"<a target=\"_blank\" "
+"href=\"https://wordpress.org/plugins/related-posts-thumbnails/\">صفحة "
+"الإضافة على ووردبريس</a>. شكراً!"
 
 #: related-posts-thumbnails.php:160
 msgid "Related posts:"
-msgstr "Verwandte Beiträge:"
+msgstr "المشاركات ذات الصلة:"
 
 #: related-posts-thumbnails.php:294
 msgid " %1$s Opt Out %2$s "
-msgstr " %1$s Abmelden %2$s "
+msgstr " %1$s إلغاء الاشتراك %2$s "
 
 #: related-posts-thumbnails.php:299
 msgid " %1$s Opt In %2$s "
-msgstr " %1$s Anmelden %2$s "
+msgstr " %1$s الاشتراك %2$s "
 
 #: related-posts-thumbnails.php:306
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "الإعدادات"
 
 #: related-posts-thumbnails.php:616
 msgid "Leave A Review?"
-msgstr "Eine Bewertung hinterlassen?"
+msgstr "هل ترغب في ترك مراجعة؟"
 
 #: related-posts-thumbnails.php:620
 msgid ""
 "We hope you've enjoyed using Related Post Thumbnails! Would you consider "
 "leaving us a review on WordPress.org?"
 msgstr ""
-"Wir hoffen, dass Sie die Verwendung von Verwandten Beitragsminiaturen "
-"genossen haben! Würden Sie in Betracht ziehen, uns eine Bewertung auf "
-"WordPress.org zu hinterlassen?"
+"نأمل أن تكون قد استمتعت باستخدام صور المصغرات للمشاركات ذات الصلة! هل ستفكر "
+"في ترك مراجعة لنا على WordPress.org؟"
 
 #: related-posts-thumbnails.php:627
 msgid "Sure! I'd love to!"
-msgstr "Klar! Das würde ich gerne tun!"
+msgstr "بالطبع! سأكون سعيداً بذلك!"
 
 #: related-posts-thumbnails.php:634
 msgid "I've already left a review"
-msgstr "Ich habe bereits eine Bewertung hinterlassen"
+msgstr "لقد تركت مراجعة بالفعل"
 
 #: related-posts-thumbnails.php:641
 msgid "Maybe Later"
-msgstr "Vielleicht später"
+msgstr "ربما لاحقاً"
 
 #: related-posts-thumbnails.php:648
 msgid "Never show again"
-msgstr "Nie wieder anzeigen"
+msgstr "لا تُظهر مرة أخرى"
 
 #: related-posts-thumbnails.php:1586
 msgid "Related Posts"
-msgstr "Verwandte Beiträge"
+msgstr "المشاركات ذات الصلة"
 
 #: related-posts-thumbnails.php:1652
 #: related-posts-thumbnails.php:1664
 msgid "All"
-msgstr "Alle"
+msgstr "الكل"
 
 #: related-posts-thumbnails.php:1660
 msgid "Select Categories"
-msgstr "Kategorien auswählen"
+msgstr "اختر الفئات"
