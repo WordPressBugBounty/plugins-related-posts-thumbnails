@@ -3,14 +3,14 @@
  * Plugin Name:  Related Posts Thumbnails
  * Plugin URI:   https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp
  * Description:  Showing related posts thumbnails under the posts.
- * Version:      4.3.2
+ * Version:      4.3.3
  * Author:       WPBrigade
  * Author URI:   https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&utm_campaign=pro-upgrade-rp
  * GitHub Plugin URI: https://github.com/WPBrigade/related-posts-thumbnails
  */
 
 /*
-Copyright 2010 - 2025 WPBrigade.com
+Copyright 2010 - 2026 WPBrigade.com
 
 This product was first developed by Maria I Shaldybina and later on maintained and developed by Adnan (WPBrigade.com)
 
@@ -448,7 +448,7 @@ class RelatedPostsThumbnails
      */
     function constant()
     {
-        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.3.2');
+        define('RELATED_POSTS_THUMBNAILS_VERSION', '4.3.3');
         define('RELATED_POSTS_THUMBNAILS_FEEDBACK_SERVER', 'https://wpbrigade.com/');
         define('RELATED_POSTS_THUMBNAILS_PLUGIN_DIR', plugin_dir_path(__FILE__));
     }

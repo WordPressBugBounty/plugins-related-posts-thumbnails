@@ -5,7 +5,7 @@ Author URI: https://loginpress.pro/?utm_source=related-posts-lite&utm_medium=aut
 Tags: easy related posts, Related Posts thumbnails, Free Related Posts, related posts, similar related posts
 Requires at least: 3.6
 Tested up to: 6.9
-Stable tag: 4.3.2
+Stable tag: 4.3.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -72,10 +72,13 @@ If there are no images of the specified size in the post, or file does not exist
 
 == Upgrade Notice ==
 
-= 4.3.2 =
+= 4.3.3 =
 * Upgrade immediately.
 
 == Changelog ==
+
+= 4.3.3 - 2026-03-17 =
+* Security Fix: Added nonce verification and capability checks to prevent CSRF attacks.
 
 = 4.3.2 - 2026-02-12 =
 * Security Fix: Fixed CSRF vulnerability in settings form by verifying nonce first.
