@@ -1,5 +1,7 @@
 <?php
 
+$rpt_show_default_image_url_notice = false;
+
 // Admin interface
 if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
     // Verify nonce FIRST to prevent CSRF attacks - this must be the first check
@@ -10,8 +12,29 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
         wp_die( __( 'No access', 'related-posts-thumbnails' ) );
     }
     $validation = true;
+    $error      = '';
 
     $set_date = isset( $_POST[ 'rpt_post_include' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'rpt_post_include' ] ) ) : '';
+    $old_query_settings = rpt_get_query_affecting_settings();
+
+    $submitted_image_type = isset( $_POST['relpoststh_default_image_type'] )
+        ? sanitize_text_field( wp_unslash( $_POST['relpoststh_default_image_type'] ) )
+        : 'image';
+
+    if ( ! in_array( $submitted_image_type, array( 'image', 'url' ), true ) ) {
+        $submitted_image_type = 'image';
+    }
+
+    if ( 'url' === $submitted_image_type && isset( $_POST['relpoststh_default_image_url'] ) ) {
+        $raw_image_url       = trim( wp_unslash( $_POST['relpoststh_default_image_url'] ) );
+        $submitted_image_url = esc_url_raw( $raw_image_url );
+
+        if ( '' !== $raw_image_url && ! rpt_is_valid_remote_image_url( $raw_image_url ) ) {
+            $validation                         = false;
+            $error                              = __( 'Please enter a valid image URL (for example .jpg, .png, .gif, or .webp).', 'related-posts-thumbnails' );
+            $rpt_show_default_image_url_notice  = true;
+        }
+    }
 
     if ( $validation ) {
 
@@ -51,7 +74,7 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
 		 * Show Related Post Categories settings.
 		 *
 		 * @since 2.2.0
-		 * @version 4.3.0
+		 * @version 5.0.0
 		 */
 		if ( isset( $_POST[ 'relpoststh_show_taxonomy' ] ) ) {
 			update_option( 'relpoststh_show_taxonomy', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_show_taxonomy' ] ) ) );
@@ -97,10 +120,19 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
             update_option( 'relpoststh_cleanhtml', '0' );
         }
 
-        if ( isset( $_POST[ 'relpoststh_auto' ] ) ) {
-            update_option( 'relpoststh_auto', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_auto' ] ) ) );
-        } else {
+        $author_related_enabled = $this->rpt_has_multiple_publishers() && isset( $_POST['relpoststh_author_related'] );
+
+        if ( $author_related_enabled ) {
+            update_option( 'relpoststh_author_related', '1' );
             update_option( 'relpoststh_auto', '0' );
+        } else {
+            update_option( 'relpoststh_author_related', '0' );
+
+            if ( isset( $_POST['relpoststh_auto'] ) ) {
+                update_option( 'relpoststh_auto', sanitize_text_field( wp_unslash( $_POST['relpoststh_auto'] ) ) );
+            } else {
+                update_option( 'relpoststh_auto', '0' );
+            }
         }
 
         if ( isset( $_POST[ 'relpoststh_top_text' ] ) ) {
@@ -116,8 +148,22 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
             update_option( 'relpoststh_relation', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_relation' ] ) ) );
         }
 
+        if ( isset( $_POST[ 'relpoststh_default_image_type' ] ) ) {
+            $default_image_type = sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_default_image_type' ] ) );
+
+            if ( ! in_array( $default_image_type, array( 'image', 'url' ), true ) ) {
+                $default_image_type = 'image';
+            }
+
+            update_option( 'relpoststh_default_image_type', $default_image_type );
+        }
+
         if ( isset( $_POST[ 'relpoststh_default_image' ] ) ) {
             update_option( 'relpoststh_default_image', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_default_image' ] ) ) );
+        }
+
+        if ( isset( $_POST[ 'relpoststh_default_image_url' ] ) ) {
+            update_option( 'relpoststh_default_image_url', esc_url_raw( wp_unslash( $_POST[ 'relpoststh_default_image_url' ] ) ) );
         }
 
         if ( isset( $_POST[ 'relpoststh_poststhname' ] ) ) {
@@ -219,6 +265,12 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
             update_option( 'relpoststh_devmode', '0' );
         }
 
+        if ( isset( $_POST['relpoststh_cache_enabled'] ) ) {
+            update_option( 'relpoststh_cache_enabled', '1' );
+        } else {
+            update_option( 'relpoststh_cache_enabled', '0' );
+        }
+
 		// Added for custom title tag. Added in 4.3.0.
         if ( isset( $_POST[ 'relpoststh_title_tag' ] ) ) {
             update_option( 'relpoststh_title_tag', sanitize_text_field( wp_unslash( $_POST[ 'relpoststh_title_tag' ] ) ) );
@@ -241,9 +293,13 @@ if ( isset( $_POST[ 'action' ] ) && ( $_POST[ 'action' ] == 'update' ) ) {
             update_option( 'relpoststh_custom_taxonomies', array ());
         }
 
+        if ( rpt_query_settings_changed( $old_query_settings, rpt_get_query_affecting_settings() ) ) {
+            rpt_purge_all_related_cache();
+        }
+
         echo "<div class='updated fade'><p>" . __( 'Settings updated', 'related-posts-thumbnails' ) . '</p></div>';
-    } else {
-        echo "<div class='error fade'><p>" . __( 'Settings update failed', 'related-posts-thumbnails' ) . '. ' . $error . '</p></div>';
+    } elseif ( ! $rpt_show_default_image_url_notice && ! empty( $error ) ) {
+        echo "<div class='error fade'><p>" . esc_html__( 'Settings update failed', 'related-posts-thumbnails' ) . '. ' . esc_html( $error ) . '</p></div>';
     }
 }
 $available_sizes = array(
@@ -256,7 +312,7 @@ $available_sizes = array(
  * To add WordPress standard size which is original image resolution (unmodified).
  *
  * @since 1.9.0
- * @version 4.3.0
+ * @version 5.0.0
  *
  * @param array '$available_sizes' Associative array of post thumbnail sizes.
  */
@@ -282,6 +338,8 @@ $relpoststh_cleanhtml          = get_option( 'relpoststh_cleanhtml', 0 );
 $relpoststh_relation           = get_option( 'relpoststh_relation', $this->relation );
 $relpoststh_thsource           = get_option( 'relpoststh_thsource', $this->thsource );
 $relpoststh_devmode            = get_option( 'relpoststh_devmode', $this->devmode );
+$relpoststh_cache_enabled      = get_option( 'relpoststh_cache_enabled', '1' );
+$relpoststh_author_related     = get_option( 'relpoststh_author_related', $this->author_related );
 $relpoststh_categoriesall      = get_option( 'relpoststh_categoriesall', $this->categories_all );
 $relpoststh_categories         = get_option( 'relpoststh_categories' );
 // $relpoststh_show_date          = get_option( 'relpoststh_show_date', '0' );
@@ -295,6 +353,27 @@ $relpoststh_show_date          = get_option( 'relpoststh_show_date', false );
 $relpoststh_date_format        = get_option( 'relpoststh_date_format', false );
 $relpoststh_startdate          = explode( '-', get_option( 'relpoststh_startdate' ) );
 $relpoststh_output_style       = get_option( 'relpoststh_output_style', 'block' );
+$relpoststh_default_image_type = get_option( 'relpoststh_default_image_type', $this->default_image_type );
+$relpoststh_default_image_url  = get_option( 'relpoststh_default_image_url', '' );
+
+if ( $rpt_show_default_image_url_notice ) {
+	if ( isset( $_POST['relpoststh_default_image_type'] ) ) {
+		$posted_image_type = sanitize_text_field( wp_unslash( $_POST['relpoststh_default_image_type'] ) );
+
+		if ( in_array( $posted_image_type, array( 'image', 'url' ), true ) ) {
+			$relpoststh_default_image_type = $posted_image_type;
+		}
+	}
+
+	if ( isset( $_POST['relpoststh_default_image_url'] ) ) {
+		$relpoststh_default_image_url = trim( wp_unslash( $_POST['relpoststh_default_image_url'] ) );
+	}
+}
+
+$default_image_types           = array(
+	'image' => __( 'Image (attachment ID)', 'related-posts-thumbnails' ),
+	'url'   => __( 'URL (remote image)', 'related-posts-thumbnails' ),
+);
 $thsources                     = array( 'post-thumbnails' => __( 'Post thumbnails', 'related_posts_thumbnails' ),'custom-field' => __( 'Custom field', 'related_posts_thumbnails' ) );
 $categories                    = get_categories();
 
@@ -442,6 +521,52 @@ if ( $this->wp_version >= 3 ) {
 						</div>
 					</td>
 				</tr>
+				<tr valign="top">
+					<th scope="row">
+						<?php esc_html_e( 'Cache related post IDs', 'related-posts-thumbnails' ); ?>:
+					</th>
+					<td>
+						<div class="rpt-td-wrap">
+							<input type="checkbox" name="relpoststh_cache_enabled" id="relpoststh_cache_enabled" value="1"
+							<?php
+							if ( '1' === $relpoststh_cache_enabled ) {
+								echo 'checked="checked"';
+							}
+							?>
+							/>
+							<label for="relpoststh_cache_enabled">
+								<p class="description rpth-discription">
+									<?php esc_html_e( 'Cache related post IDs for up to 24 hours to reduce database queries. HTML is still rendered on each page load. Use the admin bar to purge cache site-wide.', 'related-posts-thumbnails' ); ?>
+								</p>
+							</label>
+							<br />
+						</div>
+					</td>
+				</tr>
+				<?php if ( $this->rpt_has_multiple_publishers() ) : ?>
+				<tr valign="top">
+					<th scope="row">
+						<?php esc_html_e( 'Author related', 'related-posts-thumbnails' ); ?>:
+					</th>
+					<td>
+						<div class="rpt-td-wrap">
+							<input type="checkbox" name="relpoststh_author_related" id="relpoststh_author_related" value="1"
+							<?php
+							if ( $relpoststh_author_related ) {
+								echo 'checked="checked"';
+							}
+							?>
+							/>
+							<label for="relpoststh_author_related">
+								<p class="description rpth-discription">
+									<?php esc_html_e( 'Author related posts. Replaces automatic related posts with same-author related posts at the end of single posts. Uses your existing relation, layout, and display settings.', 'related-posts-thumbnails' ); ?>
+								</p>
+							</label>
+							<br />
+						</div>
+					</td>
+				</tr>
+				<?php endif; ?>
 				<tr valign="top">
 					<th scope="row">
 						<?php _e( 'Display related posts', 'related-posts-thumbnails' ); ?>:
@@ -622,19 +747,80 @@ if ( $this->wp_version >= 3 ) {
 				<!-- <table class="form-table"> -->
 					<tr>
 						<th scope="row">
-							<?php _e( 'Default image', 'related-posts-thumbnails' ); ?>:
+							<?php esc_html_e( 'Default Thumbnail field type', 'related-posts-thumbnails' ); ?>:
+						</th>
+						<td>
+							<div class="rpt-field-type-wrap rpt-td-wrap">
+								<?php foreach ( $default_image_types as $type_key => $type_label ) : ?>
+									<div class="rpt-radio-wrap">
+										<input
+											type="radio"
+											name="relpoststh_default_image_type"
+											id="relpoststh_default_image_type_<?php echo esc_attr( $type_key ); ?>"
+											value="<?php echo esc_attr( $type_key ); ?>"
+											<?php checked( $relpoststh_default_image_type, $type_key ); ?>
+										/>
+										<label for="relpoststh_default_image_type_<?php echo esc_attr( $type_key ); ?>">
+											<?php echo esc_html( $type_label ); ?>
+										</label>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						</td>
+					</tr>
+					<tr id="relpoststh_default_image_image_row"<?php echo 'url' === $relpoststh_default_image_type ? ' style="display:none;"' : ''; ?>>
+						<th scope="row">
+							<?php esc_html_e( 'Default image', 'related-posts-thumbnails' ); ?>:
 						</th>
 						<td>
 							<div class="rpt-td-wrap rpt-td-image-wrap">
-								<img src="<?php echo get_option( 'relpoststh_default_image', $this->default_image ); ?>" id="relpoststh_default_image_prev" class="regular-text process_custom_images" height="200" width="30">
+								<img src="<?php echo esc_url( get_option( 'relpoststh_default_image', $this->default_image ) ); ?>" id="relpoststh_default_image_prev" class="regular-text process_custom_images" height="200" width="30" alt="">
 								<div class="relposts-button-section">
-									<button class="relpoststh_set_def_image button">
-										<?php _e( 'Set Image', 'related-posts-thumbnails' ); ?>
+									<button type="button" class="relpoststh_set_def_image button">
+										<?php esc_html_e( 'Set Image', 'related-posts-thumbnails' ); ?>
 									</button>
-									<button value="<?php echo esc_url( plugins_url( '../img/default.png', __FILE__ ) ); ?>" class="relpoststh_set_plug_image button">
-										<?php _e( 'Default Image', 'related-posts-thumbnails' ); ?>
+									<button type="button" value="<?php echo esc_url( plugins_url( '../img/default.png', __FILE__ ) ); ?>" class="relpoststh_set_plug_image button">
+										<?php esc_html_e( 'Default Image', 'related-posts-thumbnails' ); ?>
 									</button>
-									<input type="hidden" name="relpoststh_default_image" id="relpoststh_default_image" value="<?php echo get_option( 'relpoststh_default_image', $this->default_image ); ?>" size="50"/>
+									<input type="hidden" name="relpoststh_default_image" id="relpoststh_default_image" value="<?php echo esc_url( get_option( 'relpoststh_default_image', $this->default_image ) ); ?>" size="50"/>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr id="relpoststh_default_image_url_row"<?php echo 'url' === $relpoststh_default_image_type ? '' : ' style="display:none;"'; ?>>
+						<th scope="row">
+							<?php esc_html_e( 'Default image URL', 'related-posts-thumbnails' ); ?>:
+						</th>
+						<td>
+							<div class="rpt-td-wrap rpt-td-image-wrap">
+								<input
+									type="text"
+									name="relpoststh_default_image_url"
+									id="relpoststh_default_image_url"
+									value="<?php echo esc_attr( $relpoststh_default_image_url ); ?>"
+									class="regular-text"
+									size="50"
+									placeholder="<?php esc_attr_e( 'Remote image URL, e.g. https://example.com/image.jpg', 'related-posts-thumbnails' ); ?>"
+								/>
+								<img
+									src="<?php echo esc_url( $relpoststh_default_image_url ); ?>"
+									id="relpoststh_default_image_url_prev"
+									class="regular-text process_custom_images"
+									height="200"
+									width="30"
+									alt=""
+									<?php echo empty( $relpoststh_default_image_url ) ? 'style="display:none;"' : ''; ?>
+								>
+								<div
+									id="rpt_default_image_url_notice"
+									class="rpt-default-image-url-notice notice notice-error"
+									<?php echo $rpt_show_default_image_url_notice ? '' : 'style="display:none;"'; ?>
+									role="alert"
+								>
+									<p><?php esc_html_e( 'Please enter a valid image URL (for example .jpg, .png, .gif, or .webp).', 'related-posts-thumbnails' ); ?></p>
+									<button type="button" class="rpt-default-image-url-notice-dismiss notice-dismiss" aria-label="<?php esc_attr_e( 'Dismiss this notice.', 'related-posts-thumbnails' ); ?>">
+										<span class="screen-reader-text"><?php esc_html_e( 'Dismiss this notice.', 'related-posts-thumbnails' ); ?></span>
+									</button>
 								</div>
 							</div>
 						</td>

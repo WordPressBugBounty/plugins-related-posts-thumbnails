@@ -112,6 +112,141 @@
             }
         });
 
+        function rptToggleDefaultImageFields() {
+            if ($("input[name='relpoststh_default_image_type']:checked").val() === 'url') {
+                $('#relpoststh_default_image_image_row').hide();
+                $('#relpoststh_default_image_url_row').show();
+            } else {
+                $('#relpoststh_default_image_image_row').show();
+                $('#relpoststh_default_image_url_row').hide();
+                rptHideDefaultImageUrlNotice();
+            }
+        }
+
+        var rptDefaultImageUrlNoticeTimer = null;
+
+        function rptHideDefaultImageUrlNotice() {
+            if (rptDefaultImageUrlNoticeTimer) {
+                clearTimeout(rptDefaultImageUrlNoticeTimer);
+                rptDefaultImageUrlNoticeTimer = null;
+            }
+
+            $('#rpt_default_image_url_notice').hide();
+        }
+
+        function rptShowDefaultImageUrlNotice() {
+            var $notice = $('#rpt_default_image_url_notice');
+
+            if (!$notice.length) {
+                return;
+            }
+
+            $notice.show();
+
+            if (rptDefaultImageUrlNoticeTimer) {
+                clearTimeout(rptDefaultImageUrlNoticeTimer);
+            }
+
+            rptDefaultImageUrlNoticeTimer = setTimeout(function() {
+                rptHideDefaultImageUrlNotice();
+            }, 5000);
+        }
+
+        function rptUpdateDefaultImageUrlPreview() {
+            var remoteUrl = $('#relpoststh_default_image_url').val().trim();
+            var $preview = $('#relpoststh_default_image_url_prev');
+
+            rptHideDefaultImageUrlNotice();
+
+            if (remoteUrl) {
+                $preview.attr('src', remoteUrl).show();
+            } else {
+                $preview.hide().attr('src', '');
+            }
+        }
+
+        $("input[name='relpoststh_default_image_type']").on('change', rptToggleDefaultImageFields);
+
+        $('#relpoststh_default_image_url').on('input change', rptUpdateDefaultImageUrlPreview);
+
+        $('#relpoststh_default_image_url_prev').on('error', function() {
+            if ($("input[name='relpoststh_default_image_type']:checked").val() !== 'url') {
+                return;
+            }
+
+            if ($('#relpoststh_default_image_url').val().trim()) {
+                $(this).hide();
+                rptShowDefaultImageUrlNotice();
+            }
+        });
+
+        $('#relpoststh_default_image_url_prev').on('load', function() {
+            if ($("input[name='relpoststh_default_image_type']:checked").val() !== 'url') {
+                return;
+            }
+
+            if (this.naturalWidth > 0) {
+                rptHideDefaultImageUrlNotice();
+                $(this).show();
+            }
+        });
+
+        $(document).on('click', '.rpt-default-image-url-notice-dismiss', function(event) {
+            event.preventDefault();
+            rptHideDefaultImageUrlNotice();
+        });
+
+        $('form').on('submit', function(event) {
+            if ($("input[name='relpoststh_default_image_type']:checked").val() !== 'url') {
+                return;
+            }
+
+            var remoteUrl = $('#relpoststh_default_image_url').val().trim();
+
+            if (!remoteUrl) {
+                return;
+            }
+
+            if ($('#rpt_default_image_url_notice').is(':visible')) {
+                event.preventDefault();
+                rptShowDefaultImageUrlNotice();
+                rptScrollToDefaultImageUrlNotice();
+            }
+        });
+
+        function rptScrollToDefaultImageUrlNotice() {
+            var $notice = $('#rpt_default_image_url_notice');
+
+            if (!$notice.is(':visible')) {
+                return;
+            }
+
+            $('html, body').animate({
+                scrollTop: $notice.offset().top - 100
+            }, 300);
+
+            $('#relpoststh_default_image_url').trigger('focus');
+        }
+
+        rptToggleDefaultImageFields();
+
+        if ($('#rpt_default_image_url_notice').is(':visible')) {
+            rptShowDefaultImageUrlNotice();
+            window.setTimeout(rptScrollToDefaultImageUrlNotice, 100);
+        }
+
+        $('#relpoststh_author_related').on('change', function() {
+            if ($(this).is(':checked')) {
+                $('#relpoststh_auto').prop('checked', false);
+            }
+        });
+
+        $('#relpoststh_auto').on('change', function() {
+            if ($(this).is(':checked')) {
+                $('#relpoststh_author_related').prop('checked', false);
+            }
+        });
+
         // Ajax for subsriber
         $('#rpt_subscribe_btn').on('click', function(event) {
             event.preventDefault();

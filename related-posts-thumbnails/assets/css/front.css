@@ -223,12 +223,12 @@ html[dir="rtl"] #related_posts_thumbnails li {
     font-size: 11px;
 }
 .relpost-block-container .relpost_card_title{
-    font-size: inherit;
-	line-height: inherit;
-    font-weight: 700;
+    font-size: inherit !important;
+	line-height: inherit !important;
+    font-weight: 700 !important;
 }
-.relpost_content h2.relpost_card_title {
-	font-size: inherit;
+.relpost_content .relpost_card_title:is(h1,h2,h3,h4,h5, h6) {
+	font-size: inherit !important;
 }
 /* Responsive Layout */
 .relpost-block-column-layout{

@@ -257,15 +257,15 @@ class loginpress_amp {
                 flex-wrap: wrap;
             }
             .relpost-block-container .relpost_card_title{
-                font-size: inherit;
-                line-height: inherit;
-                font-weight: 700;
+                font-size: inherit !important;
+                line-height: inherit !important;
+                font-weight: 700 !important;
             }
             .relpost-block-container>div{
                 max-width: min-content;
             }
             .relpost_content h2.relpost_card_title {
-                font-size: inherit;
+                font-size: inherit !important;
             }
         
             .relpost-block-container>div{

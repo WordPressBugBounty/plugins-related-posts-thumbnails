@@ -4,8 +4,8 @@ Donate link: https://wpbrigade.com/go/donate-related-posts
 Author URI: https://loginpress.pro/?utm_source=related-posts-lite&utm_medium=author-url-link
 Tags: easy related posts, Related Posts thumbnails, Free Related Posts, related posts, similar related posts
 Requires at least: 3.6
-Tested up to: 6.9
-Stable tag: 4.3.3
+Tested up to: 7.0
+Stable tag: 5.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -72,10 +72,28 @@ If there are no images of the specified size in the post, or file does not exist
 
 == Upgrade Notice ==
 
-= 4.3.3 =
+= 5.0.0 =
 * Upgrade immediately.
 
 == Changelog ==
+
+= 5.0.0 - 2026-07-15 =
+* New Feature: Introduced related posts by author - Now you can display posts written by the same author (great for multi-author blogs).
+* New Feature: Use images from anywhere - Upload images from external sources or CDN instead of just from your WordPress library.
+* New Feature: Introduce Cached, faster website - The plugin now caches results automatically, making your site load 3 times faster.
+* Improvement: Smarter image loading - CSS and JavaScript now load only when needed, further speeding up your pages.
+* Improvement: Better security - Added protections when using external images to keep your site safe.
+* Improvement: Live image preview - See how your images look while setting them up in the plugin settings.
+* Improvement: Helpful error messages - Get clear, easy-to-understand messages if something isn't quite right.
+* Improvement: Quick cache refresh - New button in the admin bar to instantly refresh cached content when needed.
+* Improvement: Better multilingual support - Fixed issues with translated content and language handling.
+* Improvement: Updated translations - Full support for German, French, Italian, Russian, Turkish, Indonesian, Spanish, Dutch, and Arabic.
+* Fix: Better styling consistency - Related posts now display consistently across different layouts.
+* Compatibility: Works with WordPress 7.0 and newer.
+
+= 4.3.4 – 2026-05-25 =
+* Enhancement: General code refactoring and internal cleanup.
+* Compatibility: Compatible with WordPress 7.0.
 
 = 4.3.3 - 2026-03-17 =
 * Security Fix: Added nonce verification and capability checks to prevent CSRF attacks.
