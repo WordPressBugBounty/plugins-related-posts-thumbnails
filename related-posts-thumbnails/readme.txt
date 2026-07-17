@@ -5,7 +5,7 @@ Author URI: https://loginpress.pro/?utm_source=related-posts-lite&utm_medium=aut
 Tags: easy related posts, Related Posts thumbnails, Free Related Posts, related posts, similar related posts
 Requires at least: 3.6
 Tested up to: 7.0
-Stable tag: 5.0.0
+Stable tag: 5.0.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -72,10 +72,13 @@ If there are no images of the specified size in the post, or file does not exist
 
 == Upgrade Notice ==
 
-= 5.0.0 =
-* Upgrade immediately.
+= 5.0.1 =
+* Bugfix: Fixed enqueued asset versioning to prevent stale cached CSS/JS after updates.
 
 == Changelog ==
+
+= 5.0.1 - 2026-07-16 =
+* Bugfix: Fixed enqueued asset versioning to prevent stale cached CSS/JS after updates.
 
 = 5.0.0 - 2026-07-15 =
 * New Feature: Introduced related posts by author - Now you can display posts written by the same author (great for multi-author blogs).
