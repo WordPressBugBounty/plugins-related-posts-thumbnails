@@ -1,0 +1,456 @@
+{
+    "translation-revision-date": "2026-09-22 11:52+0000",
+    "generator": "WP-CLI\/2.11.0",
+    "source": "build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "it-IT",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Custom relation requires at least one taxonomy. Select a taxonomy or choose a different relation.": [
+                "La relazione personalizzata richiede almeno una tassonomia. Seleziona una tassonomia o scegli una relazione diversa."
+            ],
+            "All": [
+                "Tutti"
+            ],
+            "Select Color": [
+                "Seleziona colore"
+            ],
+            "Copied!": [
+                "Copia incollata!"
+            ],
+            "Copy": [
+                "Copia"
+            ],
+            "Remove": [
+                "Rimuovi"
+            ],
+            "Search options": [
+                "Opzioni di ricerca"
+            ],
+            "No results found": [
+                "Nessun risultato trovato"
+            ],
+            "Clear": [
+                "Cancella"
+            ],
+            "Select default image": [
+                "Seleziona immagine predefinita"
+            ],
+            "Use image": [
+                "Usa immagine"
+            ],
+            "Set Image": [
+                "Imposta immagine"
+            ],
+            "Default Image": [
+                "Immagine predefinita"
+            ],
+            "OR": [
+                "OPPURE"
+            ],
+            "Uncheck to place them manually with the snippet or shortcode below.": [
+                "Deseleziona per posizionarli manualmente con il frammento o codice breve qui sotto."
+            ],
+            "Select an option": [
+                "Seleziona un'opzione"
+            ],
+            "Get Support": [
+                "Ottieni supporto"
+            ],
+            "RelatedPost Thumbnails": [
+                "Miniature Post Correlati"
+            ],
+            "Dismiss": [
+                "Ignora"
+            ],
+            "Upgrade settings storage": [
+                "Aggiorna archiviazione impostazioni"
+            ],
+            "We are consolidating your Related Posts settings into a more efficient storage format.": [
+                "Stiamo consolidando le tue impostazioni dei Post Correlati in un formato di archiviazione pi\u00f9 efficiente."
+            ],
+            "Fewer database rows \u2014 about 45 separate options become 4 organized groups.": [
+                "Meno righe di database - circa 45 opzioni separate diventano 4 gruppi organizzati."
+            ],
+            "Lower database overhead and faster settings loading.": [
+                "Minore sovraccarico del database e caricamento delle impostazioni pi\u00f9 veloce."
+            ],
+            "Your existing settings are preserved during the upgrade.": [
+                "Le tue impostazioni esistenti sono preservate durante l'aggiornamento."
+            ],
+            "Upgrading\u2026": [
+                "Aggiornamento in corso\u2026"
+            ],
+            "Proceed": [
+                "Procedi"
+            ],
+            "Dismiss notice": [
+                "Ignora avviso"
+            ],
+            "Saving\u2026": [
+                "Salvataggio\u2026"
+            ],
+            "Save Settings": [
+                "Salva impostazioni"
+            ],
+            "Loading settings": [
+                "Caricamento impostazioni"
+            ],
+            "General Display Options": [
+                "Opzioni di Visualizzazione Generali"
+            ],
+            "General Settings": [
+                "Impostazioni generali"
+            ],
+            "Thumbnails": [
+                "Miniature"
+            ],
+            "Style Options": [
+                "Opzioni di stile"
+            ],
+            "Relations Builders Options": [
+                "Opzioni per la costruzione delle relazioni"
+            ],
+            "Settings sections": [
+                "Sezioni delle impostazioni"
+            ],
+            "Build a branded, secure login experience with modern templates and styling options.": [
+                "Crea un'esperienza di accesso sicura e con marchio con modelli moderni e opzioni di stile."
+            ],
+            "Connect Google Analytics to WordPress and track all stats in your dashboard.": [
+                "Collega Google Analytics a WordPress e monitora tutte le statistiche nella tua dashboard."
+            ],
+            "Increase your content reach with clean, fast social sharing buttons.": [
+                "Aumenta la portata dei tuoi contenuti con pulsanti di condivisione sociale puliti e veloci."
+            ],
+            "Create a Coming Soon or Maintenance Mode page instantly for your website.": [
+                "Crea immediatamente una pagina di Coming Soon o Modalit\u00e0 Manutenzione per il tuo sito web."
+            ],
+            "Share on Facebook": [
+                "Condividi su Facebook"
+            ],
+            "Share on Twitter": [
+                "Condividi su Twitter"
+            ],
+            "Share on LinkedIn": [
+                "Condividi su LinkedIn"
+            ],
+            "Subscription failed.": [
+                "Iscrizione fallita."
+            ],
+            "Spread the Word": [
+                "Diffondi la parola"
+            ],
+            "Love this plugin? Tell others about it": [
+                "Ti piace questo plugin? Parlane con gli altri"
+            ],
+            "Recommended Plugins": [
+                "Plugin raccomandati"
+            ],
+            "Handpicked tools to enhance your WordPress experience": [
+                "Strumenti selezionati per migliorare la tua esperienza WordPress"
+            ],
+            "Newsletter": [
+                "Newsletter"
+            ],
+            "Join our newsletter for latest WordPress guides and updates": [
+                "Unisciti alla nostra newsletter per le ultime guide e aggiornamenti su WordPress"
+            ],
+            "Email": [
+                "Email"
+            ],
+            "Name": [
+                "Nome"
+            ],
+            "Subscribe": [
+                "Iscriviti"
+            ],
+            "Dismiss message": [
+                "Ignora messaggio"
+            ],
+            "Site default": [
+                "Predefinito del sito"
+            ],
+            "Automatically append to the post content": [
+                "Aggiungi automaticamente al contenuto del post"
+            ],
+            "Developer mode": [
+                "Modalit\u00e0 sviluppatore"
+            ],
+            "This will add debugging information in the HTML source.": [
+                "Questo aggiunger\u00e0 informazioni di debug nel sorgente HTML."
+            ],
+            "Cache related post IDs": [
+                "ID post correlati nella cache"
+            ],
+            "Caches related post IDs for 24 hours to reduce database load. Clear anytime from the admin bar.": [
+                "Memorizza nella cache gli ID post correlati per 24 ore per ridurre il carico sul database. Svuota in qualsiasi momento dalla barra di amministrazione."
+            ],
+            "Show Posts By The Same Author": [
+                "Mostra post dello stesso autore"
+            ],
+            "Shows related posts by the same author instead of category\/tag matches. Uses your existing relation, layout, and display settings.": [
+                "Mostra post correlati dello stesso autore invece di corrispondenze per categoria\/tag. Utilizza la tua relazione esistente, layout e impostazioni di visualizzazione."
+            ],
+            "Restrict To Single Posts": [
+                "Limita ai post singoli"
+            ],
+            "Limits related posts to single post views only.": [
+                "Limita i post correlati solo alle visualizzazioni di post singoli."
+            ],
+            "Post types": [
+                "Tipi di post"
+            ],
+            "Select the post types above eligible to show related posts.": [
+                "Seleziona i tipi di post sopra idonei a mostrare post correlati."
+            ],
+            "Select post types\u2026": [
+                "Seleziona tipi di post\u2026"
+            ],
+            "Display related posts from these categories": [
+                "Mostra post correlati da queste categorie"
+            ],
+            "Select categories\u2026": [
+                "Seleziona categorie\u2026"
+            ],
+            "Display Categories on Related Posts": [
+                "Mostra categorie nei post correlati"
+            ],
+            "Shows each selected category on its related post thumbnail.": [
+                "Mostra ogni categoria selezionata sulla miniatura del post correlato."
+            ],
+            "Disable on Mobile Devices": [
+                "Disabilita sui dispositivi mobili"
+            ],
+            "Hide related posts on mobile devices.": [
+                "Nascondi i post correlati sui dispositivi mobili."
+            ],
+            "Include posts after selected date": [
+                "Includi post dopo la data selezionata"
+            ],
+            "Leave empty to display all posts.": [
+                "Lascia vuoto per mostrare tutti i post."
+            ],
+            "Sort Related Posts by": [
+                "Ordina i post correlati per"
+            ],
+            "Random": [
+                "Casuale"
+            ],
+            "Latest": [
+                "Ultimi"
+            ],
+            "Top Text": [
+                "Testo in alto"
+            ],
+            "Custom heading shown above related posts.": [
+                "Intestazione personalizzata mostrata sopra i post correlati."
+            ],
+            "Enter heading text": [
+                "Inserisci il testo dell'intestazione"
+            ],
+            "Number of posts to display": [
+                "Numero di post da visualizzare"
+            ],
+            "Default Thumbnail Image Type": [
+                "Tipo di immagine miniatura predefinito"
+            ],
+            "Fallback thumbnail for related posts with no image of their own.": [
+                "Miniatura di riserva per i post correlati senza un'immagine propria."
+            ],
+            "Image (attachment ID)": [
+                "Immagine (ID allegato)"
+            ],
+            "URL (remote image)": [
+                "URL (immagine remota)"
+            ],
+            "Default image URL": [
+                "URL immagine predefinita"
+            ],
+            "Remote image URL, e.g. https:\/\/example.com\/image.jpg": [
+                "URL immagine remota, ad es. https:\/\/example.com\/image.jpg"
+            ],
+            "Show date": [
+                "Mostra data"
+            ],
+            "Shows the post's publish date.": [
+                "Mostra la data di pubblicazione del post."
+            ],
+            "Date format": [
+                "Formato data"
+            ],
+            "Select thumbnails source": [
+                "Seleziona la fonte delle miniature"
+            ],
+            "Where each related post's image comes from.": [
+                "Da dove proviene l'immagine di ciascun post correlato."
+            ],
+            "Post thumbnails": [
+                "Miniature dei post"
+            ],
+            "Custom field": [
+                "Campo personalizzato"
+            ],
+            "Related posts thumbnail size": [
+                "Dimensione delle miniature dei post correlati"
+            ],
+            "Show posts with featured image": [
+                "Mostra i post con immagine in evidenza"
+            ],
+            "Only posts with featured image will be shown.": [
+                "Saranno mostrati solo i post con immagine in evidenza."
+            ],
+            "Show Post's First Image": [
+                "Mostra la prima immagine del post"
+            ],
+            "Use first in-post image when no featured image is set.": [
+                "Usa la prima immagine nel post quando non \u00e8 impostata un'immagine in evidenza."
+            ],
+            "Image type": [
+                "Tipo di immagine"
+            ],
+            "Image": [
+                "Immagine"
+            ],
+            "URL": [
+                "URL"
+            ],
+            "Custom field name": [
+                "Nome campo personalizzato"
+            ],
+            "ACF\/Custom field name for thumbnails that should have image field type.": [
+                "Nome campo ACF\/Personalizzato per le miniature che dovrebbero avere il tipo di campo immagine."
+            ],
+            "Size": [
+                "Dimensione"
+            ],
+            "Enter width in pixels": [
+                "Inserisci la larghezza in pixel"
+            ],
+            "Enter height in pixels": [
+                "Inserisci l'altezza in pixel"
+            ],
+            "Theme resize url": [
+                "URL per il ridimensionamento del tema"
+            ],
+            "If your theme resizes images, enter URL to its resizing PHP file": [
+                "Se il tuo tema ridimensiona le immagini, inserisci l'URL del suo file PHP di ridimensionamento"
+            ],
+            "Select the layout for related posts.": [
+                "Seleziona il layout per i post correlati."
+            ],
+            "Output style": [
+                "Stile di output"
+            ],
+            "Block": [
+                "Blocco"
+            ],
+            "List": [
+                "Elenco"
+            ],
+            "Disables the plugin's CSS, your theme's styles apply instead.": [
+                "Disabilita il CSS del plugin, si applicano invece gli stili del tuo tema."
+            ],
+            "Disable plugin styles": [
+                "Disabilita gli stili del plugin"
+            ],
+            "Desktop Columns:": [
+                "Colonne Desktop:"
+            ],
+            "Select Column": [
+                "Seleziona Colonna"
+            ],
+            "Tablet Columns:": [
+                "Colonne Tablet:"
+            ],
+            "Mobile Columns:": [
+                "Colonne Mobile:"
+            ],
+            "Image Size": [
+                "Dimensione Immagine"
+            ],
+            "Crop ratio (width:height) for thumbnails.": [
+                "Rapporto di ritaglio (larghezza:altezza) per le miniature."
+            ],
+            "Select Size": [
+                "Seleziona Dimensione"
+            ],
+            "Background color": [
+                "Colore di sfondo"
+            ],
+            "Background color\non mouse over": [
+                "Colore di sfondo\nal passaggio del mouse"
+            ],
+            "Border color": [
+                "Colore del bordo"
+            ],
+            "Font color": [
+                "Colore del carattere"
+            ],
+            "Font family": [
+                "Famiglia del carattere"
+            ],
+            "Font size": [
+                "Dimensione del carattere"
+            ],
+            "Enter size in pixels (px).": [
+                "Inserisci la dimensione in pixel (px)."
+            ],
+            "Space Between Image and Title": [
+                "Spazio tra l'immagine e il titolo"
+            ],
+            "Set the space between the image and the title box (e.g., 10px, 1em).": [
+                "Imposta lo spazio tra l'immagine e la casella del titolo (ad es., 10px, 1em)."
+            ],
+            "Text maximum length": [
+                "Lunghezza massima del testo"
+            ],
+            "Set 0 to hide the title.": [
+                "Imposta 0 per nascondere il titolo."
+            ],
+            "Excerpt maximum length": [
+                "Lunghezza massima dell'estratto"
+            ],
+            "Set 0 to hide the excerpt.": [
+                "Imposta 0 per nascondere l'estratto."
+            ],
+            "Text block height": [
+                "Altezza del blocco di testo"
+            ],
+            "Enter height in pixels (px).": [
+                "Inserisci l'altezza in pixel (px)."
+            ],
+            "Base relation on": [
+                "Relazione base su"
+            ],
+            "Categories": [
+                "Categorie"
+            ],
+            "Tags": [
+                "Tag"
+            ],
+            "Both": [
+                "Entrambi"
+            ],
+            "Custom": [
+                "Personalizzato"
+            ],
+            "Custom taxonomies": [
+                "Tassonomie personalizzate"
+            ],
+            "Select taxonomies\u2026": [
+                "Seleziona tassonomie\u2026"
+            ],
+            "%s cannot be empty.": [
+                "%s non pu\u00f2 essere vuoto."
+            ],
+            "%1$s must be between %2$d and %3$d.": [
+                "%1$s deve essere compreso tra %2$d e %3$d."
+            ]
+        }
+    }
+}

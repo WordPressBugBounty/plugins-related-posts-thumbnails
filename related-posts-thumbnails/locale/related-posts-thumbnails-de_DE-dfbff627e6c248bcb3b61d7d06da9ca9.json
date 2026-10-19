@@ -1,0 +1,456 @@
+{
+    "translation-revision-date": "2026-09-22 11:51+0000",
+    "generator": "WP-CLI\/2.11.0",
+    "source": "build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "de-DE",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Custom relation requires at least one taxonomy. Select a taxonomy or choose a different relation.": [
+                "Benutzerdefinierte Beziehung erfordert mindestens eine Taxonomie. W\u00e4hlen Sie eine Taxonomie oder w\u00e4hlen Sie eine andere Beziehung."
+            ],
+            "All": [
+                "Alle"
+            ],
+            "Select Color": [
+                "Farbe ausw\u00e4hlen"
+            ],
+            "Copied!": [
+                "Kopiert!"
+            ],
+            "Copy": [
+                "Kopieren"
+            ],
+            "Remove": [
+                "Entfernen"
+            ],
+            "Search options": [
+                "Suchoptionen"
+            ],
+            "No results found": [
+                "Keine Ergebnisse gefunden"
+            ],
+            "Clear": [
+                "L\u00f6schen"
+            ],
+            "Select default image": [
+                "Standardbild ausw\u00e4hlen"
+            ],
+            "Use image": [
+                "Bild verwenden"
+            ],
+            "Set Image": [
+                "Bild festlegen"
+            ],
+            "Default Image": [
+                "Standardbild"
+            ],
+            "OR": [
+                "ODER"
+            ],
+            "Uncheck to place them manually with the snippet or shortcode below.": [
+                "Deaktivieren, um sie manuell mit dem Snippet oder Shortcode unten zu platzieren."
+            ],
+            "Select an option": [
+                "W\u00e4hlen Sie eine Option"
+            ],
+            "Get Support": [
+                "Support erhalten"
+            ],
+            "RelatedPost Thumbnails": [
+                "Vorgeschlagene Beitr\u00e4ge Thumbnails"
+            ],
+            "Dismiss": [
+                "Hinweis schlie\u00dfen"
+            ],
+            "Upgrade settings storage": [
+                "Einstellungen f\u00fcr den Speicherplatz aktualisieren"
+            ],
+            "We are consolidating your Related Posts settings into a more efficient storage format.": [
+                "Wir konsolidieren Ihre Einstellungen f\u00fcr verwandte Beitr\u00e4ge in ein effizienteres Speicherformat."
+            ],
+            "Fewer database rows \u2014 about 45 separate options become 4 organized groups.": [
+                "Weniger Datenbankzeilen \u2014 etwa 45 separate Optionen werden zu 4 organisierten Gruppen."
+            ],
+            "Lower database overhead and faster settings loading.": [
+                "Geringerer Datenbankaufwand und schnellere Ladezeiten der Einstellungen."
+            ],
+            "Your existing settings are preserved during the upgrade.": [
+                "Ihre vorhandenen Einstellungen bleiben w\u00e4hrend des Upgrades erhalten."
+            ],
+            "Upgrading\u2026": [
+                "Wird aktualisiert\u2026"
+            ],
+            "Proceed": [
+                "Fortfahren"
+            ],
+            "Dismiss notice": [
+                "Hinweis schlie\u00dfen"
+            ],
+            "Saving\u2026": [
+                "Speichern\u2026"
+            ],
+            "Save Settings": [
+                "Einstellungen speichern"
+            ],
+            "Loading settings": [
+                "Einstellungen werden geladen"
+            ],
+            "General Display Options": [
+                "Allgemeine Anzeigeoptionen"
+            ],
+            "General Settings": [
+                "Allgemeine Einstellungen"
+            ],
+            "Thumbnails": [
+                "Miniaturansichten"
+            ],
+            "Style Options": [
+                "Stiloptionen"
+            ],
+            "Relations Builders Options": [
+                "Optionen f\u00fcr Relations Builder"
+            ],
+            "Settings sections": [
+                "Einstellungsabschnitte"
+            ],
+            "Build a branded, secure login experience with modern templates and styling options.": [
+                "Erstellen Sie ein markenorientiertes, sicheres Login-Erlebnis mit modernen Vorlagen und Stiloptionen."
+            ],
+            "Connect Google Analytics to WordPress and track all stats in your dashboard.": [
+                "Verbinden Sie Google Analytics mit WordPress und verfolgen Sie alle Statistiken in Ihrem Dashboard."
+            ],
+            "Increase your content reach with clean, fast social sharing buttons.": [
+                "Erh\u00f6hen Sie Ihre Reichweite mit sauberen, schnellen Social-Sharing-Buttons."
+            ],
+            "Create a Coming Soon or Maintenance Mode page instantly for your website.": [
+                "Erstellen Sie sofort eine \"Bald verf\u00fcgbar\" oder Wartungsmodus-Seite f\u00fcr Ihre Website."
+            ],
+            "Share on Facebook": [
+                "Auf Facebook teilen"
+            ],
+            "Share on Twitter": [
+                "Auf Twitter teilen"
+            ],
+            "Share on LinkedIn": [
+                "Auf LinkedIn teilen"
+            ],
+            "Subscription failed.": [
+                "Abonnement fehlgeschlagen."
+            ],
+            "Spread the Word": [
+                "Verbreiten Sie das Wort"
+            ],
+            "Love this plugin? Tell others about it": [
+                "Lieben Sie dieses Plugin? Erz\u00e4hlen Sie anderen davon"
+            ],
+            "Recommended Plugins": [
+                "Empfohlene Plugins"
+            ],
+            "Handpicked tools to enhance your WordPress experience": [
+                "Ausgew\u00e4hlte Tools zur Verbesserung Ihres WordPress-Erlebnisses"
+            ],
+            "Newsletter": [
+                "Newsletter"
+            ],
+            "Join our newsletter for latest WordPress guides and updates": [
+                "Abonnieren Sie unseren Newsletter f\u00fcr die neuesten WordPress-Anleitungen und -Updates"
+            ],
+            "Email": [
+                "E-Mail"
+            ],
+            "Name": [
+                "Name"
+            ],
+            "Subscribe": [
+                "Abonnieren"
+            ],
+            "Dismiss message": [
+                "Nachricht schlie\u00dfen"
+            ],
+            "Site default": [
+                "Website-Standard"
+            ],
+            "Automatically append to the post content": [
+                "Automatisch an den Beitragstext anh\u00e4ngen"
+            ],
+            "Developer mode": [
+                "Entwicklermodus"
+            ],
+            "This will add debugging information in the HTML source.": [
+                "Dies f\u00fcgt Debugging-Informationen im HTML-Quellcode hinzu."
+            ],
+            "Cache related post IDs": [
+                "Cache-bezogene Beitrag-IDs"
+            ],
+            "Caches related post IDs for 24 hours to reduce database load. Clear anytime from the admin bar.": [
+                "Cache-bezogene Beitrag-IDs f\u00fcr 24 Stunden, um die Datenbanklast zu reduzieren. Jederzeit \u00fcber die Administrationsleiste l\u00f6schen."
+            ],
+            "Show Posts By The Same Author": [
+                "Beitr\u00e4ge vom selben Autor anzeigen"
+            ],
+            "Shows related posts by the same author instead of category\/tag matches. Uses your existing relation, layout, and display settings.": [
+                "Zeigt verwandte Beitr\u00e4ge vom selben Autor anstelle von Kategorie-\/Tag\u00fcbereinstimmungen. Verwendet Ihre bestehenden Beziehungen, Layout- und Anzeigeeinstellungen."
+            ],
+            "Restrict To Single Posts": [
+                "Auf Einzelbeitr\u00e4ge beschr\u00e4nken"
+            ],
+            "Limits related posts to single post views only.": [
+                "Begrenzt verwandte Beitr\u00e4ge auf Einzelbeitr\u00e4ge."
+            ],
+            "Post types": [
+                "Beitragsarten"
+            ],
+            "Select the post types above eligible to show related posts.": [
+                "W\u00e4hlen Sie die oben genannten Beitragstypen aus, die berechtigt sind, verwandte Beitr\u00e4ge anzuzeigen."
+            ],
+            "Select post types\u2026": [
+                "Beitragstypen ausw\u00e4hlen\u2026"
+            ],
+            "Display related posts from these categories": [
+                "Verwandte Beitr\u00e4ge aus diesen Kategorien anzeigen"
+            ],
+            "Select categories\u2026": [
+                "Kategorien ausw\u00e4hlen\u2026"
+            ],
+            "Display Categories on Related Posts": [
+                "Kategorien zu verwandten Beitr\u00e4gen anzeigen"
+            ],
+            "Shows each selected category on its related post thumbnail.": [
+                "Zeigt jede ausgew\u00e4hlte Kategorie auf der Miniaturansicht ihres verwandten Beitrags an."
+            ],
+            "Disable on Mobile Devices": [
+                "Auf mobilen Ger\u00e4ten deaktivieren"
+            ],
+            "Hide related posts on mobile devices.": [
+                "Verwandte Beitr\u00e4ge auf mobilen Ger\u00e4ten ausblenden."
+            ],
+            "Include posts after selected date": [
+                "Beitr\u00e4ge nach ausgew\u00e4hltem Datum einschlie\u00dfen"
+            ],
+            "Leave empty to display all posts.": [
+                "Leer lassen, um alle Beitr\u00e4ge anzuzeigen."
+            ],
+            "Sort Related Posts by": [
+                "Verwandte Beitr\u00e4ge sortieren nach"
+            ],
+            "Random": [
+                "Zuf\u00e4llig"
+            ],
+            "Latest": [
+                "Neueste"
+            ],
+            "Top Text": [
+                "Top-Text"
+            ],
+            "Custom heading shown above related posts.": [
+                "Benutzerdefinierter \u00dcberschrift, die \u00fcber verwandten Beitr\u00e4gen angezeigt wird."
+            ],
+            "Enter heading text": [
+                "\u00dcberschrifttext eingeben"
+            ],
+            "Number of posts to display": [
+                "Anzahl der anzuzeigenden Beitr\u00e4ge"
+            ],
+            "Default Thumbnail Image Type": [
+                "Standard-Vorschaubildtyp"
+            ],
+            "Fallback thumbnail for related posts with no image of their own.": [
+                "Fallback-Vorschaubild f\u00fcr verwandte Beitr\u00e4ge ohne eigenes Bild."
+            ],
+            "Image (attachment ID)": [
+                "Bild (Anhangs-ID)"
+            ],
+            "URL (remote image)": [
+                "URL (externes Bild)"
+            ],
+            "Default image URL": [
+                "Standardbild-URL"
+            ],
+            "Remote image URL, e.g. https:\/\/example.com\/image.jpg": [
+                "Externe Bild-URL, z.B. https:\/\/example.com\/image.jpg"
+            ],
+            "Show date": [
+                "Datum anzeigen"
+            ],
+            "Shows the post's publish date.": [
+                "Zeigt das Ver\u00f6ffentlichungsdatum des Beitrags an."
+            ],
+            "Date format": [
+                "Datumsformat"
+            ],
+            "Select thumbnails source": [
+                "Miniaturansichtsquelle ausw\u00e4hlen"
+            ],
+            "Where each related post's image comes from.": [
+                "Woher das Bild jedes verwandten Beitrags stammt."
+            ],
+            "Post thumbnails": [
+                "Beitrags-Vorschaubilder"
+            ],
+            "Custom field": [
+                "Benutzerdefiniertes Feld"
+            ],
+            "Related posts thumbnail size": [
+                "Gr\u00f6\u00dfe der Miniaturansichten verwandter Beitr\u00e4ge"
+            ],
+            "Show posts with featured image": [
+                "Beitr\u00e4ge mit hervorgehobenem Bild anzeigen"
+            ],
+            "Only posts with featured image will be shown.": [
+                "Es werden nur Beitr\u00e4ge mit hervorgehobenem Bild angezeigt."
+            ],
+            "Show Post's First Image": [
+                "Erstes Bild des Beitrags anzeigen"
+            ],
+            "Use first in-post image when no featured image is set.": [
+                "Erstes Bild im Beitrag verwenden, wenn kein hervorgehobenes Bild festgelegt ist."
+            ],
+            "Image type": [
+                "Bildtyp"
+            ],
+            "Image": [
+                "Bild"
+            ],
+            "URL": [
+                "URL"
+            ],
+            "Custom field name": [
+                "Name des benutzerdefinierten Feldes"
+            ],
+            "ACF\/Custom field name for thumbnails that should have image field type.": [
+                "ACF\/Benutzerdefinierter Feldname f\u00fcr Miniaturansichten, die den Bildfeldtyp haben sollten."
+            ],
+            "Size": [
+                "Gr\u00f6\u00dfe"
+            ],
+            "Enter width in pixels": [
+                "Geben Sie die Breite in Pixeln ein"
+            ],
+            "Enter height in pixels": [
+                "Geben Sie die H\u00f6he in Pixeln ein"
+            ],
+            "Theme resize url": [
+                "Themen-Resize-URL"
+            ],
+            "If your theme resizes images, enter URL to its resizing PHP file": [
+                "Wenn Ihr Theme Bilder neu skaliert, geben Sie die URL zu seiner PHP-Datei f\u00fcr das Resizing ein"
+            ],
+            "Select the layout for related posts.": [
+                "W\u00e4hlen Sie das Layout f\u00fcr verwandte Beitr\u00e4ge aus."
+            ],
+            "Output style": [
+                "Ausgabestil"
+            ],
+            "Block": [
+                "Block"
+            ],
+            "List": [
+                "Liste"
+            ],
+            "Disables the plugin's CSS, your theme's styles apply instead.": [
+                "Deaktiviert das CSS des Plugins, die Stile Ihres Themes werden stattdessen angewendet."
+            ],
+            "Disable plugin styles": [
+                "Plugin-Stile deaktivieren"
+            ],
+            "Desktop Columns:": [
+                "Desktop-Spalten:"
+            ],
+            "Select Column": [
+                "Spalte ausw\u00e4hlen"
+            ],
+            "Tablet Columns:": [
+                "Tablet-Spalten:"
+            ],
+            "Mobile Columns:": [
+                "Mobile Spalten:"
+            ],
+            "Image Size": [
+                "Bildgr\u00f6\u00dfe"
+            ],
+            "Crop ratio (width:height) for thumbnails.": [
+                "Zuschneideverh\u00e4ltnis (Breite:H\u00f6he) f\u00fcr Vorschaubilder."
+            ],
+            "Select Size": [
+                "Gr\u00f6\u00dfe ausw\u00e4hlen"
+            ],
+            "Background color": [
+                "Hintergrundfarbe"
+            ],
+            "Background color\non mouse over": [
+                "Hintergrundfarbe\nbei Mouseover"
+            ],
+            "Border color": [
+                "Rahmenfarbe"
+            ],
+            "Font color": [
+                "Schriftfarbe"
+            ],
+            "Font family": [
+                "Schriftfamilie"
+            ],
+            "Font size": [
+                "Schriftgr\u00f6\u00dfe"
+            ],
+            "Enter size in pixels (px).": [
+                "Geben Sie die Gr\u00f6\u00dfe in Pixel (px) ein."
+            ],
+            "Space Between Image and Title": [
+                "Abstand zwischen Bild und Titel"
+            ],
+            "Set the space between the image and the title box (e.g., 10px, 1em).": [
+                "Legen Sie den Abstand zwischen dem Bild und dem Titelk\u00e4stchen fest (z. B. 10px, 1em)."
+            ],
+            "Text maximum length": [
+                "Maximale Textl\u00e4nge"
+            ],
+            "Set 0 to hide the title.": [
+                "Setzen Sie 0, um den Titel auszublenden."
+            ],
+            "Excerpt maximum length": [
+                "Maximale Auszugsl\u00e4nge"
+            ],
+            "Set 0 to hide the excerpt.": [
+                "Setzen Sie 0, um den Auszug auszublenden."
+            ],
+            "Text block height": [
+                "H\u00f6he des Textblocks"
+            ],
+            "Enter height in pixels (px).": [
+                "Geben Sie die H\u00f6he in Pixel (px) ein."
+            ],
+            "Base relation on": [
+                "Basisverh\u00e4ltnis auf"
+            ],
+            "Categories": [
+                "Kategorien"
+            ],
+            "Tags": [
+                "Tags"
+            ],
+            "Both": [
+                "Beide"
+            ],
+            "Custom": [
+                "Benutzerdefiniert"
+            ],
+            "Custom taxonomies": [
+                "Benutzerdefinierte Taxonomien"
+            ],
+            "Select taxonomies\u2026": [
+                "Taxonomien ausw\u00e4hlen\u2026"
+            ],
+            "%s cannot be empty.": [
+                "%s darf nicht leer sein."
+            ],
+            "%1$s must be between %2$d and %3$d.": [
+                "%1$s muss zwischen %2$d und %3$d liegen."
+            ]
+        }
+    }
+}

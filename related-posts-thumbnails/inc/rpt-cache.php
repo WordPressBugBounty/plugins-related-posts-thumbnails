@@ -23,11 +23,6 @@ define( 'RPT_RELATED_CACHE_META_KEY', '_rpt_related_ids_cache' );
 define( 'RPT_CACHE_VERSION_OPTION', 'relpoststh_cache_version' );
 
 /**
- * Site option for the Settings checkbox "Cache related post IDs" (1 = on, 0 = off).
- */
-define( 'RPT_CACHE_ENABLED_OPTION', 'relpoststh_cache_enabled' );
-
-/**
  * Flag option set when a site-wide purge schedules leftover meta cleanup.
  * Cleared after batch deletion removes all `_rpt_related_ids_cache` rows.
  */
@@ -43,6 +38,11 @@ define( 'RPT_CACHE_BATCH_SIZE', 500 );
  * Transient key for the cached "site has multiple publishers" check (author-related feature).
  */
 define( 'RPT_MULTIPLE_PUBLISHERS_TRANSIENT', 'rpt_has_multiple_publishers' );
+
+/**
+ * Default related-posts ORDER BY fragment.
+ */
+define( 'RPT_RELATED_SORT_RAND', 'rand()' );
 
 /**
  * Whether related post ID caching is enabled.
@@ -62,11 +62,14 @@ define( 'RPT_MULTIPLE_PUBLISHERS_TRANSIENT', 'rpt_has_multiple_publishers' );
  *
  * @return bool
  * @since 5.0.0
+ * @version 6.0.0
  */
 function rpt_is_related_cache_enabled() {
-	$enabled = get_option( RPT_CACHE_ENABLED_OPTION, '1' );
+	$enabled = function_exists( 'rpt_settings_bool' )
+		? rpt_settings_bool( 'general.cache_enabled', true )
+		: true;
 
-	return (bool) apply_filters( 'rpt_related_ids_cache_enabled', '1' === $enabled );
+	return (bool) apply_filters( 'rpt_related_ids_cache_enabled', $enabled );
 }
 
 /**
@@ -124,19 +127,25 @@ function rpt_bump_cache_version() {
  *
  * @return array<string, mixed>
  * @since 5.0.0
+ * @version 6.0.0
  */
 function rpt_get_query_affecting_settings() {
+	$query_scope   = rpt_settings()->rpt_get( 'general.query_scope', array( 'mode' => 'all', 'category_ids' => array() ) );
+	$display_scope = rpt_settings()->rpt_get( 'general.display_scope', array( 'mode' => 'all', 'category_ids' => array() ) );
+	$general       = rpt_settings()->rpt_get( 'general', array() );
+	$relations     = rpt_settings()->rpt_get( 'relations', array() );
+
 	return array(
-		'relation'           => get_option( 'relpoststh_relation', 'categories' ),
-		'show_categoriesall' => get_option( 'relpoststh_show_categoriesall', get_option( 'relpoststh_categoriesall', '1' ) ),
-		'categoriesall'      => get_option( 'relpoststh_categoriesall', '1' ),
-		'show_categories'    => get_option( 'relpoststh_show_categories', get_option( 'relpoststh_categories', array() ) ),
-		'categories'         => get_option( 'relpoststh_categories', array() ),
-		'startdate'          => get_option( 'relpoststh_startdate', '' ),
-		'custom_taxonomies'  => get_option( 'relpoststh_custom_taxonomies', array() ),
-		'post_sort'          => get_option( 'rpt_post_sort', 'rand' ),
-		'number'             => absint( get_option( 'relpoststh_number', 3 ) ),
-		'author_related'     => get_option( 'relpoststh_author_related', '0' ),
+		'relation'           => (string) ( $relations['relation'] ?? 'categories' ),
+		'show_categoriesall' => rpt_settings_scope_is_all( $display_scope ) ? '1' : '0',
+		'categoriesall'      => rpt_settings_scope_is_all( $query_scope ) ? '1' : '0',
+		'show_categories'    => rpt_settings_scope_ids( $display_scope ),
+		'categories'         => rpt_settings_scope_ids( $query_scope ),
+		'startdate'          => (string) ( $general['start_date'] ?? '' ),
+		'custom_taxonomies'  => (array) ( $relations['custom_taxonomies'] ?? array() ),
+		'post_sort'          => (string) ( $general['post_sort'] ?? 'rand' ),
+		'number'             => absint( $general['number'] ?? 3 ),
+		'author_related'     => rpt_settings_bool( 'general.author_related' ) ? '1' : '0',
 	);
 }
 
@@ -157,11 +166,12 @@ function rpt_query_settings_changed( $old_settings, $new_settings ) {
  *
  * @return string
  * @since 5.0.0
+ * @version 6.0.0
  */
 function rpt_get_related_cache_settings_fingerprint() {
 	$settings = rpt_get_query_affecting_settings();
 
-	$settings['onlywiththumbs'] = get_option( 'relpoststh_onlywiththumbs', '0' );
+	$settings['onlywiththumbs'] = rpt_settings_bool( 'thumbnails.only_with_thumbs' ) ? '1' : '0';
 
 	return md5( wp_json_encode( $settings ) );
 }
@@ -389,7 +399,7 @@ function rpt_batch_delete_cache_meta() {
 		return true;
 	}
 
-	if ( ! is_admin() || wp_doing_ajax() || wp_doing_cron() ) {
+	if ( ! is_admin() || wp_doing_ajax() || wp_doing_cron() || ! current_user_can( 'manage_options' ) ) {
 		return false;
 	}
 
@@ -436,19 +446,20 @@ function rpt_batch_delete_cache_meta() {
  * @param string $sort_by Raw sort value.
  * @return string Safe ORDER BY clause fragment.
  * @since 5.0.0
+ * @version 6.0.0
  */
 function rpt_sanitize_related_sort_by( $sort_by ) {
 	$sort_by = trim( (string) $sort_by );
 
-	if ( 'rand()' === $sort_by ) {
-		return 'rand()';
+	if ( RPT_RELATED_SORT_RAND === $sort_by ) {
+		return RPT_RELATED_SORT_RAND;
 	}
 
 	if ( 'post_date' === $sort_by || preg_match( '/^post_date\s+DESC$/i', $sort_by ) ) {
 		return 'post_date DESC';
 	}
 
-	return 'rand()';
+	return RPT_RELATED_SORT_RAND;
 }
 
 /**

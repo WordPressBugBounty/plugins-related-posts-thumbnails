@@ -9,12 +9,52 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! function_exists( 'rpt_should_use_minified_assets' ) ) {
+	/**
+	 * Whether plugin CSS/JS should load the minified builds.
+	 *
+	 * Returns false when WordPress SCRIPT_DEBUG is enabled.
+	 *
+	 * @return bool
+	 * @since 6.0.0
+	 */
+	function rpt_should_use_minified_assets() {
+		return ! ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG );
+	}
+}
+
+if ( ! function_exists( 'rpt_resolve_asset_url' ) ) {
+	/**
+	 * Resolve a plugin asset URL, preferring minified files unless debug is on.
+	 *
+	 * @param string $source_relative_path Unminified path relative to the plugin root.
+	 * @param string $min_relative_path    Minified path relative to the plugin root.
+	 * @return string
+	 * @since 6.0.0
+	 */
+	function rpt_resolve_asset_url( $source_relative_path, $min_relative_path ) {
+		$plugin_file   = dirname( __DIR__ ) . '/related-posts-thumbnails.php';
+		$plugin_dir    = dirname( __DIR__ ) . '/';
+		$relative_path = $source_relative_path;
+
+		if ( rpt_should_use_minified_assets() ) {
+			$min_absolute = $plugin_dir . ltrim( $min_relative_path, '/\\' );
+
+			if ( is_readable( $min_absolute ) ) {
+				$relative_path = $min_relative_path;
+			}
+		}
+
+		return plugins_url( $relative_path, $plugin_file );
+	}
+}
+
 /**
  * Handles frontend CSS/JS registration, conditional enqueue, and defer loading.
  *
  * @since 5.0.0
  */
-class RPT_Frontend_Assets {
+class RPT_Frontend_Assets { // NOSONAR — WPCS prefixed class name (php:S101)
 
 	const RPT_STYLE_HANDLE  = 'rpt-front';
 	const RPT_SCRIPT_HANDLE = 'rpt-lazy-load';
@@ -27,22 +67,12 @@ class RPT_Frontend_Assets {
 	private static $enqueued = false;
 
 	/**
-	 * Main plugin file path for asset URLs.
-	 *
-	 * @var string
-	 */
-	private static $plugin_file = '';
-
-	/**
 	 * Bootstrap asset hooks.
 	 *
-	 * @param string $plugin_file Main plugin file path.
 	 * @return void
 	 * @since 5.0.0
 	 */
-	public static function rpt_init( $plugin_file ) {
-		self::$plugin_file = $plugin_file;
-
+	public static function rpt_init() {
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'rpt_register_assets' ), 5 );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'rpt_maybe_enqueue_early' ), 20 );
 		add_filter( 'script_loader_tag', array( __CLASS__, 'rpt_defer_script_tag' ), 10, 3 );
@@ -62,41 +92,18 @@ class RPT_Frontend_Assets {
 
 		wp_register_style(
 			self::RPT_STYLE_HANDLE,
-			self::rpt_get_asset_url( 'assets/css/front.css', 'assets/css/front.min.css' ),
+			rpt_resolve_asset_url( 'assets/css/front.css', 'assets/css/front.min.css' ),
 			array(),
 			RELATED_POSTS_THUMBNAILS_VERSION
 		);
 
 		wp_register_script(
 			self::RPT_SCRIPT_HANDLE,
-			self::rpt_get_asset_url( 'assets/js/lazy-load.js', 'assets/js/lazy-load.min.js' ),
+			rpt_resolve_asset_url( 'assets/js/lazy-load.js', 'assets/js/lazy-load.min.js' ),
 			array(),
 			RELATED_POSTS_THUMBNAILS_VERSION,
 			true
 		);
-	}
-
-	/**
-	 * Resolve a frontend asset URL, preferring minified builds when available.
-	 *
-	 * @param string $source_relative_path Source asset path relative to the plugin root.
-	 * @param string $min_relative_path    Minified asset path relative to the plugin root.
-	 * @return string
-	 * @since 5.0.0
-	 */
-	private static function rpt_get_asset_url( $source_relative_path, $min_relative_path ) {
-		$use_minified  = ! ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG );
-		$relative_path = $source_relative_path;
-
-		if ( $use_minified ) {
-			$min_file_path = plugin_dir_path( self::$plugin_file ) . $min_relative_path;
-
-			if ( file_exists( $min_file_path ) ) {
-				$relative_path = $min_relative_path;
-			}
-		}
-
-		return plugins_url( $relative_path, self::$plugin_file );
 	}
 
 	/**
@@ -108,7 +115,33 @@ class RPT_Frontend_Assets {
 	public static function rpt_maybe_enqueue_early() {
 		if ( self::rpt_should_load_on_request() ) {
 			self::rpt_enqueue();
+			return;
 		}
+
+		if ( rpt_is_yes_option( 'relpoststh_mobile_view', '0' ) && ! is_admin() && ! self::rpt_is_amp_context() ) {
+			self::rpt_enqueue_mobile_hide_styles();
+		}
+	}
+
+	/**
+	 * Enqueue viewport-based mobile hide CSS when full RPT assets are not loaded.
+	 *
+	 * Covers cached HTML and cases where wp_is_mobile() does not match the viewport.
+	 *
+	 * @return void
+	 * @since 5.0.1
+	 */
+	private static function rpt_enqueue_mobile_hide_styles() {
+		if ( self::$enqueued ) {
+			return;
+		}
+
+		self::rpt_register_assets();
+		wp_enqueue_style( self::RPT_STYLE_HANDLE );
+		wp_add_inline_style(
+			self::RPT_STYLE_HANDLE,
+			'@media (max-width:782px){.relpost-thumb-wrapper,.relpost-author-related,#related_posts_thumbnails{display:none!important;}}'
+		);
 	}
 
 	/**
@@ -218,11 +251,11 @@ class RPT_Frontend_Assets {
 			return false;
 		}
 
-		if ( ! get_option( 'relpoststh_auto', $related_posts_thumbnails->auto ) ) {
+		if ( ! rpt_is_yes_option( 'relpoststh_auto', $related_posts_thumbnails->auto ) ) {
 			return false;
 		}
 
-		if ( wp_is_mobile() && '1' === get_option( 'relpoststh_mobile_view', '0' ) ) {
+		if ( rpt_is_mobile_hidden() ) {
 			return false;
 		}
 
@@ -251,19 +284,25 @@ class RPT_Frontend_Assets {
 			return '';
 		}
 
-		$border_color    = esc_attr( get_option( 'relpoststh_bordercolor', $plugin->border_color ) );
-		$background      = esc_attr( get_option( 'relpoststh_background', $plugin->background ) );
-		$hoverbackground = esc_attr( get_option( 'relpoststh_hoverbackground', $plugin->hoverbackground ) );
-		$font_size       = esc_attr( get_option( 'relpoststh_fontsize', $plugin->font_size ) );
-		$font_color      = esc_attr( get_option( 'relpoststh_fontcolor', $plugin->font_color ) );
-		$spacing         = esc_attr( get_option( 'relpoststh_spacing', '10px' ) );
+		$border_color    = rpt_sanitize_hex_color( (string) rpt_settings()->rpt_get( 'styles.border_color', $plugin->border_color ), $plugin->border_color );
+		$background      = rpt_sanitize_hex_color( (string) rpt_settings()->rpt_get( 'styles.background', $plugin->background ), $plugin->background );
+		$hoverbackground = rpt_sanitize_hex_color( (string) rpt_settings()->rpt_get( 'styles.hover_background', $plugin->hoverbackground ), $plugin->hoverbackground );
+		$font_size       = rpt_sanitize_css_font_size( (string) rpt_settings()->rpt_get( 'styles.font_size', $plugin->font_size ), $plugin->font_size );
+		$font_color      = rpt_sanitize_hex_color( (string) rpt_settings()->rpt_get( 'styles.font_color', $plugin->font_color ), $plugin->font_color );
+		$spacing         = rpt_sanitize_css_length( (string) rpt_settings()->rpt_get( 'styles.spacing', '10px' ), '10px' );
 
-		return "#related_posts_thumbnails li{border-right:1px solid {$border_color};background-color:{$background}}"
+		$css = "#related_posts_thumbnails li{border-right:1px solid {$border_color};background-color:{$background}}"
 			. "#related_posts_thumbnails li:hover{background-color:{$hoverbackground}}"
 			. ".relpost_content{font-size:{$font_size}px;color:{$font_color}}"
 			. ".relpost-block-single{background-color:{$background};border-right:1px solid {$border_color};border-left:1px solid {$border_color};margin-right:-1px}"
 			. ".relpost-block-single:hover{background-color:{$hoverbackground}}"
 			. ".relpost-block-single-image,.relpost-post-image{margin-bottom:{$spacing}}";
+
+		if ( rpt_is_yes_option( 'relpoststh_mobile_view', '0' ) ) {
+			$css .= '@media (max-width:782px){.relpost-thumb-wrapper,.relpost-author-related,#related_posts_thumbnails{display:none!important;}}';
+		}
+
+		return $css;
 	}
 
 	/**
@@ -275,7 +314,7 @@ class RPT_Frontend_Assets {
 	 * @return string
 	 * @since 5.0.0
 	 */
-	public static function rpt_defer_script_tag( $tag, $handle, $src ) {
+	public static function rpt_defer_script_tag( $tag, $handle, $src ) { // NOSONAR — WP script_loader_tag signature (php:S1172)
 		if ( self::RPT_SCRIPT_HANDLE !== $handle || false !== strpos( $tag, ' defer' ) ) {
 			return $tag;
 		}
@@ -293,7 +332,7 @@ class RPT_Frontend_Assets {
 	 * @return string
 	 * @since 5.0.0
 	 */
-	public static function rpt_async_style_tag( $html, $handle, $href, $media ) {
+	public static function rpt_async_style_tag( $html, $handle, $href, $media ) { // NOSONAR — WP style_loader_tag signature (php:S1172)
 		if ( self::RPT_STYLE_HANDLE !== $handle || ! self::$enqueued ) {
 			return $html;
 		}

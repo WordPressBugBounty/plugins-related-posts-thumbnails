@@ -1,0 +1,802 @@
+# Copyright (C) 2026 WPBrigade
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Related Posts Thumbnails 4.3.2\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/related-posts-thumbnails\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-04T07:23:16+00:00\n"
+"PO-Revision-Date: 2026-09-22 11:50+0000\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: related-posts-thumbnails\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"Language: ar\n"
+
+#: related-posts-thumbnails.php
+#: inc/rpt-blocks.php:53
+#: related-posts-thumbnails.php:702
+#: related-posts-thumbnails.php:1499
+#. Plugin Name of the plugin
+msgid "Related Posts Thumbnails"
+msgstr "صور مصغرة للمنشورات المتعلقة"
+
+#: related-posts-thumbnails.php
+#. Plugin URI of the plugin
+msgid ""
+"https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-"
+"posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp"
+msgstr ""
+"https://wpbrigade.com/wordpress/plugins/related-posts/?utm_source=related-"
+"posts-lite&utm_medium=plugin-uri&utm_campaign=pro-upgrade-rp"
+
+#: related-posts-thumbnails.php
+#. Description of the plugin
+msgid "Showing related posts thumbnails under the posts."
+msgstr "عرض صور مصغرة للمنشورات المتعلقة تحت المنشورات."
+
+#: related-posts-thumbnails.php
+#. Author of the plugin
+msgid "WPBrigade"
+msgstr "WPBrigade"
+
+#: related-posts-thumbnails.php
+#. Author URI of the plugin
+msgid ""
+"https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&"
+"utm_campaign=pro-upgrade-rp"
+msgstr ""
+"https://WPBrigade.com/?utm_source=related-posts-lite&utm_medium=author-link&"
+"utm_campaign=pro-upgrade-rp"
+
+#: inc/class-rpt-related-query.php:94
+#: inc/class-rpt-related-query.php:356
+#: inc/class-rpt-related-query.php:364
+#: inc/class-rpt-related-query.php:393
+msgid "No posts matching relationships criteria;"
+msgstr "لا توجد مشاركات تتطابق مع معايير العلاقات;"
+
+#: inc/class-rpt-related-query.php:212
+#: inc/class-rpt-related-query.php:221
+msgid "No taxonomy terms to get posts;"
+msgstr "لا توجد مصطلحات تصنيف للحصول على مشاركات;"
+
+#: inc/class-rpt-related-query.php:238
+#: inc/class-rpt-related-query.php:247
+msgid "No categories were selected;"
+msgstr "لم يتم اختيار أي فئات;"
+
+#: inc/class-rpt-settings-service.php:162
+msgid "Settings storage upgrade failed. Please try again or contact support."
+msgstr "فشل ترقية تخزين الإعدادات. يرجى المحاولة مرة أخرى أو الاتصال بالدعم."
+
+#: inc/class-rpt-settings-service.php:174
+msgid "Settings storage upgraded successfully."
+msgstr "تمت ترقية تخزين الإعدادات بنجاح."
+
+#: inc/class-rpt-settings-service.php:191
+msgid "Invalid settings payload."
+msgstr "حمولة الإعدادات غير صالحة."
+
+#: inc/class-rpt-settings-service.php:199
+msgid "Please upgrade your settings storage before saving changes."
+msgstr "يرجى ترقية تخزين الإعدادات قبل حفظ التغييرات."
+
+#: inc/class-rpt-settings-service.php:222
+msgid "Please enter a valid image URL (for example .jpg, .png, .gif, or .webp)."
+msgstr "يرجى إدخال عنوان URL صورة صالح (على سبيل المثال .jpg، .png، .gif، أو .webp)."
+
+#: inc/class-rpt-settings-service.php:243
+#: src/utils/validateSettings.js:105
+msgid ""
+"Custom relation requires at least one taxonomy. Select a taxonomy or choose "
+"a different relation."
+msgstr ""
+"يتطلب العلاقة المخصصة على الأقل تصنيفًا واحدًا. حدد تصنيفًا أو اختر علاقة "
+"مختلفة."
+
+#: inc/class-rpt-settings-service.php:272
+msgid "Settings updated"
+msgstr "تم تحديث الإعدادات"
+
+#: inc/class-rpt-settings-service.php:718
+#: related-posts-thumbnails.php:351
+msgid "Related posts:"
+msgstr "المشاركات ذات الصلة:"
+
+#: inc/rpt-widget.php:93
+msgid "Title:"
+msgstr "العنوان:"
+
+#: related-posts-thumbnails.php:418
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: related-posts-thumbnails.php:707
+msgid "Leave A Review?"
+msgstr "هل ترغب في ترك مراجعة؟"
+
+#: related-posts-thumbnails.php:711
+msgid ""
+"We hope you've enjoyed using Related Post Thumbnails! Would you consider "
+"leaving us a review on WordPress.org?"
+msgstr ""
+"نأمل أن تكون قد استمتعت باستخدام صور المصغرات للمشاركات ذات الصلة! هل ستفكر "
+"في ترك مراجعة لنا على WordPress.org؟"
+
+#: related-posts-thumbnails.php:718
+msgid "Sure! I'd love to!"
+msgstr "بالطبع! سأكون سعيداً بذلك!"
+
+#: related-posts-thumbnails.php:725
+msgid "I've already left a review"
+msgstr "لقد تركت مراجعة بالفعل"
+
+#: related-posts-thumbnails.php:732
+msgid "Maybe Later"
+msgstr "ربما لاحقاً"
+
+#: related-posts-thumbnails.php:739
+msgid "Never show again"
+msgstr "لا تُظهر مرة أخرى"
+
+#: related-posts-thumbnails.php:1403
+#: related-posts-thumbnails.php:1410
+msgid "Purge RPT Cache"
+msgstr "مسح ذاكرة تخزين RPT المؤقتة"
+
+#: related-posts-thumbnails.php:1452
+msgid "No access"
+msgstr "لا يوجد وصول"
+
+#: related-posts-thumbnails.php:1484
+msgid "Related posts cache purge started. Cleanup will continue in the background."
+msgstr "تم بدء مسح ذاكرة تخزين المشاركات ذات الصلة. ستستمر عملية التنظيف في الخلفية."
+
+#: related-posts-thumbnails.php:1485
+msgid "Related posts cache purged successfully."
+msgstr "تم مسح ذاكرة تخزين المشاركات ذات الصلة بنجاح."
+
+#: related-posts-thumbnails.php:1500
+msgid "Related Posts"
+msgstr "المشاركات ذات الصلة"
+
+#: related-posts-thumbnails.php:1509
+msgid "Activate"
+msgstr "تفعيل"
+
+#: related-posts-thumbnails.php:1606
+#: related-posts-thumbnails.php:1618
+#: src/components/fields/MultiSelectAutocomplete.js:34
+msgid "All"
+msgstr "الكل"
+
+#: related-posts-thumbnails.php:1614
+msgid "Select Categories"
+msgstr "اختر الفئات"
+
+#: src/components/fields/ColorPickerField.js:161
+#: src/components/fields/ColorPickerField.js:169
+msgid "Select Color"
+msgstr "اختر اللون"
+
+#: src/components/fields/CopyButton.js:38
+msgid "Copied!"
+msgstr "تم النسخ!"
+
+#: src/components/fields/CopyButton.js:39
+msgid "Copy"
+msgstr "نسخ"
+
+#: src/components/fields/MultiSelectAutocomplete.js:192
+msgid "Remove"
+msgstr "إزالة"
+
+#: src/components/fields/MultiSelectAutocomplete.js:220
+msgid "Search options"
+msgstr "خيارات البحث"
+
+#: src/components/fields/MultiSelectAutocomplete.js:231
+msgid "No results found"
+msgstr "لم يتم العثور على نتائج"
+
+#: src/components/fields/RptField.js:147
+msgid "Clear"
+msgstr "مسح"
+
+#: src/components/fields/RptField.js:212
+msgid "Select default image"
+msgstr "اختر صورة افتراضية"
+
+#: src/components/fields/RptField.js:213
+msgid "Use image"
+msgstr "استخدم الصورة"
+
+#: src/components/fields/RptField.js:241
+msgid "Set Image"
+msgstr "تعيين صورة"
+
+#: src/components/fields/RptField.js:249
+#: src/config/fields-schema.js:268
+msgid "Default Image"
+msgstr "صورة افتراضية"
+
+#: src/components/fields/RptField.js:257
+msgid "OR"
+msgstr "أو"
+
+#: src/components/fields/RptField.js:267
+msgid "Uncheck to place them manually with the snippet or shortcode below."
+msgstr "قم بإلغاء التحديد لوضعها يدويًا باستخدام المقتطف أو الرمز القصير أدناه."
+
+#: src/components/fields/SelectDropdown.js:45
+msgid "Select an option"
+msgstr "اختر خيارًا"
+
+#: src/components/layout/Header.js:22
+msgid "Get Support"
+msgstr "احصل على الدعم"
+
+#: src/components/layout/HeaderLogo.js:9
+msgid "RelatedPost Thumbnails"
+msgstr "صور مصغرة للمشاركات ذات الصلة"
+
+#: src/components/layout/MigrationConsentModal.js:53
+msgid "Dismiss"
+msgstr "تجاهل"
+
+#: src/components/layout/MigrationConsentModal.js:59
+msgid "Upgrade settings storage"
+msgstr "ترقية تخزين الإعدادات"
+
+#: src/components/layout/MigrationConsentModal.js:63
+msgid ""
+"We are consolidating your Related Posts settings into a more efficient "
+"storage format."
+msgstr ""
+"نحن نقوم بتجميع إعدادات المشاركات ذات الصلة الخاصة بك في تنسيق تخزين أكثر "
+"كفاءة."
+
+#: src/components/layout/MigrationConsentModal.js:71
+msgid "Fewer database rows — about 45 separate options become 4 organized groups."
+msgstr ""
+"عدد أقل من صفوف قاعدة البيانات - حوالي 45 خيارًا منفصلًا تصبح 4 مجموعات "
+"منظمة."
+
+#: src/components/layout/MigrationConsentModal.js:77
+msgid "Lower database overhead and faster settings loading."
+msgstr "تقليل الحمل على قاعدة البيانات وتحميل الإعدادات بشكل أسرع."
+
+#: src/components/layout/MigrationConsentModal.js:83
+msgid "Your existing settings are preserved during the upgrade."
+msgstr "يتم الاحتفاظ بإعداداتك الحالية أثناء الترقية."
+
+#: src/components/layout/MigrationConsentModal.js:107
+msgid "Upgrading…"
+msgstr "جارٍ الترقية..."
+
+#: src/components/layout/MigrationConsentModal.js:111
+msgid "Proceed"
+msgstr "متابعة"
+
+#: src/components/layout/SaveBar.js:32
+msgid "Dismiss notice"
+msgstr "تجاهل الإشعار"
+
+#: src/components/layout/SaveBar.js:57
+msgid "Saving…"
+msgstr "جارٍ الحفظ..."
+
+#: src/components/layout/SaveBar.js:58
+msgid "Save Settings"
+msgstr "حفظ الإعدادات"
+
+#: src/components/layout/SettingsSkeleton.js:53
+msgid "Loading settings"
+msgstr "جارٍ تحميل الإعدادات"
+
+#: src/components/layout/SettingsTabs.js:9
+msgid "General Display Options"
+msgstr "خيارات العرض العامة"
+
+#: src/components/layout/SettingsTabs.js:10
+msgid "General Settings"
+msgstr "الإعدادات العامة"
+
+#: src/components/layout/SettingsTabs.js:14
+msgid "Thumbnails"
+msgstr "صور مصغرة"
+
+#: src/components/layout/SettingsTabs.js:18
+msgid "Style Options"
+msgstr "خيارات النمط"
+
+#: src/components/layout/SettingsTabs.js:22
+msgid "Relations Builders Options"
+msgstr "خيارات بناء العلاقات"
+
+#: src/components/layout/SettingsTabs.js:125
+msgid "Settings sections"
+msgstr "أقسام الإعدادات"
+
+#: src/components/layout/Sidebar.js:12
+msgid ""
+"Build a branded, secure login experience with modern templates and styling "
+"options."
+msgstr ""
+"قم بإنشاء تجربة تسجيل دخول آمنة تحمل علامتك التجارية باستخدام قوالب حديثة "
+"وخيارات تنسيق."
+
+#: src/components/layout/Sidebar.js:19
+msgid "Connect Google Analytics to WordPress and track all stats in your dashboard."
+msgstr ""
+"قم بتوصيل Google Analytics بـ WordPress وتتبع جميع الإحصائيات في لوحة "
+"التحكم الخاصة بك."
+
+#: src/components/layout/Sidebar.js:26
+msgid "Increase your content reach with clean, fast social sharing buttons."
+msgstr "قم بزيادة وصول محتواك من خلال أزرار المشاركة الاجتماعية السريعة والنظيفة."
+
+#: src/components/layout/Sidebar.js:33
+msgid "Create a Coming Soon or Maintenance Mode page instantly for your website."
+msgstr "أنشئ صفحة قيد الإنشاء أو وضع الصيانة على الفور لموقعك الإلكتروني."
+
+#: src/components/layout/Sidebar.js:42
+msgid "Share on Facebook"
+msgstr "شارك على فيسبوك"
+
+#: src/components/layout/Sidebar.js:48
+msgid "Share on Twitter"
+msgstr "شارك على تويتر"
+
+#: src/components/layout/Sidebar.js:54
+msgid "Share on LinkedIn"
+msgstr "شارك على لينكد إن"
+
+#: src/components/layout/Sidebar.js:95
+msgid "Subscription failed."
+msgstr "فشل الاشتراك."
+
+#: src/components/layout/Sidebar.js:107
+msgid "Spread the Word"
+msgstr "انشر الكلمة"
+
+#: src/components/layout/Sidebar.js:109
+msgid "Love this plugin? Tell others about it"
+msgstr "تحب هذه الإضافة؟ أخبر الآخرين عنها"
+
+#: src/components/layout/Sidebar.js:138
+msgid "Recommended Plugins"
+msgstr "الإضافات الموصى بها"
+
+#: src/components/layout/Sidebar.js:140
+msgid "Handpicked tools to enhance your WordPress experience"
+msgstr "أدوات مختارة لتعزيز تجربتك مع WordPress"
+
+#: src/components/layout/Sidebar.js:168
+msgid "Newsletter"
+msgstr "النشرة الإخبارية"
+
+#: src/components/layout/Sidebar.js:170
+msgid "Join our newsletter for latest WordPress guides and updates"
+msgstr "انضم إلى نشرتنا الإخبارية للحصول على أحدث أدلة وتحديثات WordPress"
+
+#: src/components/layout/Sidebar.js:179
+#: src/components/layout/Sidebar.js:183
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: src/components/layout/Sidebar.js:193
+#: src/components/layout/Sidebar.js:197
+msgid "Name"
+msgstr "الاسم"
+
+#: src/components/layout/Sidebar.js:205
+msgid "Subscribe"
+msgstr "اشترك"
+
+#: src/components/layout/Sidebar.js:216
+msgid "Dismiss message"
+msgstr "تجاهل الرسالة"
+
+#: src/config/fields-schema.js:113
+msgid "Site default"
+msgstr "افتراضي الموقع"
+
+#: src/config/fields-schema.js:124
+msgid "Automatically append to the post content"
+msgstr "إضافة تلقائياً إلى محتوى المقالة"
+
+#: src/config/fields-schema.js:130
+msgid "Developer mode"
+msgstr "وضع المطور"
+
+#: src/config/fields-schema.js:131
+msgid "This will add debugging information in the HTML source."
+msgstr "سيؤدي هذا إلى إضافة معلومات تصحيح الأخطاء في المصدر HTML."
+
+#: src/config/fields-schema.js:137
+msgid "Cache related post IDs"
+msgstr "معرّفات المشاركات المتعلقة بالذاكرة المؤقتة"
+
+#: src/config/fields-schema.js:138
+msgid ""
+"Caches related post IDs for 24 hours to reduce database load. Clear anytime "
+"from the admin bar."
+msgstr ""
+"يتم تخزين معرّفات المشاركات المتعلقة بالذاكرة المؤقتة لمدة 24 ساعة لتقليل "
+"الحمل على قاعدة البيانات. يمكن مسحها في أي وقت من شريط الإدارة."
+
+#: src/config/fields-schema.js:147
+msgid "Show Posts By The Same Author"
+msgstr "عرض المشاركات بواسطة نفس المؤلف"
+
+#: src/config/fields-schema.js:148
+msgid ""
+"Shows related posts by the same author instead of category/tag matches. "
+"Uses your existing relation, layout, and display settings."
+msgstr ""
+"يعرض المشاركات المتعلقة بنفس المؤلف بدلاً من مطابقة الفئة/الوسم. يستخدم "
+"العلاقة والتخطيط وإعدادات العرض الحالية لديك."
+
+#: src/config/fields-schema.js:157
+msgid "Restrict To Single Posts"
+msgstr "تقييد لمشاركات فردية"
+
+#: src/config/fields-schema.js:158
+msgid "Limits related posts to single post views only."
+msgstr "يقتصر عرض المشاركات المتعلقة على مشاهدات المشاركات الفردية فقط."
+
+#: src/config/fields-schema.js:164
+msgid "Post types"
+msgstr "أنواع المشاركات"
+
+#: src/config/fields-schema.js:165
+msgid "Select the post types above eligible to show related posts."
+msgstr "اختر أنواع المشاركات المؤهلة أعلاه لعرض المشاركات المتعلقة."
+
+#: src/config/fields-schema.js:169
+msgid "Select post types…"
+msgstr "اختر أنواع المشاركات…"
+
+#: src/config/fields-schema.js:177
+msgid "Display related posts from these categories"
+msgstr "عرض المشاركات المتعلقة من هذه الفئات"
+
+#: src/config/fields-schema.js:178
+#: src/config/fields-schema.js:195
+msgid "Select categories…"
+msgstr "اختر الفئات…"
+
+#: src/config/fields-schema.js:186
+msgid "Display Categories on Related Posts"
+msgstr "عرض الفئات على المشاركات المتعلقة"
+
+#: src/config/fields-schema.js:188
+msgid "Shows each selected category on its related post thumbnail."
+msgstr "يعرض كل فئة مختارة على صورة المعاينة الخاصة بالمشاركة المتعلقة."
+
+#: src/config/fields-schema.js:204
+msgid "Disable on Mobile Devices"
+msgstr "تعطيل على الأجهزة المحمولة"
+
+#: src/config/fields-schema.js:206
+msgid "Hide related posts on mobile devices."
+msgstr "إخفاء المشاركات المتعلقة على الأجهزة المحمولة."
+
+#: src/config/fields-schema.js:212
+msgid "Include posts after selected date"
+msgstr "تضمين المشاركات بعد التاريخ المحدد"
+
+#: src/config/fields-schema.js:213
+msgid "Leave empty to display all posts."
+msgstr "اتركه فارغًا لعرض جميع المشاركات."
+
+#: src/config/fields-schema.js:219
+msgid "Sort Related Posts by"
+msgstr "فرز المشاركات المتعلقة بواسطة"
+
+#: src/config/fields-schema.js:221
+#: src/config/fields-schema.js:526
+msgid "Random"
+msgstr "عشوائي"
+
+#: src/config/fields-schema.js:222
+msgid "Latest"
+msgstr "الأحدث"
+
+#: src/config/fields-schema.js:229
+msgid "Top Text"
+msgstr "النص العلوي"
+
+#: src/config/fields-schema.js:231
+msgid "Custom heading shown above related posts."
+msgstr "عنوان مخصص يظهر فوق المشاركات المتعلقة."
+
+#: src/config/fields-schema.js:233
+msgid "Enter heading text"
+msgstr "أدخل نص العنوان"
+
+#: src/config/fields-schema.js:241
+#: src/utils/validateSettings.js:50
+msgid "Number of posts to display"
+msgstr "عدد المشاركات المعروضة"
+
+#: src/config/fields-schema.js:249
+msgid "Default Thumbnail Image Type"
+msgstr "نوع الصورة المصغرة الافتراضية"
+
+#: src/config/fields-schema.js:250
+msgid "Fallback thumbnail for related posts with no image of their own."
+msgstr "صورة مصغرة احتياطية للمنشورات ذات الصلة التي لا تحتوي على صورة خاصة بها."
+
+#: src/config/fields-schema.js:252
+msgid "Image (attachment ID)"
+msgstr "الصورة (معرف المرفق)"
+
+#: src/config/fields-schema.js:253
+msgid "URL (remote image)"
+msgstr "الرابط (صورة عن بُعد)"
+
+#: src/config/fields-schema.js:260
+msgid "Default image URL"
+msgstr "رابط الصورة الافتراضية"
+
+#: src/config/fields-schema.js:261
+msgid "Remote image URL, e.g. https://example.com/image.jpg"
+msgstr "رابط الصورة عن بُعد، مثل https://example.com/image.jpg"
+
+#: src/config/fields-schema.js:276
+msgid "Show date"
+msgstr "عرض التاريخ"
+
+#: src/config/fields-schema.js:277
+msgid "Shows the post's publish date."
+msgstr "يظهر تاريخ نشر المنشور."
+
+#: src/config/fields-schema.js:283
+msgid "Date format"
+msgstr "تنسيق التاريخ"
+
+#: src/config/fields-schema.js:293
+msgid "Select thumbnails source"
+msgstr "اختر مصدر الصور المصغرة"
+
+#: src/config/fields-schema.js:294
+msgid "Where each related post's image comes from."
+msgstr "من أين تأتي صورة كل منشور ذي صلة."
+
+#: src/config/fields-schema.js:296
+msgid "Post thumbnails"
+msgstr "صور مصغرة للمنشورات"
+
+#: src/config/fields-schema.js:297
+msgid "Custom field"
+msgstr "حقل مخصص"
+
+#: src/config/fields-schema.js:304
+msgid "Related posts thumbnail size"
+msgstr "حجم صور المشاركات ذات الصلة"
+
+#: src/config/fields-schema.js:312
+msgid "Show posts with featured image"
+msgstr "عرض المشاركات بصورة مميزة"
+
+#: src/config/fields-schema.js:313
+msgid "Only posts with featured image will be shown."
+msgstr "لن تظهر سوى المنشورات التي تحتوي على صورة مميزة."
+
+#: src/config/fields-schema.js:320
+msgid "Show Post's First Image"
+msgstr "عرض الصورة الأولى للمشاركة"
+
+#: src/config/fields-schema.js:321
+msgid "Use first in-post image when no featured image is set."
+msgstr "استخدم الصورة الأولى في المنشور عندما لا يتم تعيين صورة مميزة."
+
+#: src/config/fields-schema.js:330
+msgid "Image type"
+msgstr "نوع الصورة"
+
+#: src/config/fields-schema.js:332
+msgid "Image"
+msgstr "صورة"
+
+#: src/config/fields-schema.js:333
+msgid "URL"
+msgstr "رابط"
+
+#: src/config/fields-schema.js:341
+msgid "Custom field name"
+msgstr "اسم الحقل المخصص"
+
+#: src/config/fields-schema.js:342
+msgid "ACF/Custom field name for thumbnails that should have image field type."
+msgstr "اسم حقل ACF / مخصص للصور المصغرة التي يجب أن تحتوي على نوع حقل الصورة."
+
+#: src/config/fields-schema.js:349
+msgid "Size"
+msgstr "الحجم"
+
+#: src/config/fields-schema.js:356
+msgid "Enter width in pixels"
+msgstr "أدخل العرض بالبكسل"
+
+#: src/config/fields-schema.js:363
+msgid "Enter height in pixels"
+msgstr "أدخل الارتفاع بالبكسل"
+
+#: src/config/fields-schema.js:370
+msgid "Theme resize url"
+msgstr "رابط إعادة تغيير حجم القالب"
+
+#: src/config/fields-schema.js:371
+msgid "If your theme resizes images, enter URL to its resizing PHP file"
+msgstr ""
+"إذا كان القالب الخاص بك يعيد تغيير حجم الصور، أدخل رابط ملف PHP الخاص "
+"بإعادة تغيير الحجم"
+
+#: src/config/fields-schema.js:378
+msgid "Select the layout for related posts."
+msgstr "اختر تخطيط المنشورات ذات الصلة."
+
+#: src/config/fields-schema.js:379
+msgid "Output style"
+msgstr "نمط الإخراج"
+
+#: src/config/fields-schema.js:381
+msgid "Block"
+msgstr "كتلة"
+
+#: src/config/fields-schema.js:382
+msgid "List"
+msgstr "قائمة"
+
+#: src/config/fields-schema.js:389
+msgid "Disables the plugin's CSS, your theme's styles apply instead."
+msgstr "تعطيل CSS الخاص بالملحق، ستطبق أنماط القالب الخاص بك بدلاً من ذلك."
+
+#: src/config/fields-schema.js:390
+msgid "Disable plugin styles"
+msgstr "تعطيل أنماط الملحق"
+
+#: src/config/fields-schema.js:397
+msgid "Desktop Columns:"
+msgstr "أعمدة سطح المكتب:"
+
+#: src/config/fields-schema.js:400
+#: src/config/fields-schema.js:411
+#: src/config/fields-schema.js:422
+msgid "Select Column"
+msgstr "اختر عمود"
+
+#: src/config/fields-schema.js:408
+msgid "Tablet Columns:"
+msgstr "أعمدة الجهاز اللوحي:"
+
+#: src/config/fields-schema.js:419
+msgid "Mobile Columns:"
+msgstr "أعمدة الهاتف المحمول:"
+
+#: src/config/fields-schema.js:430
+msgid "Image Size"
+msgstr "حجم الصورة"
+
+#: src/config/fields-schema.js:431
+msgid "Crop ratio (width:height) for thumbnails."
+msgstr "نسبة القص (العرض:الارتفاع) للصور المصغرة."
+
+#: src/config/fields-schema.js:433
+msgid "Select Size"
+msgstr "اختر الحجم"
+
+#: src/config/fields-schema.js:446
+msgid "Background color"
+msgstr "لون الخلفية"
+
+#: src/config/fields-schema.js:452
+msgid ""
+"Background color\n"
+"on mouse over"
+msgstr ""
+"لون الخلفية\n"
+"عند تمرير الماوس"
+
+#: src/config/fields-schema.js:459
+msgid "Border color"
+msgstr "لون الحدود"
+
+#: src/config/fields-schema.js:465
+msgid "Font color"
+msgstr "لون الخط"
+
+#: src/config/fields-schema.js:471
+msgid "Font family"
+msgstr "عائلة الخط"
+
+#: src/config/fields-schema.js:477
+#: src/utils/validateSettings.js:61
+msgid "Font size"
+msgstr "حجم الخط"
+
+#: src/config/fields-schema.js:478
+msgid "Enter size in pixels (px)."
+msgstr "أدخل الحجم بالبكسل (px)."
+
+#: src/config/fields-schema.js:486
+msgid "Space Between Image and Title"
+msgstr "المسافة بين الصورة والعنوان"
+
+#: src/config/fields-schema.js:487
+msgid "Set the space between the image and the title box (e.g., 10px, 1em)."
+msgstr "حدد المسافة بين الصورة وصندوق العنوان (مثل، 10px، 1em)."
+
+#: src/config/fields-schema.js:493
+#: src/utils/validateSettings.js:94
+msgid "Text maximum length"
+msgstr "الحد الأقصى لطول النص"
+
+#: src/config/fields-schema.js:494
+msgid "Set 0 to hide the title."
+msgstr "حدد 0 لإخفاء العنوان."
+
+#: src/config/fields-schema.js:502
+#: src/utils/validateSettings.js:72
+msgid "Excerpt maximum length"
+msgstr "الحد الأقصى لطول الاقتباس"
+
+#: src/config/fields-schema.js:503
+msgid "Set 0 to hide the excerpt."
+msgstr "حدد 0 لإخفاء المقتطف."
+
+#: src/config/fields-schema.js:511
+#: src/utils/validateSettings.js:83
+msgid "Text block height"
+msgstr "ارتفاع كتلة النص"
+
+#: src/config/fields-schema.js:512
+msgid "Enter height in pixels (px)."
+msgstr "أدخل الارتفاع بالبكسل (px)."
+
+#: src/config/fields-schema.js:521
+msgid "Base relation on"
+msgstr "العلاقة الأساسية على"
+
+#: src/config/fields-schema.js:523
+msgid "Categories"
+msgstr "فئات"
+
+#: src/config/fields-schema.js:524
+msgid "Tags"
+msgstr "علامات"
+
+#: src/config/fields-schema.js:525
+msgid "Both"
+msgstr "كلاهما"
+
+#: src/config/fields-schema.js:527
+msgid "Custom"
+msgstr "مخصص"
+
+#: src/config/fields-schema.js:534
+msgid "Custom taxonomies"
+msgstr "تصنيفات مخصصة"
+
+#: src/config/fields-schema.js:535
+msgid "Select taxonomies…"
+msgstr "اختر التصنيفات…"
+
+#: src/utils/validateSettings.js:16
+#. translators: %s: Field label.
+msgid "%s cannot be empty."
+msgstr "%s لا يمكن أن يكون فارغًا."
+
+#: src/utils/validateSettings.js:26
+#. translators: 1: Field label, 2: Minimum allowed value, 3: Maximum allowed value.
+msgid "%1$s must be between %2$d and %3$d."
+msgstr "%1$s يجب أن يكون بين %2$d و %3$d."

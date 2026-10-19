@@ -1,0 +1,456 @@
+{
+    "translation-revision-date": "2026-09-22 11:54+0000",
+    "generator": "WP-CLI\/2.11.0",
+    "source": "build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "tr-TR",
+                "plural-forms": "nplurals=2; plural=(n > 1);"
+            },
+            "Custom relation requires at least one taxonomy. Select a taxonomy or choose a different relation.": [
+                "\u00d6zel ili\u015fki en az bir taksonomi gerektirir. Bir taksonomi se\u00e7in veya farkl\u0131 bir ili\u015fki se\u00e7in."
+            ],
+            "All": [
+                "Hepsi"
+            ],
+            "Select Color": [
+                "Renk Se\u00e7in"
+            ],
+            "Copied!": [
+                "Kopyaland\u0131!"
+            ],
+            "Copy": [
+                "Kopyala"
+            ],
+            "Remove": [
+                "Kald\u0131r"
+            ],
+            "Search options": [
+                "Arama se\u00e7enekleri"
+            ],
+            "No results found": [
+                "Sonu\u00e7 bulunamad\u0131"
+            ],
+            "Clear": [
+                "Temizle"
+            ],
+            "Select default image": [
+                "Varsay\u0131lan resmi se\u00e7"
+            ],
+            "Use image": [
+                "Resmi kullan"
+            ],
+            "Set Image": [
+                "Resmi Ayarla"
+            ],
+            "Default Image": [
+                "Varsay\u0131lan Resim"
+            ],
+            "OR": [
+                "VEYA"
+            ],
+            "Uncheck to place them manually with the snippet or shortcode below.": [
+                "A\u015fa\u011f\u0131daki snippet veya shortcode ile manuel olarak yerle\u015ftirmek i\u00e7in i\u015fareti kald\u0131r\u0131n."
+            ],
+            "Select an option": [
+                "Bir se\u00e7enek se\u00e7in"
+            ],
+            "Get Support": [
+                "Destek Al"
+            ],
+            "RelatedPost Thumbnails": [
+                "\u0130lgili G\u00f6nderi K\u00fc\u00e7\u00fck Resimleri"
+            ],
+            "Dismiss": [
+                "Kapat"
+            ],
+            "Upgrade settings storage": [
+                "Ayarlar\u0131 depolama alan\u0131n\u0131 y\u00fckselt"
+            ],
+            "We are consolidating your Related Posts settings into a more efficient storage format.": [
+                "\u0130lgili G\u00f6nderi ayarlar\u0131n\u0131z\u0131 daha verimli bir depolama format\u0131na konsolide ediyoruz."
+            ],
+            "Fewer database rows \u2014 about 45 separate options become 4 organized groups.": [
+                "Daha az veritaban\u0131 sat\u0131r\u0131 \u2014 yakla\u015f\u0131k 45 ayr\u0131 se\u00e7enek 4 d\u00fczenli gruba d\u00f6n\u00fc\u015f\u00fcyor."
+            ],
+            "Lower database overhead and faster settings loading.": [
+                "Daha d\u00fc\u015f\u00fck veritaban\u0131 y\u00fck\u00fc ve daha h\u0131zl\u0131 ayar y\u00fcklenmesi."
+            ],
+            "Your existing settings are preserved during the upgrade.": [
+                "Mevcut ayarlar\u0131n\u0131z y\u00fckseltme s\u0131ras\u0131nda korunur."
+            ],
+            "Upgrading\u2026": [
+                "Y\u00fckseltiliyor\u2026"
+            ],
+            "Proceed": [
+                "Devam et"
+            ],
+            "Dismiss notice": [
+                "Bildirim kapat"
+            ],
+            "Saving\u2026": [
+                "Kaydediliyor\u2026"
+            ],
+            "Save Settings": [
+                "Ayarlar\u0131 Kaydet"
+            ],
+            "Loading settings": [
+                "Ayarlar y\u00fckleniyor"
+            ],
+            "General Display Options": [
+                "Genel G\u00f6r\u00fcnt\u00fcleme Se\u00e7enekleri"
+            ],
+            "General Settings": [
+                "Genel Ayarlar"
+            ],
+            "Thumbnails": [
+                "K\u00fc\u00e7\u00fck Resimler"
+            ],
+            "Style Options": [
+                "Stil Se\u00e7enekleri"
+            ],
+            "Relations Builders Options": [
+                "\u0130li\u015fkiler Olu\u015fturucu Se\u00e7enekleri"
+            ],
+            "Settings sections": [
+                "Ayarlar b\u00f6l\u00fcmleri"
+            ],
+            "Build a branded, secure login experience with modern templates and styling options.": [
+                "Modern \u015fablonlar ve stil se\u00e7enekleri ile markal\u0131, g\u00fcvenli bir giri\u015f deneyimi olu\u015fturun."
+            ],
+            "Connect Google Analytics to WordPress and track all stats in your dashboard.": [
+                "Google Analytics'i WordPress'e ba\u011flay\u0131n ve t\u00fcm istatistikleri panonuzda takip edin."
+            ],
+            "Increase your content reach with clean, fast social sharing buttons.": [
+                "Temiz, h\u0131zl\u0131 sosyal payla\u015f\u0131m butonlar\u0131 ile i\u00e7eri\u011finizin eri\u015fimini art\u0131r\u0131n."
+            ],
+            "Create a Coming Soon or Maintenance Mode page instantly for your website.": [
+                "Web siteniz i\u00e7in an\u0131nda Bir S\u00fcreli\u011fine Geliyor veya Bak\u0131m Modu sayfas\u0131 olu\u015fturun."
+            ],
+            "Share on Facebook": [
+                "Facebook'ta Payla\u015f"
+            ],
+            "Share on Twitter": [
+                "Twitter'da Payla\u015f"
+            ],
+            "Share on LinkedIn": [
+                "LinkedIn'de Payla\u015f"
+            ],
+            "Subscription failed.": [
+                "Abonelik ba\u015far\u0131s\u0131z oldu."
+            ],
+            "Spread the Word": [
+                "Haber Yay\u0131nlay\u0131n"
+            ],
+            "Love this plugin? Tell others about it": [
+                "Bu eklentiyi seviyor musunuz? Ba\u015fkalar\u0131na anlat\u0131n"
+            ],
+            "Recommended Plugins": [
+                "Tavsiye Edilen Eklentiler"
+            ],
+            "Handpicked tools to enhance your WordPress experience": [
+                "WordPress deneyiminizi geli\u015ftirmek i\u00e7in \u00f6zenle se\u00e7ilmi\u015f ara\u00e7lar"
+            ],
+            "Newsletter": [
+                "B\u00fclten"
+            ],
+            "Join our newsletter for latest WordPress guides and updates": [
+                "En son WordPress k\u0131lavuzlar\u0131 ve g\u00fcncellemeleri i\u00e7in b\u00fcltenimize kat\u0131l\u0131n"
+            ],
+            "Email": [
+                "E-posta"
+            ],
+            "Name": [
+                "\u0130sim"
+            ],
+            "Subscribe": [
+                "Abone Ol"
+            ],
+            "Dismiss message": [
+                "Mesaj\u0131 kapat"
+            ],
+            "Site default": [
+                "Site varsay\u0131lan\u0131"
+            ],
+            "Automatically append to the post content": [
+                "G\u00f6nderi i\u00e7eri\u011fine otomatik olarak ekle"
+            ],
+            "Developer mode": [
+                "Geli\u015ftirici modu"
+            ],
+            "This will add debugging information in the HTML source.": [
+                "Bu, HTML kayna\u011f\u0131nda hata ay\u0131klama bilgilerini ekleyecektir."
+            ],
+            "Cache related post IDs": [
+                "\u00d6nbellek ile ilgili g\u00f6nderi kimlikleri"
+            ],
+            "Caches related post IDs for 24 hours to reduce database load. Clear anytime from the admin bar.": [
+                "Veritaban\u0131 y\u00fck\u00fcn\u00fc azaltmak i\u00e7in ilgili g\u00f6nderi kimliklerini 24 saat boyunca \u00f6nbelle\u011fe al\u0131r. Y\u00f6netici \u00e7ubu\u011fundan istedi\u011finiz zaman temizleyebilirsiniz."
+            ],
+            "Show Posts By The Same Author": [
+                "Ayn\u0131 Yazar\u0131n G\u00f6nderilerini G\u00f6ster"
+            ],
+            "Shows related posts by the same author instead of category\/tag matches. Uses your existing relation, layout, and display settings.": [
+                "Kategori\/etiket e\u015fle\u015fmeleri yerine ayn\u0131 yazar\u0131n ilgili g\u00f6nderilerini g\u00f6sterir. Mevcut ili\u015fkinizi, d\u00fczeninizi ve g\u00f6r\u00fcnt\u00fc ayarlar\u0131n\u0131z\u0131 kullan\u0131r."
+            ],
+            "Restrict To Single Posts": [
+                "Tek G\u00f6nderilere S\u0131n\u0131rl\u0131 Tut"
+            ],
+            "Limits related posts to single post views only.": [
+                "\u0130lgili g\u00f6nderileri yaln\u0131zca tek g\u00f6nderi g\u00f6r\u00fcnt\u00fclerine s\u0131n\u0131rlar."
+            ],
+            "Post types": [
+                "G\u00f6nderi t\u00fcrleri"
+            ],
+            "Select the post types above eligible to show related posts.": [
+                "\u0130lgili g\u00f6nderileri g\u00f6stermek i\u00e7in uygun g\u00f6nderi t\u00fcrlerini yukar\u0131dan se\u00e7in."
+            ],
+            "Select post types\u2026": [
+                "G\u00f6nderi t\u00fcrlerini se\u00e7in\u2026"
+            ],
+            "Display related posts from these categories": [
+                "Bu kategorilerden ilgili g\u00f6nderileri g\u00f6ster"
+            ],
+            "Select categories\u2026": [
+                "Kategorileri se\u00e7in\u2026"
+            ],
+            "Display Categories on Related Posts": [
+                "\u0130lgili G\u00f6nderilerde Kategorileri G\u00f6ster"
+            ],
+            "Shows each selected category on its related post thumbnail.": [
+                "Se\u00e7ilen her kategoriyi ilgili g\u00f6nderi k\u00fc\u00e7\u00fck resminde g\u00f6sterir."
+            ],
+            "Disable on Mobile Devices": [
+                "Mobil Cihazlarda Devre D\u0131\u015f\u0131 B\u0131rak"
+            ],
+            "Hide related posts on mobile devices.": [
+                "Mobil cihazlarda ilgili g\u00f6nderileri gizle."
+            ],
+            "Include posts after selected date": [
+                "Se\u00e7ilen tarihten sonraki g\u00f6nderileri dahil et"
+            ],
+            "Leave empty to display all posts.": [
+                "T\u00fcm g\u00f6nderileri g\u00f6stermek i\u00e7in bo\u015f b\u0131rak\u0131n."
+            ],
+            "Sort Related Posts by": [
+                "\u0130lgili G\u00f6nderileri \u015euna G\u00f6re S\u0131rala"
+            ],
+            "Random": [
+                "Rasgele"
+            ],
+            "Latest": [
+                "Son"
+            ],
+            "Top Text": [
+                "\u00dcst Metin"
+            ],
+            "Custom heading shown above related posts.": [
+                "\u0130lgili g\u00f6nderilerin \u00fcst\u00fcnde g\u00f6sterilen \u00f6zel ba\u015fl\u0131k."
+            ],
+            "Enter heading text": [
+                "Ba\u015fl\u0131k metnini girin"
+            ],
+            "Number of posts to display": [
+                "G\u00f6sterilecek g\u00f6nderi say\u0131s\u0131"
+            ],
+            "Default Thumbnail Image Type": [
+                "Varsay\u0131lan K\u00fc\u00e7\u00fck Resim T\u00fcr\u00fc"
+            ],
+            "Fallback thumbnail for related posts with no image of their own.": [
+                "Kendi resmi olmayan ilgili yaz\u0131lar i\u00e7in yedek k\u00fc\u00e7\u00fck resim."
+            ],
+            "Image (attachment ID)": [
+                "Resim (ek ID'si)"
+            ],
+            "URL (remote image)": [
+                "URL (uzaktaki resim)"
+            ],
+            "Default image URL": [
+                "Varsay\u0131lan resim URL'si"
+            ],
+            "Remote image URL, e.g. https:\/\/example.com\/image.jpg": [
+                "Uzaktaki resim URL'si, \u00f6rn. https:\/\/example.com\/image.jpg"
+            ],
+            "Show date": [
+                "Tarihi g\u00f6ster"
+            ],
+            "Shows the post's publish date.": [
+                "Yaz\u0131n\u0131n yay\u0131n tarihini g\u00f6sterir."
+            ],
+            "Date format": [
+                "Tarih format\u0131"
+            ],
+            "Select thumbnails source": [
+                "K\u00fc\u00e7\u00fck resim kayna\u011f\u0131n\u0131 se\u00e7in"
+            ],
+            "Where each related post's image comes from.": [
+                "Her ilgili yaz\u0131n\u0131n resminin nereden geldi\u011fi."
+            ],
+            "Post thumbnails": [
+                "Yaz\u0131 k\u00fc\u00e7\u00fck resimleri"
+            ],
+            "Custom field": [
+                "\u00d6zel alan"
+            ],
+            "Related posts thumbnail size": [
+                "\u0130lgili g\u00f6nderilerin k\u00fc\u00e7\u00fck resim boyutu"
+            ],
+            "Show posts with featured image": [
+                "\u00d6ne \u00e7\u0131kar\u0131lm\u0131\u015f g\u00f6rseli olan g\u00f6nderileri g\u00f6ster"
+            ],
+            "Only posts with featured image will be shown.": [
+                "Sadece \u00f6ne \u00e7\u0131kan resmi olan yaz\u0131lar g\u00f6sterilecektir."
+            ],
+            "Show Post's First Image": [
+                "G\u00f6nderinin \u0130lk Resmini G\u00f6ster"
+            ],
+            "Use first in-post image when no featured image is set.": [
+                "\u00d6ne \u00e7\u0131kan resim ayarlanmam\u0131\u015fsa, ilk yaz\u0131 i\u00e7i resmi kullan\u0131n."
+            ],
+            "Image type": [
+                "Resim t\u00fcr\u00fc"
+            ],
+            "Image": [
+                "Resim"
+            ],
+            "URL": [
+                "URL"
+            ],
+            "Custom field name": [
+                "\u00d6zel alan ad\u0131"
+            ],
+            "ACF\/Custom field name for thumbnails that should have image field type.": [
+                "K\u00fc\u00e7\u00fck resimler i\u00e7in resim alan\u0131 t\u00fcr\u00fcne sahip olmal\u0131 ACF\/\u00d6zel alan ad\u0131."
+            ],
+            "Size": [
+                "Boyut"
+            ],
+            "Enter width in pixels": [
+                "Geni\u015fli\u011fi piksel cinsinden girin"
+            ],
+            "Enter height in pixels": [
+                "Y\u00fcksekli\u011fi piksel cinsinden girin"
+            ],
+            "Theme resize url": [
+                "Tema yeniden boyutland\u0131rma URL'si"
+            ],
+            "If your theme resizes images, enter URL to its resizing PHP file": [
+                "Teman\u0131z resimleri yeniden boyutland\u0131r\u0131yorsa, yeniden boyutland\u0131rma PHP dosyas\u0131n\u0131n URL'sini girin"
+            ],
+            "Select the layout for related posts.": [
+                "\u0130lgili yaz\u0131lar i\u00e7in d\u00fczeni se\u00e7in."
+            ],
+            "Output style": [
+                "\u00c7\u0131kt\u0131 stili"
+            ],
+            "Block": [
+                "Blok"
+            ],
+            "List": [
+                "Liste"
+            ],
+            "Disables the plugin's CSS, your theme's styles apply instead.": [
+                "Eklentinin CSS'sini devre d\u0131\u015f\u0131 b\u0131rak\u0131r, bunun yerine teman\u0131z\u0131n stilleri uygulan\u0131r."
+            ],
+            "Disable plugin styles": [
+                "Eklenti stillerini devre d\u0131\u015f\u0131 b\u0131rak"
+            ],
+            "Desktop Columns:": [
+                "Masa\u00fcst\u00fc S\u00fctunlar\u0131:"
+            ],
+            "Select Column": [
+                "S\u00fctun Se\u00e7"
+            ],
+            "Tablet Columns:": [
+                "Tablet S\u00fctunlar\u0131:"
+            ],
+            "Mobile Columns:": [
+                "Mobil S\u00fctunlar:"
+            ],
+            "Image Size": [
+                "G\u00f6r\u00fcnt\u00fc Boyutu"
+            ],
+            "Crop ratio (width:height) for thumbnails.": [
+                "K\u00fc\u00e7\u00fck resimler i\u00e7in kesim oran\u0131 (geni\u015flik:y\u00fckseklik)."
+            ],
+            "Select Size": [
+                "Boyut Se\u00e7"
+            ],
+            "Background color": [
+                "Arka plan rengi"
+            ],
+            "Background color\non mouse over": [
+                "Fare ile \u00fczerine gelindi\u011finde arka plan rengi"
+            ],
+            "Border color": [
+                "Kenar rengi"
+            ],
+            "Font color": [
+                "Yaz\u0131 rengi"
+            ],
+            "Font family": [
+                "Yaz\u0131 tipi"
+            ],
+            "Font size": [
+                "Yaz\u0131 boyutu"
+            ],
+            "Enter size in pixels (px).": [
+                "Boyutu piksel (px) cinsinden girin."
+            ],
+            "Space Between Image and Title": [
+                "Resim ile Ba\u015fl\u0131k Aras\u0131ndaki Bo\u015fluk"
+            ],
+            "Set the space between the image and the title box (e.g., 10px, 1em).": [
+                "Resim ile ba\u015fl\u0131k kutusu aras\u0131ndaki bo\u015flu\u011fu ayarlay\u0131n (\u00f6rn., 10px, 1em)."
+            ],
+            "Text maximum length": [
+                "Metin maksimum uzunlu\u011fu"
+            ],
+            "Set 0 to hide the title.": [
+                "Ba\u015fl\u0131\u011f\u0131 gizlemek i\u00e7in 0 ayarlay\u0131n."
+            ],
+            "Excerpt maximum length": [
+                "Al\u0131nt\u0131 maksimum uzunlu\u011fu"
+            ],
+            "Set 0 to hide the excerpt.": [
+                "Al\u0131nt\u0131y\u0131 gizlemek i\u00e7in 0 ayarlay\u0131n."
+            ],
+            "Text block height": [
+                "Metin blo\u011fu y\u00fcksekli\u011fi"
+            ],
+            "Enter height in pixels (px).": [
+                "Y\u00fcksekli\u011fi piksel (px) cinsinden girin."
+            ],
+            "Base relation on": [
+                "Temel ili\u015fki ayarlar\u0131"
+            ],
+            "Categories": [
+                "Kategoriler"
+            ],
+            "Tags": [
+                "Etiketler"
+            ],
+            "Both": [
+                "Her ikisi"
+            ],
+            "Custom": [
+                "\u00d6zel"
+            ],
+            "Custom taxonomies": [
+                "\u00d6zel taksonomiler"
+            ],
+            "Select taxonomies\u2026": [
+                "Taksonomileri se\u00e7in\u2026"
+            ],
+            "%s cannot be empty.": [
+                "%s bo\u015f olamaz."
+            ],
+            "%1$s must be between %2$d and %3$d.": [
+                "%1$s %2$d ile %3$d aras\u0131nda olmal\u0131d\u0131r."
+            ]
+        }
+    }
+}

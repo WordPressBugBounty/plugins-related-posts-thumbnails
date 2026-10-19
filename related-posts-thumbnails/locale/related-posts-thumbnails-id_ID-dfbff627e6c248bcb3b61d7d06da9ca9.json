@@ -1,0 +1,456 @@
+{
+    "translation-revision-date": "2026-09-22 11:52+0000",
+    "generator": "WP-CLI\/2.11.0",
+    "source": "build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "id-ID",
+                "plural-forms": "nplurals=1; plural=0;"
+            },
+            "Custom relation requires at least one taxonomy. Select a taxonomy or choose a different relation.": [
+                "Hubungan kustom memerlukan setidaknya satu taksonomi. Pilih taksonomi atau pilih hubungan yang berbeda."
+            ],
+            "All": [
+                "Semua"
+            ],
+            "Select Color": [
+                "Pilih Warna"
+            ],
+            "Copied!": [
+                "Disalin!"
+            ],
+            "Copy": [
+                "Salin"
+            ],
+            "Remove": [
+                "Hapus"
+            ],
+            "Search options": [
+                "Opsi pencarian"
+            ],
+            "No results found": [
+                "Tidak ada hasil ditemukan"
+            ],
+            "Clear": [
+                "Bersihkan"
+            ],
+            "Select default image": [
+                "Pilih gambar default"
+            ],
+            "Use image": [
+                "Gunakan gambar"
+            ],
+            "Set Image": [
+                "Atur Gambar"
+            ],
+            "Default Image": [
+                "Gambar Default"
+            ],
+            "OR": [
+                "ATAU"
+            ],
+            "Uncheck to place them manually with the snippet or shortcode below.": [
+                "Hapus centang untuk menempatkannya secara manual dengan cuplikan atau shortcode di bawah ini."
+            ],
+            "Select an option": [
+                "Pilih opsi"
+            ],
+            "Get Support": [
+                "Dapatkan Dukungan"
+            ],
+            "RelatedPost Thumbnails": [
+                "Thumbnail Post Terkait"
+            ],
+            "Dismiss": [
+                "Tutup"
+            ],
+            "Upgrade settings storage": [
+                "Tingkatkan penyimpanan pengaturan"
+            ],
+            "We are consolidating your Related Posts settings into a more efficient storage format.": [
+                "Kami sedang mengonsolidasikan pengaturan Post Terkait Anda ke dalam format penyimpanan yang lebih efisien."
+            ],
+            "Fewer database rows \u2014 about 45 separate options become 4 organized groups.": [
+                "Lebih sedikit baris database \u2014 sekitar 45 opsi terpisah menjadi 4 kelompok yang terorganisir."
+            ],
+            "Lower database overhead and faster settings loading.": [
+                "Mengurangi beban database dan mempercepat pemuatan pengaturan."
+            ],
+            "Your existing settings are preserved during the upgrade.": [
+                "Pengaturan Anda yang ada akan dipertahankan selama peningkatan."
+            ],
+            "Upgrading\u2026": [
+                "Meningkatkan\u2026"
+            ],
+            "Proceed": [
+                "Lanjutkan"
+            ],
+            "Dismiss notice": [
+                "Tutup pemberitahuan"
+            ],
+            "Saving\u2026": [
+                "Menyimpan\u2026"
+            ],
+            "Save Settings": [
+                "Simpan Pengaturan"
+            ],
+            "Loading settings": [
+                "Memuat pengaturan"
+            ],
+            "General Display Options": [
+                "Opsi Tampilan Umum"
+            ],
+            "General Settings": [
+                "Pengaturan Umum"
+            ],
+            "Thumbnails": [
+                "Thumbnail"
+            ],
+            "Style Options": [
+                "Opsi Gaya"
+            ],
+            "Relations Builders Options": [
+                "Opsi Pembuat Hubungan"
+            ],
+            "Settings sections": [
+                "Bagian Pengaturan"
+            ],
+            "Build a branded, secure login experience with modern templates and styling options.": [
+                "Buat pengalaman login yang terjamin dan berbranding dengan template dan opsi gaya modern."
+            ],
+            "Connect Google Analytics to WordPress and track all stats in your dashboard.": [
+                "Sambungkan Google Analytics ke WordPress dan lacak semua statistik di dashboard Anda."
+            ],
+            "Increase your content reach with clean, fast social sharing buttons.": [
+                "Tingkatkan jangkauan konten Anda dengan tombol berbagi sosial yang bersih dan cepat."
+            ],
+            "Create a Coming Soon or Maintenance Mode page instantly for your website.": [
+                "Buat halaman Coming Soon atau Mode Pemeliharaan secara instan untuk situs web Anda."
+            ],
+            "Share on Facebook": [
+                "Bagikan di Facebook"
+            ],
+            "Share on Twitter": [
+                "Bagikan di Twitter"
+            ],
+            "Share on LinkedIn": [
+                "Bagikan di LinkedIn"
+            ],
+            "Subscription failed.": [
+                "Langganan gagal."
+            ],
+            "Spread the Word": [
+                "Sebarkan Berita"
+            ],
+            "Love this plugin? Tell others about it": [
+                "Suka plugin ini? Beritahu orang lain tentangnya"
+            ],
+            "Recommended Plugins": [
+                "Plugin yang Disarankan"
+            ],
+            "Handpicked tools to enhance your WordPress experience": [
+                "Alat pilihan untuk meningkatkan pengalaman WordPress Anda"
+            ],
+            "Newsletter": [
+                "Newsletter"
+            ],
+            "Join our newsletter for latest WordPress guides and updates": [
+                "Bergabunglah dengan newsletter kami untuk panduan dan pembaruan WordPress terbaru"
+            ],
+            "Email": [
+                "Email"
+            ],
+            "Name": [
+                "Nama"
+            ],
+            "Subscribe": [
+                "Berlangganan"
+            ],
+            "Dismiss message": [
+                "Abaikan pesan"
+            ],
+            "Site default": [
+                "Default situs"
+            ],
+            "Automatically append to the post content": [
+                "Secara otomatis tambahkan ke konten pos"
+            ],
+            "Developer mode": [
+                "Mode Pengembang"
+            ],
+            "This will add debugging information in the HTML source.": [
+                "Ini akan menambahkan informasi debugging di sumber HTML."
+            ],
+            "Cache related post IDs": [
+                "ID pos terkait cache"
+            ],
+            "Caches related post IDs for 24 hours to reduce database load. Clear anytime from the admin bar.": [
+                "Menyimpan ID pos terkait dalam cache selama 24 jam untuk mengurangi beban database. Hapus kapan saja dari bilah admin."
+            ],
+            "Show Posts By The Same Author": [
+                "Tampilkan Pos Oleh Penulis yang Sama"
+            ],
+            "Shows related posts by the same author instead of category\/tag matches. Uses your existing relation, layout, and display settings.": [
+                "Menampilkan pos terkait oleh penulis yang sama alih-alih mencocokkan kategori\/tag. Menggunakan hubungan, tata letak, dan pengaturan tampilan yang ada."
+            ],
+            "Restrict To Single Posts": [
+                "Batasi ke Pos Tunggal"
+            ],
+            "Limits related posts to single post views only.": [
+                "Membatasi pos terkait hanya untuk tampilan pos tunggal."
+            ],
+            "Post types": [
+                "Jenis pos"
+            ],
+            "Select the post types above eligible to show related posts.": [
+                "Pilih jenis pos di atas yang memenuhi syarat untuk menampilkan pos terkait."
+            ],
+            "Select post types\u2026": [
+                "Pilih jenis pos\u2026"
+            ],
+            "Display related posts from these categories": [
+                "Tampilkan pos terkait dari kategori ini"
+            ],
+            "Select categories\u2026": [
+                "Pilih kategori\u2026"
+            ],
+            "Display Categories on Related Posts": [
+                "Tampilkan Kategori di Pos Terkait"
+            ],
+            "Shows each selected category on its related post thumbnail.": [
+                "Menampilkan setiap kategori yang dipilih pada thumbnail pos terkaitnya."
+            ],
+            "Disable on Mobile Devices": [
+                "Nonaktifkan di Perangkat Seluler"
+            ],
+            "Hide related posts on mobile devices.": [
+                "Sembunyikan pos terkait di perangkat seluler."
+            ],
+            "Include posts after selected date": [
+                "Sertakan pos setelah tanggal yang dipilih"
+            ],
+            "Leave empty to display all posts.": [
+                "Biarkan kosong untuk menampilkan semua pos."
+            ],
+            "Sort Related Posts by": [
+                "Urutkan Pos Terkait berdasarkan"
+            ],
+            "Random": [
+                "Acak"
+            ],
+            "Latest": [
+                "Terbaru"
+            ],
+            "Top Text": [
+                "Teks Utama"
+            ],
+            "Custom heading shown above related posts.": [
+                "Judul kustom ditampilkan di atas pos terkait."
+            ],
+            "Enter heading text": [
+                "Masukkan teks judul"
+            ],
+            "Number of posts to display": [
+                "Jumlah pos yang ditampilkan"
+            ],
+            "Default Thumbnail Image Type": [
+                "Jenis Gambar Thumbnail Default"
+            ],
+            "Fallback thumbnail for related posts with no image of their own.": [
+                "Thumbnail cadangan untuk pos terkait yang tidak memiliki gambar sendiri."
+            ],
+            "Image (attachment ID)": [
+                "Gambar (ID lampiran)"
+            ],
+            "URL (remote image)": [
+                "URL (gambar jarak jauh)"
+            ],
+            "Default image URL": [
+                "URL gambar default"
+            ],
+            "Remote image URL, e.g. https:\/\/example.com\/image.jpg": [
+                "URL gambar jarak jauh, misalnya https:\/\/example.com\/image.jpg"
+            ],
+            "Show date": [
+                "Tampilkan tanggal"
+            ],
+            "Shows the post's publish date.": [
+                "Menampilkan tanggal publikasi pos."
+            ],
+            "Date format": [
+                "Format tanggal"
+            ],
+            "Select thumbnails source": [
+                "Pilih sumber thumbnail"
+            ],
+            "Where each related post's image comes from.": [
+                "Dari mana gambar setiap pos terkait berasal."
+            ],
+            "Post thumbnails": [
+                "Thumbnail pos"
+            ],
+            "Custom field": [
+                "Bidang kustom"
+            ],
+            "Related posts thumbnail size": [
+                "Ukuran thumbnail pos terkait"
+            ],
+            "Show posts with featured image": [
+                "Tampilkan pos dengan gambar unggulan"
+            ],
+            "Only posts with featured image will be shown.": [
+                "Hanya pos dengan gambar unggulan yang akan ditampilkan."
+            ],
+            "Show Post's First Image": [
+                "Tampilkan Gambar Pertama Pos"
+            ],
+            "Use first in-post image when no featured image is set.": [
+                "Gunakan gambar pertama dalam pos ketika tidak ada gambar unggulan yang ditetapkan."
+            ],
+            "Image type": [
+                "Jenis gambar"
+            ],
+            "Image": [
+                "Gambar"
+            ],
+            "URL": [
+                "URL"
+            ],
+            "Custom field name": [
+                "Nama bidang kustom"
+            ],
+            "ACF\/Custom field name for thumbnails that should have image field type.": [
+                "Nama field ACF\/Kustom untuk thumbnail yang seharusnya memiliki tipe field gambar."
+            ],
+            "Size": [
+                "Ukuran"
+            ],
+            "Enter width in pixels": [
+                "Masukkan lebar dalam piksel"
+            ],
+            "Enter height in pixels": [
+                "Masukkan tinggi dalam piksel"
+            ],
+            "Theme resize url": [
+                "URL pengubahan ukuran tema"
+            ],
+            "If your theme resizes images, enter URL to its resizing PHP file": [
+                "Jika tema Anda mengubah ukuran gambar, masukkan URL ke file PHP pengubah ukurannya"
+            ],
+            "Select the layout for related posts.": [
+                "Pilih tata letak untuk pos terkait."
+            ],
+            "Output style": [
+                "Gaya keluaran"
+            ],
+            "Block": [
+                "Blok"
+            ],
+            "List": [
+                "Daftar"
+            ],
+            "Disables the plugin's CSS, your theme's styles apply instead.": [
+                "Menonaktifkan CSS plugin, gaya tema Anda yang diterapkan sebagai gantinya."
+            ],
+            "Disable plugin styles": [
+                "Nonaktifkan gaya plugin"
+            ],
+            "Desktop Columns:": [
+                "Kolom Desktop:"
+            ],
+            "Select Column": [
+                "Pilih Kolom"
+            ],
+            "Tablet Columns:": [
+                "Kolom Tablet:"
+            ],
+            "Mobile Columns:": [
+                "Kolom Mobile:"
+            ],
+            "Image Size": [
+                "Ukuran Gambar"
+            ],
+            "Crop ratio (width:height) for thumbnails.": [
+                "Rasio pemotongan (lebar:tinggi) untuk thumbnail."
+            ],
+            "Select Size": [
+                "Pilih Ukuran"
+            ],
+            "Background color": [
+                "Warna latar belakang"
+            ],
+            "Background color\non mouse over": [
+                "Warna latar belakang\nsaat mouse melayang"
+            ],
+            "Border color": [
+                "Warna batas"
+            ],
+            "Font color": [
+                "Warna font"
+            ],
+            "Font family": [
+                "Keluarga font"
+            ],
+            "Font size": [
+                "Ukuran font"
+            ],
+            "Enter size in pixels (px).": [
+                "Masukkan ukuran dalam piksel (px)."
+            ],
+            "Space Between Image and Title": [
+                "Jarak Antara Gambar dan Judul"
+            ],
+            "Set the space between the image and the title box (e.g., 10px, 1em).": [
+                "Atur jarak antara gambar dan kotak judul (misalnya, 10px, 1em)."
+            ],
+            "Text maximum length": [
+                "Panjang maksimum teks"
+            ],
+            "Set 0 to hide the title.": [
+                "Atur 0 untuk menyembunyikan judul."
+            ],
+            "Excerpt maximum length": [
+                "Panjang maksimum kutipan"
+            ],
+            "Set 0 to hide the excerpt.": [
+                "Atur 0 untuk menyembunyikan kutipan."
+            ],
+            "Text block height": [
+                "Tinggi blok teks"
+            ],
+            "Enter height in pixels (px).": [
+                "Masukkan tinggi dalam piksel (px)."
+            ],
+            "Base relation on": [
+                "Dasar hubungan pada"
+            ],
+            "Categories": [
+                "Kategori"
+            ],
+            "Tags": [
+                "Tag"
+            ],
+            "Both": [
+                "Keduanya"
+            ],
+            "Custom": [
+                "Kustom"
+            ],
+            "Custom taxonomies": [
+                "Taksonomi kustom"
+            ],
+            "Select taxonomies\u2026": [
+                "Pilih taksonomi\u2026"
+            ],
+            "%s cannot be empty.": [
+                "%s tidak boleh kosong."
+            ],
+            "%1$s must be between %2$d and %3$d.": [
+                "%1$s harus antara %2$d dan %3$d."
+            ]
+        }
+    }
+}

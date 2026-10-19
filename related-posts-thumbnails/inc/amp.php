@@ -1,8 +1,13 @@
 <?php
+/**
+ * AMP compatibility styles.
+ *
+ * @package RelatedPostsThumbnails
+ */
 
-    if ( ! defined( 'ABSPATH' ) ) {
-        exit; // Exit if accessed directly.
-    }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 class loginpress_amp {
 
@@ -269,48 +274,48 @@ class loginpress_amp {
             }
         
             .relpost-block-container>div{
-                border-right: 1px solid <?php echo get_option( 'relpoststh_bordercolor', $this->border_color );  ?>;
-                background-color: <?php echo get_option( 'relpoststh_background', $this->background ); ?>
+                border-right: 1px solid <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.border_color', $this->border_color ) ); ?>;
+                background-color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.background', $this->background ) ); ?>
             }
             .relpost-block-container>div:hover{
-                background-color: <?php echo get_option( 'relpoststh_hoverbackground', $this->hoverbackground ); ?>;
+                background-color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.hover_background', $this->hoverbackground ) ); ?>;
             }
             .relpost_content{
-                font-size:	<?php echo get_option( 'relpoststh_fontsize', $this->font_size ) . 'px'; ?>;
-                color: 		<?php echo get_option( 'relpoststh_fontcolor', $this->font_color ); ?>;
+                font-size:	<?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.font_size', $this->font_size ) ); ?>px;
+                color: 		<?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.font_color', $this->font_color ) ); ?>;
             }
             .relpost-block-single{
-                background-color: <?php echo get_option( 'relpoststh_background', $this->background ); ?>;
-                border-right: 1px solid  <?php echo get_option( 'relpoststh_bordercolor', $this->border_color ); ?>;
-                border-left: 1px solid  <?php echo get_option( 'relpoststh_bordercolor', $this->border_color ); ?>;
+                background-color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.background', $this->background ) ); ?>;
+                border-right: 1px solid  <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.border_color', $this->border_color ) ); ?>;
+                border-left: 1px solid  <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.border_color', $this->border_color ) ); ?>;
                 margin-right: -1px;
             }
             .relpost-block-single:hover{
-                background-color: <?php echo get_option( 'relpoststh_hoverbackground', $this->hoverbackground ); ?>;
+                background-color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.hover_background', $this->hoverbackground ) ); ?>;
             }
             #related_posts_thumbnails li {
-                border-right: 1px solid <?php echo get_option( 'relpoststh_bordercolor', $this->border_color );  ?>;
-                background-color: <?php echo get_option( 'relpoststh_background', $this->background ); ?>
+                border-right: 1px solid <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.border_color', $this->border_color ) ); ?>;
+                background-color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.background', $this->background ) ); ?>
             }
         
             #related_posts_thumbnails li:hover {
-                background-color: <?php echo get_option( 'relpoststh_hoverbackground', $this->hoverbackground ); ?>;
+                background-color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.hover_background', $this->hoverbackground ) ); ?>;
             }
         
             .relpost_content {
-                font-size: <?php echo get_option( 'relpoststh_fontsize', $this->font_size ) . 'px'; ?>;
-                color: <?php echo get_option( 'relpoststh_fontcolor', $this->font_color ); ?>;
+                font-size: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.font_size', $this->font_size ) ); ?>px;
+                color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.font_color', $this->font_color ) ); ?>;
             }
         
             .relpost-block-single {
-                background-color: <?php echo get_option( 'relpoststh_background', $this->background ); ?>;
-                border-right: 1px solid <?php echo get_option( 'relpoststh_bordercolor', $this->border_color ); ?>;
-                border-left: 1px solid <?php echo get_option( 'relpoststh_bordercolor', $this->border_color ); ?>;
+                background-color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.background', $this->background ) ); ?>;
+                border-right: 1px solid <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.border_color', $this->border_color ) ); ?>;
+                border-left: 1px solid <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.border_color', $this->border_color ) ); ?>;
                 margin-right: -1px;
             }
         
             .relpost-block-single:hover {
-                background-color: <?php echo get_option( 'relpoststh_hoverbackground', $this->hoverbackground ); ?>;
+                background-color: <?php echo esc_attr( (string) rpt_settings()->rpt_get( 'styles.hover_background', $this->hoverbackground ) ); ?>;
             }
             #related_posts_thumbnails .related_posts_thumbnails img{
                 object-fit: cover;

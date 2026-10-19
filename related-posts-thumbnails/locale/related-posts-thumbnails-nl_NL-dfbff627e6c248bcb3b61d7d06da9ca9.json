@@ -1,0 +1,456 @@
+{
+    "translation-revision-date": "2026-09-22 11:53+0000",
+    "generator": "WP-CLI\/2.11.0",
+    "source": "build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "nl-NL",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Custom relation requires at least one taxonomy. Select a taxonomy or choose a different relation.": [
+                "Aangepaste relatie vereist minstens \u00e9\u00e9n taxonomie. Selecteer een taxonomie of kies een andere relatie."
+            ],
+            "All": [
+                "Alles"
+            ],
+            "Select Color": [
+                "Kleur selecteren"
+            ],
+            "Copied!": [
+                "Gekopieerd!"
+            ],
+            "Copy": [
+                "Kopi\u00ebren"
+            ],
+            "Remove": [
+                "Verwijderen"
+            ],
+            "Search options": [
+                "Zoekopties"
+            ],
+            "No results found": [
+                "Geen resultaten gevonden"
+            ],
+            "Clear": [
+                "Wis"
+            ],
+            "Select default image": [
+                "Selecteer standaardafbeelding"
+            ],
+            "Use image": [
+                "Gebruik afbeelding"
+            ],
+            "Set Image": [
+                "Stel afbeelding in"
+            ],
+            "Default Image": [
+                "Standaard afbeelding"
+            ],
+            "OR": [
+                "OF"
+            ],
+            "Uncheck to place them manually with the snippet or shortcode below.": [
+                "Schakel uit om ze handmatig te plaatsen met de snippet of shortcode hieronder."
+            ],
+            "Select an option": [
+                "Selecteer een optie"
+            ],
+            "Get Support": [
+                "Krijg ondersteuning"
+            ],
+            "RelatedPost Thumbnails": [
+                "Miniaturen van gerelateerde berichten"
+            ],
+            "Dismiss": [
+                "Verwijderen"
+            ],
+            "Upgrade settings storage": [
+                "Upgrade instellingen opslag"
+            ],
+            "We are consolidating your Related Posts settings into a more efficient storage format.": [
+                "We consolideren uw instellingen voor gerelateerde berichten in een effici\u00ebnter opslagformaat."
+            ],
+            "Fewer database rows \u2014 about 45 separate options become 4 organized groups.": [
+                "Minder database-rijen - ongeveer 45 aparte opties worden 4 georganiseerde groepen."
+            ],
+            "Lower database overhead and faster settings loading.": [
+                "Lagere database overhead en snellere instellingen laden."
+            ],
+            "Your existing settings are preserved during the upgrade.": [
+                "Uw bestaande instellingen worden behouden tijdens de upgrade."
+            ],
+            "Upgrading\u2026": [
+                "Upgraden\u2026"
+            ],
+            "Proceed": [
+                "Doorgaan"
+            ],
+            "Dismiss notice": [
+                "Verwijder melding"
+            ],
+            "Saving\u2026": [
+                "Opslaan\u2026"
+            ],
+            "Save Settings": [
+                "Instellingen Opslaan"
+            ],
+            "Loading settings": [
+                "Instellingen laden"
+            ],
+            "General Display Options": [
+                "Algemene weergave-opties"
+            ],
+            "General Settings": [
+                "Algemene instellingen"
+            ],
+            "Thumbnails": [
+                "Miniaturen"
+            ],
+            "Style Options": [
+                "Stijlopties"
+            ],
+            "Relations Builders Options": [
+                "Opties voor relatiesbouwers"
+            ],
+            "Settings sections": [
+                "Instellingen secties"
+            ],
+            "Build a branded, secure login experience with modern templates and styling options.": [
+                "Bouw een merkgebonden, veilige inlogervaring met moderne sjablonen en stijlopties."
+            ],
+            "Connect Google Analytics to WordPress and track all stats in your dashboard.": [
+                "Verbind Google Analytics met WordPress en volg alle statistieken in je dashboard."
+            ],
+            "Increase your content reach with clean, fast social sharing buttons.": [
+                "Verhoog je bereik met schone, snelle sociale deelknoppen."
+            ],
+            "Create a Coming Soon or Maintenance Mode page instantly for your website.": [
+                "Maak onmiddellijk een 'Binnenkort' of Onderhoudsmodus-pagina voor je website."
+            ],
+            "Share on Facebook": [
+                "Deel op Facebook"
+            ],
+            "Share on Twitter": [
+                "Deel op Twitter"
+            ],
+            "Share on LinkedIn": [
+                "Deel op LinkedIn"
+            ],
+            "Subscription failed.": [
+                "Abonnement mislukt."
+            ],
+            "Spread the Word": [
+                "Verspreid het Woord"
+            ],
+            "Love this plugin? Tell others about it": [
+                "Hou je van deze plugin? Vertel anderen erover"
+            ],
+            "Recommended Plugins": [
+                "Aanbevolen Plugins"
+            ],
+            "Handpicked tools to enhance your WordPress experience": [
+                "Handgeselecteerde tools om je WordPress-ervaring te verbeteren"
+            ],
+            "Newsletter": [
+                "Nieuwsbrief"
+            ],
+            "Join our newsletter for latest WordPress guides and updates": [
+                "Sluit je aan bij onze nieuwsbrief voor de laatste WordPress-gidsen en updates"
+            ],
+            "Email": [
+                "E-mail"
+            ],
+            "Name": [
+                "Naam"
+            ],
+            "Subscribe": [
+                "Abonneren"
+            ],
+            "Dismiss message": [
+                "Bericht verbergen"
+            ],
+            "Site default": [
+                "Site standaard"
+            ],
+            "Automatically append to the post content": [
+                "Automatisch toevoegen aan de postinhoud"
+            ],
+            "Developer mode": [
+                "Ontwikkelaarsmodus"
+            ],
+            "This will add debugging information in the HTML source.": [
+                "Dit voegt debuginformatie toe in de HTML-bron."
+            ],
+            "Cache related post IDs": [
+                "Cache gerelateerde bericht-ID's"
+            ],
+            "Caches related post IDs for 24 hours to reduce database load. Clear anytime from the admin bar.": [
+                "Cache gerelateerde bericht-ID's gedurende 24 uur om de belasting van de database te verminderen. Maak op elk moment schoon vanaf de adminbalk."
+            ],
+            "Show Posts By The Same Author": [
+                "Toon berichten van dezelfde auteur"
+            ],
+            "Shows related posts by the same author instead of category\/tag matches. Uses your existing relation, layout, and display settings.": [
+                "Toont gerelateerde berichten van dezelfde auteur in plaats van categorie\/tag overeenkomsten. Gebruikt je bestaande relatie-, lay-out- en weergave-instellingen."
+            ],
+            "Restrict To Single Posts": [
+                "Beperk tot enkele berichten"
+            ],
+            "Limits related posts to single post views only.": [
+                "Beperkt gerelateerde berichten tot alleen weergaven van enkele berichten."
+            ],
+            "Post types": [
+                "Berichttypen"
+            ],
+            "Select the post types above eligible to show related posts.": [
+                "Selecteer de bovengenoemde berichttypes die in aanmerking komen om gerelateerde berichten weer te geven."
+            ],
+            "Select post types\u2026": [
+                "Selecteer berichttypes\u2026"
+            ],
+            "Display related posts from these categories": [
+                "Toon gerelateerde berichten uit deze categorie\u00ebn"
+            ],
+            "Select categories\u2026": [
+                "Selecteer categorie\u00ebn\u2026"
+            ],
+            "Display Categories on Related Posts": [
+                "Toon categorie\u00ebn op gerelateerde berichten"
+            ],
+            "Shows each selected category on its related post thumbnail.": [
+                "Toont elke geselecteerde categorie op de miniatuur van het gerelateerde bericht."
+            ],
+            "Disable on Mobile Devices": [
+                "Uitschakelen op Mobiele Apparaten"
+            ],
+            "Hide related posts on mobile devices.": [
+                "Verberg gerelateerde berichten op mobiele apparaten."
+            ],
+            "Include posts after selected date": [
+                "Neem berichten op na geselecteerde datum"
+            ],
+            "Leave empty to display all posts.": [
+                "Laat leeg om alle berichten weer te geven."
+            ],
+            "Sort Related Posts by": [
+                "Sorteer gerelateerde berichten op"
+            ],
+            "Random": [
+                "Willekeurig"
+            ],
+            "Latest": [
+                "Laatste"
+            ],
+            "Top Text": [
+                "Toptekst"
+            ],
+            "Custom heading shown above related posts.": [
+                "Aangepaste kop boven gerelateerde berichten weergegeven."
+            ],
+            "Enter heading text": [
+                "Voer koptekst in"
+            ],
+            "Number of posts to display": [
+                "Aantal berichten om weer te geven"
+            ],
+            "Default Thumbnail Image Type": [
+                "Standaard Miniatuurafbeeldingstype"
+            ],
+            "Fallback thumbnail for related posts with no image of their own.": [
+                "Fallback miniatuur voor gerelateerde berichten zonder eigen afbeelding."
+            ],
+            "Image (attachment ID)": [
+                "Afbeelding (bijlage-ID)"
+            ],
+            "URL (remote image)": [
+                "URL (externe afbeelding)"
+            ],
+            "Default image URL": [
+                "Standaard afbeeldings-URL"
+            ],
+            "Remote image URL, e.g. https:\/\/example.com\/image.jpg": [
+                "Externe afbeeldings-URL, bijv. https:\/\/example.com\/image.jpg"
+            ],
+            "Show date": [
+                "Toon datum"
+            ],
+            "Shows the post's publish date.": [
+                "Toont de publicatiedatum van het bericht."
+            ],
+            "Date format": [
+                "Datumformaat"
+            ],
+            "Select thumbnails source": [
+                "Selecteer miniaturen bron"
+            ],
+            "Where each related post's image comes from.": [
+                "Waar elke gerelateerde afbeelding van het bericht vandaan komt."
+            ],
+            "Post thumbnails": [
+                "Bericht miniaturen"
+            ],
+            "Custom field": [
+                "Aangepast veld"
+            ],
+            "Related posts thumbnail size": [
+                "Grootte van miniaturen van gerelateerde berichten"
+            ],
+            "Show posts with featured image": [
+                "Toon berichten met uitgelichte afbeelding"
+            ],
+            "Only posts with featured image will be shown.": [
+                "Alleen berichten met een uitgelichte afbeelding worden getoond."
+            ],
+            "Show Post's First Image": [
+                "Toon de eerste afbeelding van het bericht"
+            ],
+            "Use first in-post image when no featured image is set.": [
+                "Gebruik de eerste afbeelding in het bericht wanneer er geen uitgelichte afbeelding is ingesteld."
+            ],
+            "Image type": [
+                "Afbeeldingstype"
+            ],
+            "Image": [
+                "Afbeelding"
+            ],
+            "URL": [
+                "URL"
+            ],
+            "Custom field name": [
+                "Naam van het aangepaste veld"
+            ],
+            "ACF\/Custom field name for thumbnails that should have image field type.": [
+                "ACF\/Aangepaste veldnaam voor miniaturen die een afbeeldingsveldtype moeten hebben."
+            ],
+            "Size": [
+                "Grootte"
+            ],
+            "Enter width in pixels": [
+                "Voer de breedte in pixels in"
+            ],
+            "Enter height in pixels": [
+                "Voer de hoogte in pixels in"
+            ],
+            "Theme resize url": [
+                "Thema afbeeldings-url"
+            ],
+            "If your theme resizes images, enter URL to its resizing PHP file": [
+                "Als je thema afbeeldingen resized, voer dan de URL naar het resizing PHP-bestand in"
+            ],
+            "Select the layout for related posts.": [
+                "Selecteer de lay-out voor gerelateerde berichten."
+            ],
+            "Output style": [
+                "Uitvoerstijl"
+            ],
+            "Block": [
+                "Blok"
+            ],
+            "List": [
+                "Lijst"
+            ],
+            "Disables the plugin's CSS, your theme's styles apply instead.": [
+                "Deactiveert de CSS van de plugin, de stijlen van uw thema worden in plaats daarvan toegepast."
+            ],
+            "Disable plugin styles": [
+                "Deactiveer plugin stijlen"
+            ],
+            "Desktop Columns:": [
+                "Desktop Kolommen:"
+            ],
+            "Select Column": [
+                "Selecteer Kolom"
+            ],
+            "Tablet Columns:": [
+                "Tablet Kolommen:"
+            ],
+            "Mobile Columns:": [
+                "Mobiele Kolommen:"
+            ],
+            "Image Size": [
+                "Afbeeldingsgrootte"
+            ],
+            "Crop ratio (width:height) for thumbnails.": [
+                "Bijsnijdverhouding (breedte:hoogte) voor miniaturen."
+            ],
+            "Select Size": [
+                "Selecteer Grootte"
+            ],
+            "Background color": [
+                "Achtergrondkleur"
+            ],
+            "Background color\non mouse over": [
+                "Achtergrondkleur\nbij muisover"
+            ],
+            "Border color": [
+                "Randkleur"
+            ],
+            "Font color": [
+                "Letterkleur"
+            ],
+            "Font family": [
+                "Lettertype"
+            ],
+            "Font size": [
+                "Lettergrootte"
+            ],
+            "Enter size in pixels (px).": [
+                "Voer grootte in pixels (px) in."
+            ],
+            "Space Between Image and Title": [
+                "Ruimte Tussen Afbeelding en Titel"
+            ],
+            "Set the space between the image and the title box (e.g., 10px, 1em).": [
+                "Stel de ruimte in tussen de afbeelding en het titelvak (bijv. 10px, 1em)."
+            ],
+            "Text maximum length": [
+                "Maximale lengte van tekst"
+            ],
+            "Set 0 to hide the title.": [
+                "Stel 0 in om de titel te verbergen."
+            ],
+            "Excerpt maximum length": [
+                "Maximale lengte van fragment"
+            ],
+            "Set 0 to hide the excerpt.": [
+                "Stel 0 in om de samenvatting te verbergen."
+            ],
+            "Text block height": [
+                "Hoogte van de tekstblok"
+            ],
+            "Enter height in pixels (px).": [
+                "Voer hoogte in pixels (px) in."
+            ],
+            "Base relation on": [
+                "Basisverhouding op"
+            ],
+            "Categories": [
+                "Categorie\u00ebn"
+            ],
+            "Tags": [
+                "Tags"
+            ],
+            "Both": [
+                "Beide"
+            ],
+            "Custom": [
+                "Aangepast"
+            ],
+            "Custom taxonomies": [
+                "Aangepaste taxonomie\u00ebn"
+            ],
+            "Select taxonomies\u2026": [
+                "Selecteer taxonomie\u00ebn\u2026"
+            ],
+            "%s cannot be empty.": [
+                "%s mag niet leeg zijn."
+            ],
+            "%1$s must be between %2$d and %3$d.": [
+                "%1$s moet tussen %2$d en %3$d liggen."
+            ]
+        }
+    }
+}
